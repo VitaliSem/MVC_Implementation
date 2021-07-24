@@ -1,0 +1,23 @@
+#Ignore all files in the 'bin' repository
+bin/
+
+#Ignore all files in the 'obj' repository
+obj/
+
+#Ignore 'wwwroot' repository
+wwwroot/
+
+#Ignore 'shared' repository
+shared/
+
+#Ignore 'properties' repository
+properties/
+
+#Ignore all .vs repositories
+.vs/
+
+#Ignore .editorconfig file
+.editorconfig
+
+#Ignore .json files
+*.json
