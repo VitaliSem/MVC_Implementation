@@ -7,9 +7,6 @@ obj/
 #Ignore 'wwwroot' repository
 wwwroot/
 
-#Ignore 'shared' repository
-shared/
-
 #Ignore 'properties' repository
 properties/
 
