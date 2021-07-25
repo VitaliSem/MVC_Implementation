@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CRM_for_English_School.BLL.DataTransportObjects
+namespace CRM_for_English_School.BLL.DataTransferObjects
 {
-    class StudentDataTransferObject : PersonDataTransferObject
+    public class StudentDataTransferObject : PersonDataTransferObject
     {
         public int StudentID { get; set; }
         public string CurrentEnglishLevel { get; set; }

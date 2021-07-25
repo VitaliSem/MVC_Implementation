@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CRM_for_English_School.BLL.DataTransferObjects
 {
-    abstract class PersonDataTransferObject
+    public abstract class PersonDataTransferObject
     {
         public string FirstName { get; set; }
         public string MiddleName { get; set; }

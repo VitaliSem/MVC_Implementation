@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CRM_for_English_School.DAL.Interfaces
 {
-    interface IUnitOfWork
+    public interface IUnitOfWork
     {
         IWorkingProcess<Student> Students { get; }
 
