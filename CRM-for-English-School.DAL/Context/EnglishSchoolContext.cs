@@ -6,7 +6,7 @@ using System.Text;
 
 namespace CRM_for_English_School.DAL.Context
 {
-    class EnglishSchoolContext : DbContext
+    public class EnglishSchoolContext : DbContext
     {
         public DbSet<Student> Students { get; set; }
 

@@ -10,5 +10,7 @@ namespace CRM_for_English_School.DAL.Interfaces
         IWorkingProcess<Student> Students { get; }
 
         void Save();
+
+        void Dispose();
     }
 }
