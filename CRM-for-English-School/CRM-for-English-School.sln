@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRM-for-English-School", "CRM-for-English-School.csproj", "{418DB105-12E7-44B9-80B0-CC95EF474C35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM-for-English-School.DAL", "..\CRM-for-English-School.DAL\CRM-for-English-School.DAL.csproj", "{08AB9163-6968-403B-A732-DBF445B91461}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRM-for-English-School.DAL", "..\CRM-for-English-School.DAL\CRM-for-English-School.DAL.csproj", "{08AB9163-6968-403B-A732-DBF445B91461}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM-for-English-School.BLL", "..\CRM-for-English-School.BLL\CRM-for-English-School.BLL.csproj", "{0EC517FB-C4D7-49A3-AD34-953073031D43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{08AB9163-6968-403B-A732-DBF445B91461}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08AB9163-6968-403B-A732-DBF445B91461}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08AB9163-6968-403B-A732-DBF445B91461}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EC517FB-C4D7-49A3-AD34-953073031D43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EC517FB-C4D7-49A3-AD34-953073031D43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EC517FB-C4D7-49A3-AD34-953073031D43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EC517FB-C4D7-49A3-AD34-953073031D43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
