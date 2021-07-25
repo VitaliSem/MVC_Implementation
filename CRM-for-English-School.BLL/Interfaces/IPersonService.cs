@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CRM_for_English_School.BLL.Interfaces
 {
-    interface IPersonService
+    public interface IPersonService
     {
         void AddPerson(PersonDataTransferObject person);
         void EditPerson(PersonDataTransferObject person);

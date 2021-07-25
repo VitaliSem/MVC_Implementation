@@ -39,7 +39,7 @@ namespace CRM_for_English_School.DAL.Groups
 
         public IEnumerable<Student> Find(Func<Student, bool> predicate)
         {
-            return _englishSchoolContext.Students.Where(predicate).ToArray();
+            return _englishSchoolContext.Students.Where(predicate).ToList();
         }
 
         public void Delete(int ID)

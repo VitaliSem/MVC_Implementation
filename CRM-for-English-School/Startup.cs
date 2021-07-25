@@ -50,7 +50,7 @@ namespace CRM_for_English_School
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=EnglishSchool}/{action=Index}/{id?}");
             });
         }
     }
