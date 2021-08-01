@@ -5,13 +5,13 @@ using System.Text;
 
 namespace CRM_for_English_School.BLL.Interfaces
 {
-    interface IStudentService
+   public interface IStudentService
     {
-        void AddPerson(StudentDataTransferObject person);
-        void EditPerson(StudentDataTransferObject person);
-        void DeletePerson(int id);
-        StudentDataTransferObject GetPerson(int id);
-        IEnumerable<StudentDataTransferObject> GetPeople();
+        void AddStudent(StudentDataTransferObject person);
+        void EditStudent(StudentDataTransferObject person);
+        void DeleteStudent(int id);
+        StudentDataTransferObject GetStudent(int id);
+        IEnumerable<StudentDataTransferObject> GetStudents();
         void Dispose();
     }
 }

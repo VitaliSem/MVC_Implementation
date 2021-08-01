@@ -23,13 +23,10 @@ namespace CRM_for_English_School.DAL
         {
             get
             {
-                return _studentsGroup;
-            }
-
-            set
-            {
                 if (_studentsGroup == null)
                     _studentsGroup = new StudentsGroup(_englishSchoolContext);
+
+                return _studentsGroup;
             }
         }
 

@@ -19,4 +19,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CRM-for-English-School.BLL\CRM-for-English-School.BLL.csproj" />
+  </ItemGroup>
+
 </Project>

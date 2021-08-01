@@ -19,7 +19,7 @@ namespace CRM_for_English_School.BLL.Services
             _unitOfWork = new UnitOfWork();
         }
 
-        public void AddPerson(StudentDataTransferObject studentDTO)
+        public void AddStudent(StudentDataTransferObject studentDTO)
         {
             if (studentDTO != null)
             {
@@ -41,7 +41,7 @@ namespace CRM_for_English_School.BLL.Services
                 throw new ArgumentException("Студент не найден");
         }
 
-        public void EditPerson(StudentDataTransferObject studentDTO)
+        public void EditStudent(StudentDataTransferObject studentDTO)
         {
             if (studentDTO != null)
             {
@@ -63,7 +63,7 @@ namespace CRM_for_English_School.BLL.Services
                 throw new ArgumentException("Студент не найден");
         }
 
-        public void DeletePerson(int id)
+        public void DeleteStudent(int id)
         {
             var student = _unitOfWork.Students.Get(id);
             if (student != null)
@@ -75,7 +75,7 @@ namespace CRM_for_English_School.BLL.Services
                 throw new ArgumentException("Студент не найден");
         }
 
-        public StudentDataTransferObject GetPerson(int id)
+        public StudentDataTransferObject GetStudent(int id)
         {
             var student = _unitOfWork.Students.Get(id);
             return new StudentDataTransferObject()
@@ -91,7 +91,7 @@ namespace CRM_for_English_School.BLL.Services
             };
         }
 
-        public IEnumerable<StudentDataTransferObject> GetPeople()
+        public IEnumerable<StudentDataTransferObject> GetStudents()
         {
             var mapper = new MapperConfiguration(cfg => cfg.CreateMap<Student, StudentDataTransferObject>()).CreateMapper();
             return mapper.Map<IEnumerable<Student>, List<StudentDataTransferObject>>(_unitOfWork.Students.GetAll());
