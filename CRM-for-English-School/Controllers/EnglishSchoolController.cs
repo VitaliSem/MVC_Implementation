@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 using AutoMapper;
-using CRM_for_English_School.BLL.DataTransferObjects;
 using CRM_for_English_School.BLL.Interfaces;
-using CRM_for_English_School.BLL.Services;
 using CRM_for_English_School.Models;
+using System.Collections.Generic;
+using CRM_for_English_School.BLL.Entities;
 
 namespace CRM_for_English_School.Controllers
 {
@@ -12,15 +11,15 @@ namespace CRM_for_English_School.Controllers
     {
         private readonly IStudentService _studentService;
 
-        public EnglishSchoolController()
+        public EnglishSchoolController(IStudentService studentService)
         {
-            _studentService = new StudentService();
+            _studentService = studentService;
         }
         public IActionResult Index()
         {
-            var studentDTOs = _studentService.GetStudents();
-            var mapper = new MapperConfiguration(cfg => cfg.CreateMap<StudentDataTransferObject, StudentModel>()).CreateMapper();
-            var students = mapper.Map<IEnumerable<StudentDataTransferObject>, List<StudentModel>>(studentDTOs);
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<Student, StudentModel>());
+            var mapper = new Mapper(config);
+            var students = mapper.Map<IEnumerable<StudentModel>>(_studentService.GetStudents());
             return View(students);
         }
 
@@ -31,18 +30,12 @@ namespace CRM_for_English_School.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddStudent(StudentModel student)
+        public IActionResult AddStudent(StudentModel studentModel)
         {
-            _studentService.AddStudent(new StudentDataTransferObject()
-            {
-                StudentID = student.StudentID,
-                FirstName = student.FirstName,
-                MiddleName = student.MiddleName,
-                LastName = student.LastName,
-                Age = student.Age,
-                Gender = student.Gender,
-                CurrentEnglishLevel = student.CurrentEnglishLevel,
-            });
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<StudentModel, Student>());
+            var mapper = new Mapper(config);
+            var student = mapper.Map<StudentModel, Student>(studentModel);
+            _studentService.AddStudent(student);
 
             return RedirectToAction("Index", "EnglishSchool");
         }
@@ -50,34 +43,20 @@ namespace CRM_for_English_School.Controllers
         [HttpGet]
         public IActionResult EditStudent(int id)
         {
-            var StudentDTO = _studentService.GetStudent(id);
-
-            var student = new StudentModel()
-            {
-                StudentID = StudentDTO.StudentID,
-                FirstName = StudentDTO.FirstName,
-                MiddleName = StudentDTO.MiddleName,
-                LastName = StudentDTO.LastName,
-                Age = StudentDTO.Age,
-                Gender = StudentDTO.Gender,
-                CurrentEnglishLevel = StudentDTO.CurrentEnglishLevel,
-            };
-            return View(student);
+            var student = _studentService.GetStudent(id);
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<Student, StudentModel>());
+            var mapper = new Mapper(config);
+            var member = mapper.Map<Student, StudentModel>(_studentService.GetStudent(id));
+            return View(member);
         }
 
         [HttpPost]
-        public IActionResult EditStudent(StudentModel student)
+        public IActionResult EditStudent(StudentModel studentModel)
         {
-            _studentService.EditStudent(new StudentDataTransferObject()
-            {
-                StudentID = student.StudentID,
-                FirstName = student.FirstName,
-                MiddleName = student.MiddleName,
-                LastName = student.LastName,
-                Age = student.Age,
-                Gender = student.Gender,
-                CurrentEnglishLevel = student.CurrentEnglishLevel,
-            });
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<StudentModel, Student>());
+            var mapper = new Mapper(config);
+            var student = mapper.Map<StudentModel, Student>(studentModel);
+            _studentService.EditStudent(student);
 
             return RedirectToAction("Index", "EnglishSchool");
         }

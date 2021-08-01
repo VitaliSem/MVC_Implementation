@@ -1,63 +1,44 @@
-﻿using AutoMapper;
-using CRM_for_English_School.BLL.DataTransferObjects;
+﻿using CRM_for_English_School.BLL.Entities;
 using CRM_for_English_School.BLL.Interfaces;
-using CRM_for_English_School.DAL;
-using CRM_for_English_School.DAL.Entities;
 using CRM_for_English_School.DAL.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace CRM_for_English_School.BLL.Services
 {
     public class StudentService : IStudentService
     {
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly IRepository<Student> _studentRepository;
 
-        public StudentService()
+        public StudentService(IRepository<Student> studentRepository)
         {
-            _unitOfWork = new UnitOfWork();
+            _studentRepository = studentRepository;
         }
 
-        public void AddStudent(StudentDataTransferObject studentDTO)
+        public IEnumerable<Student> GetStudents()
         {
-            if (studentDTO != null)
-            {
-                var student = new Student()
-                {
-                    StudentID = studentDTO.StudentID,
-                    FirstName = studentDTO.FirstName,
-                    MiddleName = studentDTO.MiddleName,
-                    LastName = studentDTO.LastName,
-                    Age = studentDTO.Age,
-                    Gender = studentDTO.Gender,
-                    CurrentEnglishLevel = studentDTO.CurrentEnglishLevel,
-                };
+            return _studentRepository.GetAll();
+        }
 
-                _unitOfWork.Students.Create(student);
-                _unitOfWork.Save();
+        public Student GetStudent(int id)
+        {
+            return _studentRepository.Get(id);
+        }
+        public void AddStudent(Student student)
+        {
+            if (student != null)
+            {
+                _studentRepository.Create(student);
             }
             else
                 throw new ArgumentException("Студент не найден");
         }
 
-        public void EditStudent(StudentDataTransferObject studentDTO)
+        public void EditStudent(Student student)
         {
-            if (studentDTO != null)
+            if (student != null)
             {
-                var student = new Student()
-                {
-                    StudentID = studentDTO.StudentID,
-                    FirstName = studentDTO.FirstName,
-                    MiddleName = studentDTO.MiddleName,
-                    LastName = studentDTO.LastName,
-                    Age = studentDTO.Age,
-                    Gender = studentDTO.Gender,
-                    CurrentEnglishLevel = studentDTO.CurrentEnglishLevel,
-                };
-
-                _unitOfWork.Students.Update(student);
-                _unitOfWork.Save();
+                _studentRepository.Update(student);
             }
             else
                 throw new ArgumentException("Студент не найден");
@@ -65,41 +46,13 @@ namespace CRM_for_English_School.BLL.Services
 
         public void DeleteStudent(int id)
         {
-            var student = _unitOfWork.Students.Get(id);
+            var student = _studentRepository.Get(id);
             if (student != null)
             {
-                _unitOfWork.Students.Delete(id);
-                _unitOfWork.Save();
+                _studentRepository.Delete(id);
             }
             else
                 throw new ArgumentException("Студент не найден");
-        }
-
-        public StudentDataTransferObject GetStudent(int id)
-        {
-            var student = _unitOfWork.Students.Get(id);
-            return new StudentDataTransferObject()
-            {
-                StudentID = student.StudentID,
-                FirstName = student.FirstName,
-                MiddleName = student.MiddleName,
-                LastName = student.LastName,
-                Age = student.Age,
-                Gender = student.Gender,
-                CurrentEnglishLevel = student.CurrentEnglishLevel,
-                
-            };
-        }
-
-        public IEnumerable<StudentDataTransferObject> GetStudents()
-        {
-            var mapper = new MapperConfiguration(cfg => cfg.CreateMap<Student, StudentDataTransferObject>()).CreateMapper();
-            return mapper.Map<IEnumerable<Student>, List<StudentDataTransferObject>>(_unitOfWork.Students.GetAll());
-        }
-
-        public void Dispose()
-        {
-            _unitOfWork.Dispose();
         }
     }
 }

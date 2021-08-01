@@ -1,11 +1,6 @@
-﻿using CRM_for_English_School.DAL.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CRM_for_English_School.BLL.DataTransferObjects
+﻿namespace CRM_for_English_School.BLL.Entities
 {
-    public abstract class PersonDataTransferObject
+    public abstract class Person
     {
         public string FirstName { get; set; }
         public string MiddleName { get; set; }

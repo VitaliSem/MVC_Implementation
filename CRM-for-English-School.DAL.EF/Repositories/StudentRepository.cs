@@ -1,18 +1,17 @@
-﻿using CRM_for_English_School.DAL.Context;
-using CRM_for_English_School.DAL.Entities;
+﻿using CRM_for_English_School.BLL.Entities;
+using CRM_for_English_School.DAL.EF.Context;
 using CRM_for_English_School.DAL.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
-namespace CRM_for_English_School.DAL.Groups
+namespace CRM_for_English_School.DAL.EF.Groups
 {
-    public class StudentsGroup : IWorkingProcess<Student>
+    public class StudentRepository : IRepository<Student>
     {
         private readonly EnglishSchoolContext _englishSchoolContext;
-        public StudentsGroup(EnglishSchoolContext englishSchoolContext)
+        public StudentRepository(EnglishSchoolContext englishSchoolContext)
         {
             _englishSchoolContext = englishSchoolContext;
         }

@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CRM-for-English-School.BLL\CRM-for-English-School.BLL.csproj" />
+    <ProjectReference Include="..\CRM-for-English-School.DAL.EF\CRM-for-English-School.DAL.EF.csproj" />
   </ItemGroup>
 
 </Project>

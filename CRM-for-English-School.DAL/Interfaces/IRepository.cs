@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace CRM_for_English_School.DAL.Interfaces
 {
-    public interface IWorkingProcess<T> where T : class
+    public interface IRepository<T> where T : class
     {
         IEnumerable<T> GetAll();
         T Get(int id);

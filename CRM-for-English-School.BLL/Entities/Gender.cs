@@ -1,4 +1,4 @@
-﻿namespace CRM_for_English_School.DAL.Entities
+﻿namespace CRM_for_English_School.BLL.Entities
 {
     public enum Gender
     {

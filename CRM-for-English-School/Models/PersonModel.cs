@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using CRM_for_English_School.BLL.Entities;
 
-namespace CRM_for_English_School.DAL.Entities
+namespace CRM_for_English_School.Models
 {
-    public abstract class Person
+    public class PersonModel
     {
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
