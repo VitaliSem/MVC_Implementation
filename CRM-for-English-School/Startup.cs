@@ -58,7 +58,7 @@ namespace CRM_for_English_School
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=EnglishSchool}/{action=Index}/{id?}");
+                    pattern: "{controller=Students}/{action=Index}/{id?}");
             });
         }
     }

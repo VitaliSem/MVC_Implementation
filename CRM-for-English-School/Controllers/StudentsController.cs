@@ -7,11 +7,11 @@ using CRM_for_English_School.BLL.Entities;
 
 namespace CRM_for_English_School.Controllers
 {
-    public class EnglishSchoolController : Controller
+    public class StudentsController : Controller
     {
         private readonly IStudentService _studentService;
 
-        public EnglishSchoolController(IStudentService studentService)
+        public StudentsController(IStudentService studentService)
         {
             _studentService = studentService;
         }
@@ -37,7 +37,7 @@ namespace CRM_for_English_School.Controllers
             var student = mapper.Map<StudentModel, Student>(studentModel);
             _studentService.AddStudent(student);
 
-            return RedirectToAction("Index", "EnglishSchool");
+            return RedirectToAction("Index", "Students");
         }
 
         [HttpGet]
@@ -58,14 +58,14 @@ namespace CRM_for_English_School.Controllers
             var student = mapper.Map<StudentModel, Student>(studentModel);
             _studentService.EditStudent(student);
 
-            return RedirectToAction("Index", "EnglishSchool");
+            return RedirectToAction("Index", "Students");
         }
 
         [HttpGet]
         public IActionResult DeleteStudent(int id)
         {
             _studentService.DeleteStudent(id);
-            return RedirectToAction("Index", "EnglishSchool");
+            return RedirectToAction("Index", "Students");
         }
     }
 }
