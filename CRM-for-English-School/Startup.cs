@@ -3,6 +3,7 @@ using CRM_for_English_School.BLL.Interfaces;
 using CRM_for_English_School.BLL.Services;
 using CRM_for_English_School.DAL.EF.Context;
 using CRM_for_English_School.DAL.EF.Groups;
+using CRM_for_English_School.DAL.EF.Repositories;
 using CRM_for_English_School.DAL.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -27,9 +28,9 @@ namespace CRM_for_English_School
         {
             services.AddDbContext<EnglishSchoolContext>(options =>
                 options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=EnglishSchoolDB;Trusted_Connection=True;"));
-            services.AddScoped<IRepository<Student>, StudentRepository>();
+            services.AddScoped<IRepository<Student>, BaseEntityRepository<Student>>();
 
-            services.AddScoped<IStudentService, StudentService>();
+            services.AddScoped<IBaseEntityService<Student>, BaseEntityService<Student>>();
 
             services.AddControllersWithViews();
         }

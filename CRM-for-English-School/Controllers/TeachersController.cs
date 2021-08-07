@@ -19,7 +19,7 @@ namespace CRM_for_English_School.Controllers
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<Teacher, TeacherModel>());
             var mapper = new Mapper(config);
-            var teacher = mapper.Map<IEnumerable<StudentModel>>(_teacherService.GetTeachers());
+            var teacher = mapper.Map<IEnumerable<StudentModel>>(_teacherService.GetAll());
             return View(teacher);
         }
 
@@ -35,7 +35,7 @@ namespace CRM_for_English_School.Controllers
             var config = new MapperConfiguration(cfg => cfg.CreateMap<TeacherModel, Teacher>());
             var mapper = new Mapper(config);
             var teacher = mapper.Map<TeacherModel, Teacher>(teacherModel);
-            _teacherService.AddTeacher(teacher);
+            _teacherService.CreateEntity(teacher);
 
             return RedirectToAction("Index", "Teachers");
         }
@@ -43,10 +43,10 @@ namespace CRM_for_English_School.Controllers
         [HttpGet]
         public IActionResult EditTeacher(int id)
         {
-            var student = _teacherService.GetTeacher(id);
+            var student = _teacherService.GetEntity(id);
             var config = new MapperConfiguration(cfg => cfg.CreateMap<Teacher, TeacherModel>());
             var mapper = new Mapper(config);
-            var member = mapper.Map<Teacher, TeacherModel>(_teacherService.GetTeacher(id));
+            var member = mapper.Map<Teacher, TeacherModel>(_teacherService.GetEntity(id));
             return View(member);
         }
 
@@ -56,7 +56,7 @@ namespace CRM_for_English_School.Controllers
             var config = new MapperConfiguration(cfg => cfg.CreateMap<TeacherModel, Teacher>());
             var mapper = new Mapper(config);
             var teacher = mapper.Map<TeacherModel, Teacher>(teacherModel);
-            _teacherService.EditTeacher(teacher);
+            _teacherService.EditEntity(teacher);
 
             return RedirectToAction("Index", "Teachers");
         }
@@ -64,7 +64,7 @@ namespace CRM_for_English_School.Controllers
         [HttpGet]
         public IActionResult DeleteTeacher(int id)
         {
-            _teacherService.DeleteTeacher(id);
+            _teacherService.DeleteEntity(id);
             return RedirectToAction("Index", "Teachers");
         }
     }

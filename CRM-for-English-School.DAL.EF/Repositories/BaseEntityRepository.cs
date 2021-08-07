@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace CRM_for_English_School.DAL.EF.Repositories
 {
-    class BaseEntityRepository<TEntity> : IRepository<TEntity> where TEntity : class
+    public class BaseEntityRepository<TEntity> : IRepository<TEntity> where TEntity : class
     {
         private readonly EnglishSchoolContext _englishSchoolContext;
         private readonly DbSet<TEntity> _entities;

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace CRM_for_English_School.BLL.Services
 {
-    public class StudentService : IStudentService
+    public class StudentService //: IStudentService
     {
         private readonly IRepository<Student> _studentRepository;
 

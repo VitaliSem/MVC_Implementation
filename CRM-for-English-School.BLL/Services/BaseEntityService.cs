@@ -1,12 +1,10 @@
 ﻿using CRM_for_English_School.BLL.Interfaces;
 using CRM_for_English_School.DAL.Interfaces;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace CRM_for_English_School.BLL.Services
 {
-    class BaseEntityService<TEntity> : IBaseEntityService<TEntity> where TEntity : class
+    public class BaseEntityService<TEntity> : IBaseEntityService<TEntity> where TEntity : class
     {
         private readonly IRepository<TEntity> _repository;
 

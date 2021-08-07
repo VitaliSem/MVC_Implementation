@@ -9,9 +9,9 @@ namespace CRM_for_English_School.Controllers
 {
     public class StudentsController : Controller
     {
-        private readonly IStudentService _studentService;
+        private readonly IBaseEntityService<Student> _studentService;
 
-        public StudentsController(IStudentService studentService)
+        public StudentsController(IBaseEntityService<Student> studentService)
         {
             _studentService = studentService;
         }
@@ -19,7 +19,7 @@ namespace CRM_for_English_School.Controllers
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<Student, StudentModel>());
             var mapper = new Mapper(config);
-            var students = mapper.Map<IEnumerable<StudentModel>>(_studentService.GetStudents());
+            var students = mapper.Map<IEnumerable<StudentModel>>(_studentService.GetAll());
             return View(students);
         }
 
@@ -35,7 +35,7 @@ namespace CRM_for_English_School.Controllers
             var config = new MapperConfiguration(cfg => cfg.CreateMap<StudentModel, Student>());
             var mapper = new Mapper(config);
             var student = mapper.Map<StudentModel, Student>(studentModel);
-            _studentService.AddStudent(student);
+            _studentService.CreateEntity(student);
 
             return RedirectToAction("Index", "Students");
         }
@@ -43,10 +43,10 @@ namespace CRM_for_English_School.Controllers
         [HttpGet]
         public IActionResult EditStudent(int id)
         {
-            var student = _studentService.GetStudent(id);
+            var student = _studentService.GetEntity(id);
             var config = new MapperConfiguration(cfg => cfg.CreateMap<Student, StudentModel>());
             var mapper = new Mapper(config);
-            var member = mapper.Map<Student, StudentModel>(_studentService.GetStudent(id));
+            var member = mapper.Map<Student, StudentModel>(_studentService.GetEntity(id));
             return View(member);
         }
 
@@ -56,7 +56,7 @@ namespace CRM_for_English_School.Controllers
             var config = new MapperConfiguration(cfg => cfg.CreateMap<StudentModel, Student>());
             var mapper = new Mapper(config);
             var student = mapper.Map<StudentModel, Student>(studentModel);
-            _studentService.EditStudent(student);
+            _studentService.EditEntity(student);
 
             return RedirectToAction("Index", "Students");
         }
@@ -64,7 +64,7 @@ namespace CRM_for_English_School.Controllers
         [HttpGet]
         public IActionResult DeleteStudent(int id)
         {
-            _studentService.DeleteStudent(id);
+            _studentService.DeleteEntity(id);
             return RedirectToAction("Index", "Students");
         }
     }

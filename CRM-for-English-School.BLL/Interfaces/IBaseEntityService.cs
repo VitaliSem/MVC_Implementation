@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace CRM_for_English_School.BLL.Interfaces
 {
-    interface IBaseEntityService<TEntity>
+    public interface IBaseEntityService<TEntity>
     {
         IEnumerable<TEntity> GetAll();
         TEntity GetEntity(int id);
