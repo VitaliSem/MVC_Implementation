@@ -32,8 +32,12 @@ namespace CRM_for_English_School.Controllers
         [HttpPost]
         public IActionResult AddStudent(StudentModel studentModel)
         {
-            _studentService.CreateEntity(_mapper.Map<Student>(studentModel));
-            return RedirectToAction("Index", "Students");
+            if (ModelState.IsValid)
+            {
+                _studentService.CreateEntity(_mapper.Map<Student>(studentModel));
+                return RedirectToAction("Index", "Students");
+            }
+            return View(studentModel);
         }
 
         [HttpGet]
@@ -46,8 +50,12 @@ namespace CRM_for_English_School.Controllers
         [HttpPost]
         public IActionResult EditStudent(StudentModel studentModel)
         {
-            _studentService.EditEntity(_mapper.Map<Student>(studentModel));
-            return RedirectToAction("Index", "Students");
+            if (ModelState.IsValid)
+            {
+                _studentService.EditEntity(_mapper.Map<Student>(studentModel));
+                return RedirectToAction("Index", "Students");
+            }
+            return View(studentModel);
         }
 
         [HttpGet]
