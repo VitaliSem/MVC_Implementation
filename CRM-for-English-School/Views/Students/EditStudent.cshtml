@@ -1,9 +1,10 @@
 ﻿@model StudentModel
 @{
-    ViewData["Title"] = "Edit student";
+    ViewData["Title"] = "Edit student / ";
 }
 <div class="small-pannel">
     <h2>Edit student</h2>
+    <br />
     @using (Html.BeginForm("EditStudent", "Students", FormMethod.Post))
     {
         @Html.HiddenFor(x => x.ID)
@@ -35,5 +36,6 @@
 
 
         <button type="submit" class="btn btn-success">Edit student</button>
+        @Html.ActionLink("Delete", "DeleteStudent", "Students", new { id = Model.ID }, new { @class = "btn btn-danger" })
     }
 </div>

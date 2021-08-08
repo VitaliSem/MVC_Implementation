@@ -18,7 +18,7 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
-                            <a class="nav-link active" aria-current="page" href="#">Students</a>
+                            <a class="nav-link active" aria-current="page" asp-controller="Students" asp-action="Index">Students</a>
                             <a class="nav-link disabled" href="#" tabindex="-1" aria-desabled="true">Teachers</a>
                             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Groups</a>
                         </div>
@@ -27,7 +27,7 @@
             </nav>
         </div>
     </header>
-    <br />
+    <br/>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
