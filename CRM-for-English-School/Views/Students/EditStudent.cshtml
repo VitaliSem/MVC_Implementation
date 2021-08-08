@@ -1,12 +1,12 @@
 ﻿@model StudentModel
 @{
-    ViewData["Title"] = "Edit worker";
+    ViewData["Title"] = "Edit student";
 }
 <div class="small-pannel">
-    <h2>Edit worker</h2>
-    @using (Html.BeginForm("EditStudent", "EnglishSchool", FormMethod.Post))
+    <h2>Edit student</h2>
+    @using (Html.BeginForm("EditStudent", "Students", FormMethod.Post))
     {
-        @Html.HiddenFor(x => x.StudentID)
+        @Html.HiddenFor(x => x.ID)
         ;
         <div class="form-group">
             <label for="FirstName">FirstName</label>

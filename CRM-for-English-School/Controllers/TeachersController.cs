@@ -2,7 +2,6 @@
 using AutoMapper;
 using CRM_for_English_School.BLL.Interfaces;
 using CRM_for_English_School.Models;
-using System.Collections.Generic;
 using CRM_for_English_School.BLL.Entities;
 
 namespace CRM_for_English_School.Controllers
@@ -10,17 +9,17 @@ namespace CRM_for_English_School.Controllers
     public class TeachersController : Controller
     {
         private readonly ITeacherService _teacherService;
+        private readonly IMapper _mapper;
 
-        public TeachersController(ITeacherService teacherervice)
+        public TeachersController(ITeacherService teacherervice, IMapper mapper)
         {
             _teacherService = teacherervice;
+            _mapper = mapper;
         }
         public IActionResult Index()
         {
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<Teacher, TeacherModel>());
-            var mapper = new Mapper(config);
-            var teacher = mapper.Map<IEnumerable<StudentModel>>(_teacherService.GetAll());
-            return View(teacher);
+            var teachers = _teacherService.GetAll();
+            return View(_mapper.Map<TeacherModel>(teachers));
         }
 
         [HttpGet]
@@ -32,32 +31,21 @@ namespace CRM_for_English_School.Controllers
         [HttpPost]
         public IActionResult AddTeacher(TeacherModel teacherModel)
         {
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<TeacherModel, Teacher>());
-            var mapper = new Mapper(config);
-            var teacher = mapper.Map<TeacherModel, Teacher>(teacherModel);
-            _teacherService.CreateEntity(teacher);
-
+            _teacherService.CreateEntity(_mapper.Map<Teacher>(teacherModel));
             return RedirectToAction("Index", "Teachers");
         }
 
         [HttpGet]
         public IActionResult EditTeacher(int id)
         {
-            var student = _teacherService.GetEntity(id);
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<Teacher, TeacherModel>());
-            var mapper = new Mapper(config);
-            var member = mapper.Map<Teacher, TeacherModel>(_teacherService.GetEntity(id));
-            return View(member);
+            var teacher = _teacherService.GetEntity(id);
+            return View(_mapper.Map<TeacherModel>(teacher));
         }
 
         [HttpPost]
         public IActionResult EditTeacher(TeacherModel teacherModel)
         {
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<TeacherModel, Teacher>());
-            var mapper = new Mapper(config);
-            var teacher = mapper.Map<TeacherModel, Teacher>(teacherModel);
-            _teacherService.EditEntity(teacher);
-
+            _teacherService.EditEntity(_mapper.Map<Teacher>(teacherModel));
             return RedirectToAction("Index", "Teachers");
         }
 

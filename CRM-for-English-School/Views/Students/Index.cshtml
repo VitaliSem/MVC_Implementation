@@ -1,10 +1,10 @@
 ﻿@model List<StudentModel>
-@{ ViewData["Title"] = "Students"; }
-<div class="big-pannel">
-    <table class="table table-striped">
-        <thead class="thead-dark">
+
+<div>
+    <table class="table table-sm table-hover">
+        <thead class="table-light">
             <tr>
-                <th scope="col">ID</th>
+                <th scope="col">#</th>
                 <th scope="col">First Name</th>
                 <th scope="col">Middle Name</th>
                 <th scope="col">Last Name</th>
@@ -17,21 +17,21 @@
         <tbody>
             @foreach (var student in Model)
             {
-
-<tr>
-    <th scope="col">@student.StudentID</th>
-    <th scope="col">@student.FirstName</th>
-    <th scope="col">@student.MiddleName</th>
-    <th scope="col">@student.LastName</th>
-    <th scope="col">@student.Age</th>
-    <th scope="col">@student.Gender</th>
-    <th scope="col">@student.CurrentEnglishLevel</th>
-    <th scope="col">
-        @Html.ActionLink("Edit", "EditStudent", "EnglishSchool", new { id = student.StudentID }, new { @class = "btn btn-success" })
-    @Html.ActionLink("Delete", "DeleteStudent", "EnglishSchool", new { id = student.StudentID }, new { @class = "btn btn-danger" })
-</th>
-</tr>            }
+                <tr>
+                    <th scope="col">@student.ID</th>
+                    <th class="font-weight-normal" asp-controller="Students" asp-action="EditStudent" asp-route-id="@student.ID" scope="col" >@student.FirstName</th>
+                    <th class="font-weight-normal" asp-controller="Students" asp-action="EditStudent" asp-route-id="@student.ID" scope="col">@student.MiddleName</th>
+                    <th class="font-weight-normal" asp-controller="Students" asp-action="EditStudent" asp-route-id="@student.ID" scope="col">@student.LastName</th>
+                    <th class="font-weight-normal" asp-controller="Students" asp-action="EditStudent" asp-route-id="@student.ID" scope="col">@student.Age</th>
+                    <th class="font-weight-normal" asp-controller="Students" asp-action="EditStudent" asp-route-id="@student.ID" scope="col">@student.Gender</th>
+                    <th class="font-weight-normal" asp-controller="Students" asp-action="EditStudent" asp-route-id="@student.ID" scope="col">@student.CurrentEnglishLevel</th>
+                    <th class="font-weight-normal" scope="col">
+                        @Html.ActionLink("Edit", "EditStudent", "Students", new { id = student.ID }, new { @class = "btn btn-success" })
+                        @Html.ActionLink("Delete", "DeleteStudent", "Students", new { id = student.ID }, new { @class = "btn btn-danger" })
+                    </th>
+                </tr>
+            }
         </tbody>
     </table>
-    @Html.ActionLink("Add new student", "AddStudent", "EnglishSchool", null, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Add new student", "AddStudent", "Students", null, new { @class = "btn btn-primary" })
 </div>

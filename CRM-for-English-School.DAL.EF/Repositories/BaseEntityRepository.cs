@@ -18,13 +18,18 @@ namespace CRM_for_English_School.DAL.EF.Repositories
             _entities = englishSchoolContext.Set<TEntity>();
         }
 
-        public void Create(TEntity item) => _englishSchoolContext.Add(item).State = EntityState.Added;
+        public void Create(TEntity item)
+        {
+            _englishSchoolContext.Add(item).State = EntityState.Added;
+            _englishSchoolContext.SaveChanges();
+        }
 
         public void Delete(int id)
         {
             var entity = _englishSchoolContext.Find<TEntity>(id);
             if (entity != null)
                 _englishSchoolContext.Remove(entity).State = EntityState.Deleted;
+            _englishSchoolContext.SaveChanges();
         }
 
         public IEnumerable<TEntity> Find(Func<TEntity, bool> predicate) => 
@@ -38,6 +43,10 @@ namespace CRM_for_English_School.DAL.EF.Repositories
 
         public IEnumerable<TEntity> GetAll() => _entities.ToList();
 
-        public void Update(TEntity item) => _englishSchoolContext.Entry(item).State = EntityState.Modified;
+        public void Update(TEntity item)
+        {
+            _englishSchoolContext.Entry(item).State = EntityState.Modified;
+            _englishSchoolContext.SaveChanges();
+        }
     }
 }

@@ -2,7 +2,7 @@
 {
     public class StudentModel : PersonModel
     {
-        public int StudentID { get; set; }
+        public int ID { get; set; }
         public string CurrentEnglishLevel { get; set; }
     }
 }

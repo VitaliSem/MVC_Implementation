@@ -1,9 +1,11 @@
+using AutoMapper;
 using CRM_for_English_School.BLL.Entities;
 using CRM_for_English_School.BLL.Interfaces;
 using CRM_for_English_School.BLL.Services;
 using CRM_for_English_School.DAL.EF.Context;
 using CRM_for_English_School.DAL.EF.Repositories;
 using CRM_for_English_School.DAL.Interfaces;
+using CRM_for_English_School.Mapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -27,9 +29,18 @@ namespace CRM_for_English_School
         {
             services.AddDbContext<EnglishSchoolContext>(options =>
                 options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=EnglishSchoolDB;Trusted_Connection=True;"));
+
             services.AddScoped<IRepository<Student>, BaseEntityRepository<Student>>();
+            services.AddScoped<IRepository<Teacher>, BaseEntityRepository<Teacher>>();
+            services.AddScoped<IRepository<StudentsGroup>, BaseEntityRepository<StudentsGroup>>();
 
             services.AddScoped<IBaseEntityService<Student>, BaseEntityService<Student>>();
+            services.AddScoped<IBaseEntityService<Teacher>, BaseEntityService<Teacher>>();
+            services.AddScoped<IBaseEntityService<StudentsGroup>, BaseEntityService<StudentsGroup>>();
+
+            var mapperConfig = new MapperConfiguration(cfg => { cfg.AddProfile(new MappingProfile()); });
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
 
             services.AddControllersWithViews();
         }
