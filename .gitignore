@@ -4,9 +4,6 @@ bin/
 #Ignore all files in the 'obj' repository
 obj/
 
-#Ignore 'wwwroot' repository
-wwwroot/
-
 #Ignore 'properties' repository
 properties/
 
