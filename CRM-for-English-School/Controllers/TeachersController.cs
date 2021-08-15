@@ -3,15 +3,17 @@ using AutoMapper;
 using CRM_for_English_School.BLL.Interfaces;
 using CRM_for_English_School.Models;
 using CRM_for_English_School.BLL.Entities;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CRM_for_English_School.Controllers
 {
     public class TeachersController : Controller
     {
-        private readonly ITeacherService _teacherService;
+        private readonly IBaseEntityService<Teacher> _teacherService;
         private readonly IMapper _mapper;
 
-        public TeachersController(ITeacherService teacherervice, IMapper mapper)
+        public TeachersController(IBaseEntityService<Teacher> teacherervice, IMapper mapper)
         {
             _teacherService = teacherervice;
             _mapper = mapper;
@@ -19,9 +21,10 @@ namespace CRM_for_English_School.Controllers
         public IActionResult Index()
         {
             var teachers = _teacherService.GetAll();
-            return View(_mapper.Map<TeacherModel>(teachers));
+            return View(_mapper.Map<IEnumerable<TeacherModel>>(teachers));
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult AddTeacher()
         {
@@ -35,6 +38,7 @@ namespace CRM_for_English_School.Controllers
             return RedirectToAction("Index", "Teachers");
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult EditTeacher(int id)
         {

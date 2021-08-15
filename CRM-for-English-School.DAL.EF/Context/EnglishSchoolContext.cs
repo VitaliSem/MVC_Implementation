@@ -1,9 +1,10 @@
 ﻿using CRM_for_English_School.BLL.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace CRM_for_English_School.DAL.EF.Context
 {
-    public class EnglishSchoolContext : DbContext
+    public class EnglishSchoolContext : IdentityDbContext
     {
         public DbSet<Student> Students { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
@@ -18,6 +19,7 @@ namespace CRM_for_English_School.DAL.EF.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Student>().HasData(
                 new Student[]

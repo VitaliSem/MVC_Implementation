@@ -4,6 +4,7 @@ using CRM_for_English_School.BLL.Interfaces;
 using CRM_for_English_School.Models;
 using System.Collections.Generic;
 using CRM_for_English_School.BLL.Entities;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CRM_for_English_School.Controllers
 {
@@ -23,6 +24,7 @@ namespace CRM_for_English_School.Controllers
             return View(_mapper.Map<IEnumerable<StudentModel>>(students));
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult AddStudent()
         {
@@ -40,6 +42,7 @@ namespace CRM_for_English_School.Controllers
             return View(studentModel);
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult EditStudent(int id)
         {
