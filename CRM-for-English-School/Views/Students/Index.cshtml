@@ -1,37 +1,34 @@
 ﻿@model List<StudentModel>
-@{ ViewData["Title"] = "Students"; }
-<div class="big-pannel">
-    <table class="table table-striped">
-        <thead class="thead-dark">
+
+<div>
+    <table class="table table-sm table-hover">
+        <thead class="table-light">
             <tr>
-                <th scope="col">ID</th>
-                <th scope="col">First Name</th>
-                <th scope="col">Middle Name</th>
-                <th scope="col">Last Name</th>
+                <th scope="col">#</th>
+                <th scope="col">Full Name</th>
                 <th scope="col">Age</th>
                 <th scope="col">Gender</th>
                 <th scope="col">Current English Level</th>
-                <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
             @foreach (var student in Model)
             {
-
-<tr>
-    <th scope="col">@student.StudentID</th>
-    <th scope="col">@student.FirstName</th>
-    <th scope="col">@student.MiddleName</th>
-    <th scope="col">@student.LastName</th>
-    <th scope="col">@student.Age</th>
-    <th scope="col">@student.Gender</th>
-    <th scope="col">@student.CurrentEnglishLevel</th>
-    <th scope="col">
-        @Html.ActionLink("Edit", "EditStudent", "EnglishSchool", new { id = student.StudentID }, new { @class = "btn btn-success" })
-    @Html.ActionLink("Delete", "DeleteStudent", "EnglishSchool", new { id = student.StudentID }, new { @class = "btn btn-danger" })
-</th>
-</tr>            }
+                <tr>
+                    <th scope="col">@student.ID</th>
+                    <td scope="col"> <a asp-controller="Students" asp-action="EditStudent" asp-route-id="@student.ID">@student.FirstName @student.MiddleName @student.LastName</a></td>
+                    <td scope="col">@student.Age</td>
+                    <td scope="col">@student.Gender</td>
+                    <td scope="col">@student.CurrentEnglishLevel</td>
+                </tr>
+            }
         </tbody>
     </table>
-    @Html.ActionLink("Add new student", "AddStudent", "EnglishSchool", null, new { @class = "btn btn-primary" })
+</div>
+<tr>
+    <th><div class="text-info">Total participants: @Model.Count()</div></th>
+</tr>
+<div>
+    <br/>
+    @Html.ActionLink("Add new student", "AddStudent", "Students", null, new { @class = "btn btn-primary" })
 </div>

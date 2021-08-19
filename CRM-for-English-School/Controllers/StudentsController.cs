@@ -4,25 +4,27 @@ using CRM_for_English_School.BLL.Interfaces;
 using CRM_for_English_School.Models;
 using System.Collections.Generic;
 using CRM_for_English_School.BLL.Entities;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CRM_for_English_School.Controllers
 {
     public class StudentsController : Controller
     {
-        private readonly IStudentService _studentService;
+        private readonly IBaseEntityService<Student> _studentService;
+        private readonly IMapper _mapper;
 
-        public StudentsController(IStudentService studentService)
+        public StudentsController(IBaseEntityService<Student> studentService, IMapper mapper)
         {
             _studentService = studentService;
+            _mapper = mapper;
         }
         public IActionResult Index()
         {
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<Student, StudentModel>());
-            var mapper = new Mapper(config);
-            var students = mapper.Map<IEnumerable<StudentModel>>(_studentService.GetStudents());
-            return View(students);
+            var students = _studentService.GetAll();
+            return View(_mapper.Map<IEnumerable<StudentModel>>(students));
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult AddStudent()
         {
@@ -32,39 +34,37 @@ namespace CRM_for_English_School.Controllers
         [HttpPost]
         public IActionResult AddStudent(StudentModel studentModel)
         {
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<StudentModel, Student>());
-            var mapper = new Mapper(config);
-            var student = mapper.Map<StudentModel, Student>(studentModel);
-            _studentService.AddStudent(student);
-
-            return RedirectToAction("Index", "Students");
+            if (ModelState.IsValid)
+            {
+                _studentService.CreateEntity(_mapper.Map<Student>(studentModel));
+                return RedirectToAction("Index", "Students");
+            }
+            return View(studentModel);
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult EditStudent(int id)
         {
-            var student = _studentService.GetStudent(id);
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<Student, StudentModel>());
-            var mapper = new Mapper(config);
-            var member = mapper.Map<Student, StudentModel>(_studentService.GetStudent(id));
-            return View(member);
+            var student = _studentService.GetEntity(id);
+            return View(_mapper.Map<StudentModel>(student));
         }
 
         [HttpPost]
         public IActionResult EditStudent(StudentModel studentModel)
         {
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<StudentModel, Student>());
-            var mapper = new Mapper(config);
-            var student = mapper.Map<StudentModel, Student>(studentModel);
-            _studentService.EditStudent(student);
-
-            return RedirectToAction("Index", "Students");
+            if (ModelState.IsValid)
+            {
+                _studentService.EditEntity(_mapper.Map<Student>(studentModel));
+                return RedirectToAction("Index", "Students");
+            }
+            return View(studentModel);
         }
 
         [HttpGet]
         public IActionResult DeleteStudent(int id)
         {
-            _studentService.DeleteStudent(id);
+            _studentService.DeleteEntity(id);
             return RedirectToAction("Index", "Students");
         }
     }

@@ -1,11 +1,14 @@
+using AutoMapper;
 using CRM_for_English_School.BLL.Entities;
 using CRM_for_English_School.BLL.Interfaces;
 using CRM_for_English_School.BLL.Services;
 using CRM_for_English_School.DAL.EF.Context;
-using CRM_for_English_School.DAL.EF.Groups;
+using CRM_for_English_School.DAL.EF.Repositories;
 using CRM_for_English_School.DAL.Interfaces;
+using CRM_for_English_School.Mapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,9 +30,21 @@ namespace CRM_for_English_School
         {
             services.AddDbContext<EnglishSchoolContext>(options =>
                 options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=EnglishSchoolDB;Trusted_Connection=True;"));
-            services.AddScoped<IRepository<Student>, StudentRepository>();
 
-            services.AddScoped<IStudentService, StudentService>();
+            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<EnglishSchoolContext>();
+
+            services.AddScoped<IRepository<Student>, BaseEntityRepository<Student>>();
+            services.AddScoped<IRepository<Teacher>, BaseEntityRepository<Teacher>>();
+            services.AddScoped<IRepository<StudentsGroup>, BaseEntityRepository<StudentsGroup>>();
+
+            services.AddScoped<IBaseEntityService<Student>, BaseEntityService<Student>>();
+            services.AddScoped<IBaseEntityService<Teacher>, BaseEntityService<Teacher>>();
+            services.AddScoped<IBaseEntityService<StudentsGroup>, BaseEntityService<StudentsGroup>>();
+
+            var mapperConfig = new MapperConfiguration(cfg => { cfg.AddProfile(new MappingProfile()); });
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
 
             services.AddControllersWithViews();
         }
@@ -52,6 +67,7 @@ namespace CRM_for_English_School
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -59,6 +75,7 @@ namespace CRM_for_English_School
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Students}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
         }
     }
