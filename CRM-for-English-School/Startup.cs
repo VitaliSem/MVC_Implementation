@@ -1,6 +1,7 @@
 using AutoMapper;
 using CRM_for_English_School.Configuration;
 using CRM_for_English_School.DAL.EF.Context;
+using CRM_for_English_School.Logger;
 using CRM_for_English_School.Mapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -9,8 +10,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace CRM_for_English_School
@@ -46,7 +49,11 @@ namespace CRM_for_English_School
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider, IOptions<AccessOptions> accessOptions)
+        public void Configure(IApplicationBuilder app, 
+            IWebHostEnvironment env, 
+            IServiceProvider serviceProvider, 
+            IOptions<AccessOptions> accessOptions,
+            ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -75,6 +82,15 @@ namespace CRM_for_English_School
             });
 
             CreateRoles(serviceProvider, accessOptions).Wait();
+
+            loggerFactory.AddFile(Path.Combine(Directory.GetCurrentDirectory(), "logfile.txt"));
+            var logger = loggerFactory.CreateLogger("FileLogger");
+
+            app.Run(async (context) =>
+            {
+                logger.LogInformation("[Info] Request from the addres string - \"{0}\". " + DateTime.Now.ToString(), context.Request.Path);
+                await context.Response.CompleteAsync();
+            });
         }
 
         private static async Task CreateRoles(IServiceProvider serviceProvider, IOptions<AccessOptions> accessOptions)
