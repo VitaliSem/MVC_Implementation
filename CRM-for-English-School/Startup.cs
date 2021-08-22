@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
+using System.Threading.Tasks;
 
 namespace CRM_for_English_School
 {
@@ -26,8 +28,10 @@ namespace CRM_for_English_School
             services.AddDbContext<EnglishSchoolContext>(options =>
                 options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=EnglishSchoolDB;Trusted_Connection=True;"));
 
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<EnglishSchoolContext>();
+            services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddDefaultUI()
+                .AddEntityFrameworkStores<EnglishSchoolContext>()
+                .AddDefaultTokenProviders();
 
             services.AddCRMService();
 
@@ -39,7 +43,7 @@ namespace CRM_for_English_School
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)
         {
             if (env.IsDevelopment())
             {
@@ -66,6 +70,26 @@ namespace CRM_for_English_School
                     pattern: "{controller=Students}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+
+            CreateRoles(serviceProvider).Wait();
+        }
+
+        private async Task CreateRoles(IServiceProvider serviceProvider)
+        {
+            var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+            var roles = new[] { "manager", "teacher", "student" };
+            foreach(var role in roles)
+            {
+                await roleManager.CreateAsync(new IdentityRole
+                {
+                    Name = role,
+                    NormalizedName = role.ToUpper()
+                });
+            }
+            var userManager = serviceProvider.GetRequiredService<UserManager<IdentityUser>>();
+            var user = await userManager.FindByEmailAsync(Configuration["ManagerUserEmail"]);
+            if (user != null)
+                await userManager.AddToRoleAsync(user, "manager");
         }
     }
 }
