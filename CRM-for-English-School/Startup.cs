@@ -1,4 +1,5 @@
 using AutoMapper;
+using CRM_for_English_School.Configuration;
 using CRM_for_English_School.DAL.EF.Context;
 using CRM_for_English_School.Mapper;
 using Microsoft.AspNetCore.Builder;
@@ -8,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 using System;
 using System.Threading.Tasks;
 
@@ -34,6 +36,7 @@ namespace CRM_for_English_School
                 .AddDefaultTokenProviders();
 
             services.AddCRMService();
+            services.Configure<AccessOptions>(Configuration.GetSection(AccessOptions.Access));
 
             var mapperConfig = new MapperConfiguration(cfg => { cfg.AddProfile(new MappingProfile()); });
             IMapper mapper = mapperConfig.CreateMapper();
@@ -43,7 +46,7 @@ namespace CRM_for_English_School
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider, IOptions<AccessOptions> accessOptions)
         {
             if (env.IsDevelopment())
             {
@@ -71,10 +74,10 @@ namespace CRM_for_English_School
                 endpoints.MapRazorPages();
             });
 
-            CreateRoles(serviceProvider).Wait();
+            CreateRoles(serviceProvider, accessOptions).Wait();
         }
 
-        private async Task CreateRoles(IServiceProvider serviceProvider)
+        private static async Task CreateRoles(IServiceProvider serviceProvider, IOptions<AccessOptions> accessOptions)
         {
             var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
             var roles = new[] { "manager", "teacher", "student" };
@@ -87,7 +90,7 @@ namespace CRM_for_English_School
                 });
             }
             var userManager = serviceProvider.GetRequiredService<UserManager<IdentityUser>>();
-            var user = await userManager.FindByEmailAsync(Configuration["ManagerUserEmail"]);
+            var user = await userManager.FindByEmailAsync(accessOptions.Value.ManagerUserEmail);
             if (user != null)
                 await userManager.AddToRoleAsync(user, "manager");
         }
