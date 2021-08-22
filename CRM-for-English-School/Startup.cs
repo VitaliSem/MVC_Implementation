@@ -1,10 +1,5 @@
 using AutoMapper;
-using CRM_for_English_School.BLL.Entities;
-using CRM_for_English_School.BLL.Interfaces;
-using CRM_for_English_School.BLL.Services;
 using CRM_for_English_School.DAL.EF.Context;
-using CRM_for_English_School.DAL.EF.Repositories;
-using CRM_for_English_School.DAL.Interfaces;
 using CRM_for_English_School.Mapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -34,13 +29,7 @@ namespace CRM_for_English_School
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<EnglishSchoolContext>();
 
-            services.AddScoped<IRepository<Student>, BaseEntityRepository<Student>>();
-            services.AddScoped<IRepository<Teacher>, BaseEntityRepository<Teacher>>();
-            services.AddScoped<IRepository<StudentsGroup>, BaseEntityRepository<StudentsGroup>>();
-
-            services.AddScoped<IBaseEntityService<Student>, BaseEntityService<Student>>();
-            services.AddScoped<IBaseEntityService<Teacher>, BaseEntityService<Teacher>>();
-            services.AddScoped<IBaseEntityService<StudentsGroup>, BaseEntityService<StudentsGroup>>();
+            services.AddCRMService();
 
             var mapperConfig = new MapperConfiguration(cfg => { cfg.AddProfile(new MappingProfile()); });
             IMapper mapper = mapperConfig.CreateMapper();
