@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace CRM_for_English_School.Controllers
 {
+    [Authorize]
     public class TeachersController : Controller
     {
         private readonly IBaseEntityService<Teacher> _teacherService;
@@ -24,7 +25,7 @@ namespace CRM_for_English_School.Controllers
             return View(_mapper.Map<IEnumerable<TeacherModel>>(teachers));
         }
 
-        [Authorize]
+        [Authorize (Roles = "manager")]
         [HttpGet]
         public IActionResult AddTeacher()
         {
@@ -38,7 +39,7 @@ namespace CRM_for_English_School.Controllers
             return RedirectToAction("Index", "Teachers");
         }
 
-        [Authorize]
+        [Authorize (Roles = "manager")]
         [HttpGet]
         public IActionResult EditTeacher(int id)
         {

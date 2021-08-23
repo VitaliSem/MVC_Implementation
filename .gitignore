@@ -4,14 +4,5 @@ bin/
 #Ignore all files in the 'obj' repository
 obj/
 
-#Ignore 'properties' repository
-properties/
-
 #Ignore all .vs repositories
 .vs/
-
-#Ignore .editorconfig file
-.editorconfig
-
-#Ignore .json files
-*.json
