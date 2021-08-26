@@ -12,10 +12,7 @@ namespace CRM_for_English_School.DAL.EF.Context
 
         public EnglishSchoolContext() { }
         public EnglishSchoolContext(DbContextOptions<EnglishSchoolContext> options) : base(options) { }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            //optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=EnglishSchoolDB;Trusted_Connection=True;");
-        }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

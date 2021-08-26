@@ -31,7 +31,7 @@ namespace CRM_for_English_School
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<EnglishSchoolContext>(options =>
-                options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=EnglishSchoolDB;Trusted_Connection=True;"));
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddDefaultUI()

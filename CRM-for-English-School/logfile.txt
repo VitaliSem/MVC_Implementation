@@ -4,3 +4,6 @@ Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Ко�
 [Info] Request from the addres string - "/Groups". 22.08.2021 18:05:50
 [Info] Request from the addres string - "/Topics". 22.08.2021 18:06:17
 [Info] Request from the addres string - "/Courses". 22.08.2021 18:06:22
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
