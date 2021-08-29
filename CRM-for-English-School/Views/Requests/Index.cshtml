@@ -1,0 +1,36 @@
+﻿@model List<RequestModel>
+
+<div>
+    <table class="table table-sm table-hover">
+        <thead class="table-light">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Full Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Email</th>
+                <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var request in Model)
+            {
+                <tr>
+                    <th scope="col">@request.Id</th>
+                    <td scope="col"> <a asp-controller="Requests" asp-action="EditRequest" asp-route-id="@request.Id">@request.FirstName @request.MiddleName @request.LastName</a></td>
+                    <td scope="col">@request.Age</td>
+                    <td scope="col">@request.PhoneNumber</td>
+                    <td scope="col">@request.Email</td>
+                    <td scope="col">@request.Status</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<tr>
+    <th><div class="text-info">Total requests: @Model.Count()</div></th>
+</tr>
+<div>
+    <br/>
+    @Html.ActionLink("Add new request", "AddRequest", "Requests", null, new { @class = "btn btn-primary" })
+</div>

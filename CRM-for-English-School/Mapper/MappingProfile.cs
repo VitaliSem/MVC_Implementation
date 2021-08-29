@@ -9,6 +9,7 @@ namespace CRM_for_English_School.Mapper
         public MappingProfile()
         {
             CreateMap<Person, PersonModel>().ReverseMap();
+            CreateMap<Request, RequestModel>().ReverseMap();
             CreateMap<Student, StudentModel>().ReverseMap();
             CreateMap<Teacher, TeacherModel>().ReverseMap();
             CreateMap<StudentsGroup, StudentsGroupModel>().ReverseMap();

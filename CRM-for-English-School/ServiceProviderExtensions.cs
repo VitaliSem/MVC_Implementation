@@ -11,10 +11,12 @@ namespace CRM_for_English_School
     {
         public static void AddCRMService(this IServiceCollection services)
         {
+            services.AddScoped<IRepository<Request>, BaseEntityRepository<Request>>();
             services.AddScoped<IRepository<Student>, BaseEntityRepository<Student>>();
             services.AddScoped<IRepository<Teacher>, BaseEntityRepository<Teacher>>();
             services.AddScoped<IRepository<StudentsGroup>, BaseEntityRepository<StudentsGroup>>();
 
+            services.AddScoped<IBaseEntityService<Request>, BaseEntityService<Request>>();
             services.AddScoped<IBaseEntityService<Student>, BaseEntityService<Student>>();
             services.AddScoped<IBaseEntityService<Teacher>, BaseEntityService<Teacher>>();
             services.AddScoped<IBaseEntityService<StudentsGroup>, BaseEntityService<StudentsGroup>>();

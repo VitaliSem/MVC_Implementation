@@ -77,7 +77,7 @@ namespace CRM_for_English_School
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Students}/{action=Index}/{id?}");
+                    pattern: "{controller=Requests}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
 
@@ -88,7 +88,7 @@ namespace CRM_for_English_School
 
             app.Run(async (context) =>
             {
-                logger.LogInformation("[Info] Request from the addres string - \"{0}\". " + DateTime.Now.ToString(), context.Request.Path);
+                logger.LogInformation("[Error] Request from the addres string - \"{0}\". " + DateTime.Now.ToString(), context.Request.Path);
                 await context.Response.CompleteAsync();
             });
         }

@@ -8,7 +8,7 @@
     <br />
     @using (Html.BeginForm("EditStudent", "Students", FormMethod.Post))
     {
-        @Html.HiddenFor(x => x.ID)
+        @Html.HiddenFor(x => x.Id)
         ;
 
         <div>
@@ -36,15 +36,6 @@
             <span asp-validation-for="Age" class="alert-danger"></span>
         </div>
         <div class="form-group">
-            <label asp-for="Gender">Gender</label>
-            <div>
-                <select asp-for="Gender" asp-items="Html.GetEnumSelectList<Gender>()">
-                    <option selected="selected" value="Please select"></option>
-                </select>
-                <span asp-validation-for="Gender" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="form-group">
             <label asp-for="CurrentEnglishLevel">CurrentEnglishLevel</label>
             <input type="text" class="form-control" id="CurrentEnglishLevel" name="CurrentEnglishLevel" value="@Model.CurrentEnglishLevel" asp-for="CurrentEnglishLevel">
             <span asp-validation-for="CurrentEnglishLevel" class="alert-danger"></span>
@@ -52,7 +43,7 @@
 
 
         <button type="submit" class="btn btn-success">Edit student</button>
-        @Html.ActionLink("Delete", "DeleteStudent", "Students", new { id = Model.ID }, new { @class = "btn btn-danger" })
+        @Html.ActionLink("Delete", "DeleteStudent", "Students", new { id = Model.Id }, new { @class = "btn btn-danger" })
     }
 </div>
 

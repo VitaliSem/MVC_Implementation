@@ -7,7 +7,6 @@
                 <th scope="col">#</th>
                 <th scope="col">Full Name</th>
                 <th scope="col">Age</th>
-                <th scope="col">Gender</th>
                 <th scope="col">Education</th>
                 <th scope="col">Specialization</th>
             </tr>
@@ -16,10 +15,9 @@
             @foreach (var teacher in Model)
             {
                 <tr>
-                    <th scope="col">@teacher.ID</th>
-                    <td scope="col"> <a asp-controller="Teachers" asp-action="EditTeacher" asp-route-id="@teacher.ID">@teacher.FirstName @teacher.MiddleName @teacher.LastName</a></td>
+                    <th scope="col">@teacher.Id</th>
+                    <td scope="col"> <a asp-controller="Teachers" asp-action="EditTeacher" asp-route-id="@teacher.Id">@teacher.FirstName @teacher.MiddleName @teacher.LastName</a></td>
                     <td scope="col">@teacher.Age</td>
-                    <td scope="col">@teacher.Gender</td>
                     <td scope="col">@teacher.GraduatedFrom - @teacher.Degree</td>
                     <td scope="col">@teacher.MainSpecialization</td>
                 </tr>

@@ -1,0 +1,9 @@
+﻿namespace CRM_for_English_School.BLL.Entities
+{
+    public class Request : Person
+    {
+        public int Id { get; set; }
+        public Status Status { get; set; }
+        public EnglishLevel? CurrentEnglishLevel { get; set; }
+    }
+}

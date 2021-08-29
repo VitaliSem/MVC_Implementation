@@ -2,7 +2,9 @@
 {
     public class Student : Person
     {
-        public int ID { get; set; }
-        public string CurrentEnglishLevel { get; set; }
+        public int Id { get; set; }
+        public EnglishLevel CurrentEnglishLevel { get; set; }
+        public int GroupdId { get; set; }
+        public StudentsGroup Group { get; set; }
     }
 }

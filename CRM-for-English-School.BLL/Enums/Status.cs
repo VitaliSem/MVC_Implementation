@@ -1,8 +1,8 @@
 ﻿namespace CRM_for_English_School.BLL.Entities
 {
-    public enum Gender
+    public enum Status
     {
-        Male,
-        Female,
+        Pending,
+        Confirmed
     }
 }
