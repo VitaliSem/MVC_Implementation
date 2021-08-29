@@ -1,0 +1,22 @@
+<h1 id="tableLabel">Courses</h1>
+
+<p>This component gives a list of courses.</p>
+
+<p *ngIf="!courses"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="courses">
+  <thead>
+    <tr>
+      <th>Course Name</th>
+      <th>English Level</th>
+      <th>Expected Start Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let course of courses">
+      <td>{{ courses.CourseName }}</td>
+      <td>{{ courses.EnglishLevel }}</td>
+      <td>{{ courses.ExpectedStartDate }}</td>
+    </tr>
+  </tbody>
+</table>
