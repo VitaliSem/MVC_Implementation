@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace CRM_for_English_School.DAL.EF.Repositories
 {
@@ -42,6 +43,8 @@ namespace CRM_for_English_School.DAL.EF.Repositories
         public TEntity Get(int id) => _entities.Find(id);
 
         public IEnumerable<TEntity> GetAll() => _entities.ToList();
+
+        public async Task<IEnumerable<TEntity>> GetAllAsync() => await _entities.ToListAsync();
 
         public void Update(TEntity item)
         {
