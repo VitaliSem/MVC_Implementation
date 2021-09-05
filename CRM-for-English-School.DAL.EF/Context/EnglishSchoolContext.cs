@@ -22,6 +22,7 @@ namespace CRM_for_English_School.DAL.EF.Context
             base.OnModelCreating(modelBuilder);
             modelBuilder.RequestsSeed();
             modelBuilder.TeachersSeed();
+            modelBuilder.CourcesSeed();
         }
     }
 }
