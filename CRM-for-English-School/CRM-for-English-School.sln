@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRM-for-English-School.DAL.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRM-for-English-School.WEB", "..\CRM-for-English-School.WEB\CRM-for-English-School.WEB.csproj", "{C86B0909-CEE5-46D2-9334-E91B9476B3E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM-for-English-School.Angular", "..\CRM-for-English-School.Angular\CRM-for-English-School.Angular.csproj", "{4D8C1BBB-F3B4-47F5-A9C4-B180688C7B70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRM-for-English-School.Angular", "..\CRM-for-English-School.Angular\CRM-for-English-School.Angular.csproj", "{4D8C1BBB-F3B4-47F5-A9C4-B180688C7B70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM-for-English-School.IntegrationTests", "..\CRM-for-English-School.IntegrationTests\CRM-for-English-School.IntegrationTests.csproj", "{6E9C57F6-BD52-42A2-8C67-EBCCBF695508}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{4D8C1BBB-F3B4-47F5-A9C4-B180688C7B70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D8C1BBB-F3B4-47F5-A9C4-B180688C7B70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D8C1BBB-F3B4-47F5-A9C4-B180688C7B70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E9C57F6-BD52-42A2-8C67-EBCCBF695508}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E9C57F6-BD52-42A2-8C67-EBCCBF695508}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E9C57F6-BD52-42A2-8C67-EBCCBF695508}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E9C57F6-BD52-42A2-8C67-EBCCBF695508}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
