@@ -2,6 +2,7 @@
 using CRM_for_English_School.BLL.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace CRM_for_English_School.WEB.Controllers
 {
@@ -20,6 +21,12 @@ namespace CRM_for_English_School.WEB.Controllers
         public IEnumerable<Teacher> GetTeachers()
         {
             return _teacherService.GetAll();
+        }
+
+        [HttpGet("async")]
+        public async Task<IEnumerable<Teacher>> GetTeachersAsync()
+        {
+            return await _teacherService.GetAllAsync();
         }
 
         [HttpGet("{id}")]

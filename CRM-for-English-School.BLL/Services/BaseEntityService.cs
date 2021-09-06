@@ -1,6 +1,7 @@
 ﻿using CRM_for_English_School.BLL.Interfaces;
 using CRM_for_English_School.DAL.Interfaces;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace CRM_for_English_School.BLL.Services
 {
@@ -20,6 +21,7 @@ namespace CRM_for_English_School.BLL.Services
 
         public IEnumerable<TEntity> GetAll() => _repository.GetAll();
 
+        public Task<IEnumerable<TEntity>> GetAllAsync() =>_repository.GetAllAsync();
         public TEntity GetEntity(int id) => _repository.Get(id);
     }
 }
