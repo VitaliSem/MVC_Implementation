@@ -1,8 +1,98 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    Layout = null;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+    <header class="p-3 bg-dark text-white">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#" class="nav-link px-2 text-secondary">Главная</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Новости</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Цены</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">О нас</a></li>
+                </ul>
+
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                    <input type="search" class="form-control form-control-dark" placeholder="Поиск..." aria-label="Search">
+                </form>
+
+                <div class="text-end">
+                    <button type="button" class="btn btn-outline-light me-2">Войти</button>
+                    <button type="button" class="btn btn-warning">Регистрация</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-lg-5 py-5">
+            <div class="col-lg-7 text-center text-lg-start">
+                <h2 class="display-4 fw-bold lh-1 mb-3">Оставьте заявку на курс и наш специалист свяжется с вами</h2>
+                <p class="col-lg-10 fs-4">Для регистрации на курс необходимо заполнить данные в форме, после чего наш специалист свяжется с вами и уточнит детали. Перед отправкой заявки рекомендуем скачать тестовое задание на определение уровня владения языком.</p>
+            </div>
+            <div class="col-md-10 mx-auto col-lg-5">
+                <form class="p-4 p-md-5 border rounded-3 bg-light">
+                    <h4 class="mb-3">Форма заявки</h4>
+                    <div class="col-sm-12">
+                        <label for="firstName" class="col-form-label">Имя</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="Имя" required />
+                        <div class="invalid-feedback">Требуется действительное имя</div>
+                    </div>
+                    <div class="col-sm-12">
+                        <label for="lastName" class="col-form-label">Фамилия</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="Фамилия" required />
+                        <div class="invalid-feedback">Требуется действительное фамилия</div>
+                    </div>
+                    <div class="col-sm-12">
+                        <label for="email" class="col-form-label">Email</label>
+                        <input type="text" class="form-control" id="email" placeholder="you@example.com" required />
+                        <div class="invalid-feedback">Требуется корректный Email</div>
+                    </div>
+                    <div class="col-sm-12">
+                        <label for="phoneNumber" class="col-form-label">Номер телефона</label>
+                        <input type="text" class="form-control" id="phoneNumber" placeholder="Номер телефона" required />
+                        <div class="invalid-feedback">Требуется корректный номер телефона</div>
+                    </div>
+                    <br />
+                    <button class="w-100 btn btn-lg btn-primary" type="submit">Оставить заявку</button>
+                    <hr class="my-4">
+                    <small class="text">Оставляя заявку вы соглашаетесь на отправку ваших персональных данных.</small>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+                <span class="text-muted">© 2021 Company, Inc</span>
+            </div>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+            </ul>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="js/maskinput.js"></script>
+</body>
+</html>

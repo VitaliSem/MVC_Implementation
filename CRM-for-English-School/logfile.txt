@@ -26,3 +26,258 @@ Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Ко�
 Application started. Press Ctrl+C to shut down.
 Hosting environment: Development
 Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:04:33
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:04:34
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:05:52
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:05:52
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:05:54
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:05:54
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:05:54
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:05:54
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:05:55
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:05:55
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:05:55
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:05:55
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:07:03
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:07:03
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:08:39
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:08:39
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:10:05
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:10:05
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:11:36
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:11:36
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:14:01
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:14:01
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:14:36
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:14:36
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:16:27
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:16:27
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:20:09
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:20:09
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:23:20
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:23:20
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:27:11
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:27:11
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:29:59
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:29:59
+Application started. Press Ctrl+C to shut down.
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:30:28
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:30:28
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:31:05
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:31:05
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:31:35
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:31:35
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:31:58
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:31:58
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:36:14
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:36:14
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:36:27
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:36:27
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:37:25
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:37:25
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:37:53
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:37:53
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:38:20
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:38:20
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:38:44
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:38:44
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:39:31
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:39:31
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 21:40:27
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 21:40:27
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 22:10:09
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 22:10:09
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 22:14:41
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 22:14:41
+[Error] Request from the addres string - "/Home/...". 07.09.2021 22:14:41
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 22:15:45
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 22:15:45
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 22:17:55
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 22:17:55
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 22:19:28
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 22:19:28
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 22:19:50
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 22:19:50
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 22:20:28
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 22:20:28
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 22:21:01
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 22:21:01
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 22:21:01
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 22:21:01
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 22:24:17
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 22:24:17
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 07.09.2021 22:27:06
+[Error] Request from the addres string - "/Home/carousel.css". 07.09.2021 22:27:06
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/js/maskinput.js". 09.09.2021 21:20:07
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/js/maskinput.js". 09.09.2021 21:22:30
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/js/maskinput.js". 09.09.2021 21:23:31
+[Error] Request from the addres string - "/Home/js/maskinput.js". 09.09.2021 21:30:38
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/js/maskinput.js". 09.09.2021 21:33:10
+[Error] Request from the addres string - "/Home/jquery.maskedinput.min.js". 09.09.2021 21:33:10
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/jquery.maskedinput.min.js". 09.09.2021 21:34:10
+[Error] Request from the addres string - "/Home/js/maskinput.js". 09.09.2021 21:34:10
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/js/maskinput.js". 09.09.2021 21:35:36
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/js/maskinput.js". 09.09.2021 21:38:19
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/js/maskinput.js". 09.09.2021 21:39:06
+[Error] Request from the addres string - "/Home/js/maskinput.js". 09.09.2021 21:39:32
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/js/maskinput.js". 09.09.2021 21:42:57
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/js/maskinput.js". 09.09.2021 21:46:12
+[Error] Request from the addres string - "/Home/js/maskinput.js". 09.09.2021 21:51:36
