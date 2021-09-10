@@ -3,12 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"]CRM for your English School </title>
+    <title>@ViewData["Title"]CRM for English School</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
 <body>
-    <header>
+    <!--<header>
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
@@ -29,18 +30,82 @@
             </nav>
         </div>
     </header>
-    <br/>
-    <div class="container">
+        -->
+    <header class="p-3 bg-dark text-white">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <!--<svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>-->
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#" class="nav-link px-2 text-secondary">Главная</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Новости</a></li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-link px-2 text-white" asp-controller="Requests" asp-action="Index">Заявки</li>
+                        <li class="nav-link px-2 text-white" asp-controller="Courses" asp-action="Index">Курсы</li>
+                        <li class="nav-link px-2 text-white" asp-controller="Groups" asp-action="Index">Группы</li>
+                        <li class="nav-link px-2 text-white" asp-controller="Teachers" asp-action="Index">Преподаватели</li>
+                        <li class="nav-link px-2 text-white" asp-controller="Students" asp-action="Index">Студенты</li>
+                    }
+                    else
+                    {
+                        <li><a href="#" class="nav-link px-2 text-white">Цены</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">О нас</a></li>
+                    }
+                </ul>
+
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                    <input type="search" class="form-control form-control-dark" placeholder="Поиск..." aria-label="Search">
+                </form>
+
+                <div class="text-end">
+                    <partial name="_LoginPartial" />
+                    <!--
+                                        <button type="button" class="btn btn-outline-light me-2">Войти</button>
+                    <button type="button" class="btn btn-warning">Регистрация</button>
+                                        -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <br />
+    <div>
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
+    <!--
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2021 - CRM for English School - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+        -->
+
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+                <span class="text-muted">© 2021 Company, Inc</span>
+            </div>
+
+            <!--
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+            </ul>
+                -->
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

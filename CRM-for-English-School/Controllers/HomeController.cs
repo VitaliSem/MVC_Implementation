@@ -1,4 +1,5 @@
 ﻿using CRM_for_English_School.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -14,6 +15,12 @@ namespace CRM_for_English_School.Controllers
         //}
 
         public IActionResult Index()
+        {
+            return View();
+        }
+
+        [Authorize(Roles = "manager")]
+        public IActionResult ManagerIndex()
         {
             return View();
         }
