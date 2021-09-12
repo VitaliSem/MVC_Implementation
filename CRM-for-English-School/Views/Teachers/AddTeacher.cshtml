@@ -1,47 +1,51 @@
 ﻿@model TeacherModel
-@{ ViewData["Title"] = "Add teacher"; }
-<div class="small-pannel">
-    <h2>Add Teacher</h2>
+@{ ViewData["Title"] = "Добавление преподавателя"; }
+<div class="container">
+    <h2>Добавить преподавателя</h2>
     @using (Html.BeginForm("AddTeacher", "Teachers", FormMethod.Post))
     {
         <div>
             @Html.ValidationSummary()
         </div>
 
-        <div class="form-group">
-            <label asp-for="FirstName">FirstName</label>
-            <input type="text" class="form-control" id="FirstName" name="FirstName" asp-for="FirstName">
-            <span class="alert-danger" asp-validation-for="FirstName"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="MiddleName">MiddleName</label>
-            <input type="text" class="form-control" id="MiddleName" name="MiddleName" asp-for="MiddleName">
-            <span class="alert-danger" asp-validation-for="MiddleName"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="LastName">LastName</label>
-            <input type="text" class="form-control" id="LastName" name="LastName" asp-for="LastName">
-            <span class="alert-danger" asp-validation-for="LastName"></span>
-        </div>
-        <div class="form-group">
-            <label class="form-check-label" asp-for="Age">Age</label>
-            <input type="number" class="form-control" id="Age" name="Age" asp-for="Age">
-            <span class="alert-danger" asp-validation-for="Age"></span>
-        </div>
-        <div class="form-group">
-            <label for="Gender">Gender</label>
-            <input type="text" class="form-control" id="Gender" name="Gender" required>
-        </div>
-        <div class="form-group">
-            <label for="GraduatedFrom">GraduatedFrom</label>
-            <input type="text" class="form-control" id="GraduatedFrom" name="GraduatedFrom" required>
-        </div>
-        <div class="form-group">
-            <label for="MainSpecialization">Main Specialization</label>
-            <input type="text" class="form-control" id="MainSpecialization" name="MainSpecialization" required>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label asp-for="LastName">Фамилия</label>
+                <input type="text" class="form-control" id="LastName" name="LastName" asp-for="LastName">
+                <span class="alert-danger" asp-validation-for="LastName"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="FirstName">Имя</label>
+                <input type="text" class="form-control" id="FirstName" name="FirstName" asp-for="FirstName">
+                <span class="alert-danger" asp-validation-for="FirstName"></span>
+            </div>
+            <div class="col-md-12">
+                <label asp-for="MiddleName">Отчество</label>
+                <input type="text" class="form-control" id="MiddleName" name="MiddleName" asp-for="MiddleName">
+                <span class="alert-danger" asp-validation-for="MiddleName"></span>
+            </div>
+            <div class="col-md-12">
+                <label class="form-check-label" asp-for="Age">Возраст</label>
+                <input type="number" class="form-control" id="Age" name="Age" asp-for="Age">
+                <span class="alert-danger" asp-validation-for="Age"></span>
+            </div>
+            <div class="col-md-6">
+                <label for="GraduatedFrom">Учебное заведение</label>
+                <input type="text" class="form-control" id="GraduatedFrom" name="GraduatedFrom" required>
+            </div>
+            <div class="col-md-6">
+                <label for="Degree">Степень</label>
+                <input type="text" class="form-control" id="Degree" name="Degree" required>
+            </div>
+            <div class="col-md-12">
+                <label for="MainSpecialization">Основная специализация</label>
+                <input type="text" class="form-control" id="MainSpecialization" name="MainSpecialization" required>
+            </div>
         </div>
 
-        <button type="submit" class="btn btn-success">Add student</button>}
+        <br />
+        <button type="submit" class="btn btn-success">Добавить</button>
+    }
 </div>
 
 @section Scripts{ @await Html.PartialAsync("_ValidationScriptsPartial.cshtml") }

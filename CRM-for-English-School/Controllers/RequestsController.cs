@@ -5,6 +5,7 @@ using CRM_for_English_School.Models;
 using System.Collections.Generic;
 using CRM_for_English_School.BLL.Entities;
 using Microsoft.AspNetCore.Authorization;
+using System.Threading;
 
 namespace CRM_for_English_School.Controllers
 {
@@ -42,6 +43,19 @@ namespace CRM_for_English_School.Controllers
             }
             return View(requestModel);
         }
+
+        [AllowAnonymous]
+        public IActionResult AddRequestUnathenticated(RequestModel requestModel)
+        {
+            if (ModelState.IsValid)
+            {
+                _requestService.CreateEntity(_mapper.Map<Request>(requestModel));
+            }
+
+            Thread.Sleep(3000);
+            return RedirectToAction("Index", "Home");
+        }
+
 
         [Authorize (Roles = "manager")]
         [HttpGet]

@@ -1,0 +1,62 @@
+﻿@model RequestModel
+
+@using CRM_for_English_School.BLL.Entities;
+
+@using (Html.BeginForm("AddRequestUnathenticated", "Requests", FormMethod.Post))
+{
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-lg-5 py-5">
+            <div class="col-lg-7 text-center text-lg-start">
+                <h2 class="display-4 fw-bold lh-1 mb-3">Оставьте заявку на курс и наш специалист свяжется с вами</h2>
+                <p class="col-lg-10 fs-4">Для регистрации на курс необходимо заполнить данные в форме, после чего наш специалист свяжется с вами и уточнит детали. Перед отправкой заявки рекомендуем скачать тестовое задание на определение уровня владения языком.</p>
+            </div>
+            <div class="col-md-10 mx-auto col-lg-5">
+                <div class="p-4 p-md-5 border rounded-3 bg-light">
+                    <h4 class="mb-3">Форма заявки</h4>
+                    <div class="col-sm-12">
+                        <label asp-for="FirstName" class="col-form-label">Имя</label>
+                        <input type="text" class="form-control" id="FirstName" asp-for="FirstName" placeholder="Имя" required />
+                        <div class="invalid-feedback">Требуется действительное имя</div>
+                    </div>
+                    <div class="col-sm-12">
+                        <label asp-for="LastName" class="col-form-label">Фамилия</label>
+                        <input type="text" class="form-control" id="LastName" asp-for="LastName" placeholder="Фамилия" required />
+                        <div class="invalid-feedback">Требуется действительное фамилия</div>
+                    </div>
+                    <div class="col-sm-12">
+                        <label asp-for="Email" class="col-form-label">Email</label>
+                        <input type="text" class="form-control" id="Email" asp-for="Email" placeholder="you@example.com" required />
+                        <div class="invalid-feedback">Требуется корректный Email</div>
+                    </div>
+                    <div class="col-sm-12">
+                        <label asp-for="PhoneNumber" class="col-form-label">Номер телефона</label>
+                        <input type="text" class="form-control" id="PhoneNumber" asp-for="PhoneNumber" placeholder="Номер телефона" required />
+                        <div class="invalid-feedback">Требуется корректный номер телефона</div>
+                    </div>
+                    <br />
+                    <button type="submit" class="w-100 btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Отправить заявку</button>
+                    <hr class="my-4">
+                    <small class="text">Оставляя заявку вы соглашаетесь на отправку ваших персональных данных.</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title align-self-center" id="modalLabel">Подтвержение</h5>
+                </div>
+                <div class="modal-body">
+                    Заявка отправлена. Спасибо что выбрали наше учебное заведение.
+                </div>
+                <!--
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-secondary btn-warning">Подтвердить</button>
+    </div>
+        -->
+            </div>
+        </div>
+    </div>
+}

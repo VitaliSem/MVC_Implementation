@@ -32,7 +32,7 @@ namespace CRM_for_English_School.Controllers
         public IActionResult AddStudentsGroup(StudentsGroupModel studentsGroupModel)
         {
             _studentsGroupService.CreateEntity(_mapper.Map<StudentsGroup>(studentsGroupModel));
-            return RedirectToAction("Index", "StudentsGroup");
+            return RedirectToAction("Index", "StudentsGroups");
         }
 
         [HttpGet]
@@ -46,14 +46,14 @@ namespace CRM_for_English_School.Controllers
         public IActionResult EditStudentsGroup(StudentsGroupModel studentsGroupModel)
         {
             _studentsGroupService.EditEntity(_mapper.Map<StudentsGroup>(studentsGroupModel));
-            return RedirectToAction("Index", "StudentsGroup");
+            return RedirectToAction("Index", "StudentsGroups");
         }
 
         [HttpGet]
         public IActionResult DeleteStudentsGroup(int id)
         {
             _studentsGroupService.DeleteEntity(id);
-            return RedirectToAction("Index", "StudentsGroup");
+            return RedirectToAction("Index", "StudentsGroups");
         }
     }
 }

@@ -39,18 +39,18 @@
                 </a>
 
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#" class="nav-link px-2 text-secondary">Главная</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">Новости</a></li>
-                    @if (User.Identity.IsAuthenticated)
+                    <li><a class="nav-link px-2 text-secondary" asp-controller="Home" asp-action="Index">Главная</a></li>
+                    @if (User.IsInRole("manager"))
                     {
-                        <li class="nav-link px-2 text-white" asp-controller="Requests" asp-action="Index">Заявки</li>
-                        <li class="nav-link px-2 text-white" asp-controller="Courses" asp-action="Index">Курсы</li>
-                        <li class="nav-link px-2 text-white" asp-controller="Groups" asp-action="Index">Группы</li>
-                        <li class="nav-link px-2 text-white" asp-controller="Teachers" asp-action="Index">Преподаватели</li>
-                        <li class="nav-link px-2 text-white" asp-controller="Students" asp-action="Index">Студенты</li>
+                        <li><a class="nav-link px-2 text-white" asp-controller="Requests" asp-action="Index">Заявки</a></li>
+                        <li><a class="nav-link px-2 text-white" onclick="return false" asp-controller="Courses" asp-action="Index">Курсы</a></li>
+                        <li><a class="nav-link px-2 text-white" onclick="return false" asp-controller="StudentsGroups" asp-action="Index">Группы</a></li>
+                        <li><a class="nav-link px-2 text-white" asp-controller="Teachers" asp-action="Index">Преподаватели</a></li>
+                        <li><a class="nav-link px-2 text-white" asp-controller="Students" asp-action="Index">Студенты</a></li>
                     }
                     else
                     {
+                        <li><a href="#" class="nav-link px-2 text-white">Новости</a></li>
                         <li><a href="#" class="nav-link px-2 text-white">Цены</a></li>
                         <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
                         <li><a href="#" class="nav-link px-2 text-white">О нас</a></li>

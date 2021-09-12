@@ -387,3 +387,625 @@ Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Ко�
 Application started. Press Ctrl+C to shut down.
 Hosting environment: Development
 Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/docs/5.1/dist/js/bootstrap.bundle.min.js". 11.09.2021 13:38:30
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/docs/5.1/assets/img/favicons/favicon.ico". 11.09.2021 13:46:33
+[Error] Request from the addres string - "/docs/5.1/assets/img/favicons/favicon-32x32.png". 11.09.2021 13:46:33
+[Error] Request from the addres string - "/docs/5.1/assets/img/favicons/favicon-16x16.png". 11.09.2021 13:46:33
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/docs/5.1/dist/js/bootstrap.bundle.min.js". 11.09.2021 13:48:01
+[Error] Request from the addres string - "/docs/5.1/assets/img/favicons/favicon.ico". 11.09.2021 13:48:02
+[Error] Request from the addres string - "/docs/5.1/assets/img/favicons/favicon-32x32.png". 11.09.2021 13:48:02
+[Error] Request from the addres string - "/docs/5.1/assets/img/favicons/favicon-16x16.png". 11.09.2021 13:48:02
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/docs/5.1/dist/js/bootstrap.bundle.min.js". 11.09.2021 13:50:13
+[Error] Request from the addres string - "/docs/5.1/dist/css/bootstrap.min.css". 11.09.2021 13:50:13
+[Error] Request from the addres string - "/docs/5.1/assets/img/favicons/favicon.ico". 11.09.2021 13:50:15
+[Error] Request from the addres string - "/docs/5.1/assets/img/favicons/favicon-32x32.png". 11.09.2021 13:50:15
+[Error] Request from the addres string - "/docs/5.1/assets/img/favicons/favicon-16x16.png". 11.09.2021 13:50:15
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Courses". 11.09.2021 18:32:27
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Courses". 11.09.2021 18:35:51
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+The view 'AddRequestUnathenticated' was not found. Searched locations: /Views/Requests/AddRequestUnathenticated.cshtml, /Views/Shared/AddRequestUnathenticated.cshtml, /Pages/Shared/AddRequestUnathenticated.cshtml
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/RequestConfirmedPartial". 11.09.2021 19:59:00
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/RequestConfirmedPartial". 11.09.2021 20:00:34
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/RequestConfirmedPartial". 11.09.2021 20:01:11
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/RequestConfirmedPartial". 11.09.2021 20:02:27
+Application started. Press Ctrl+C to shut down.
+[Error] Request from the addres string - "/Home/RequestConfirmedPartial". 11.09.2021 21:41:48
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/RequestConfirmedPartial". 11.09.2021 21:42:05
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/RequestConfirmedPartial". 11.09.2021 21:58:32
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Home/UnauthenticatedPartial". 12.09.2021 13:02:12
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Courses". 12.09.2021 14:00:31
+[Error] Request from the addres string - "/Groups". 12.09.2021 14:00:36
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Groups". 12.09.2021 14:22:07
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Groups". 12.09.2021 14:59:55
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Failed executing DbCommand (944ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Requests] ([Age], [CurrentEnglishLevel], [Email], [FirstName], [LastName], [MiddleName], [PhoneNumber], [Status])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT [Id]
+FROM [Requests]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+An exception occurred in the database while saving changes for context type 'CRM_for_English_School.DAL.EF.Context.EnglishSchoolContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Age', table 'EnglishSchoolDB.dbo.Requests'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:5cd325b8-8c07-4ef5-8f8e-c24cd3a82bb6
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Failed executing DbCommand (179ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Requests] ([Age], [CurrentEnglishLevel], [Email], [FirstName], [LastName], [MiddleName], [PhoneNumber], [Status])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT [Id]
+FROM [Requests]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+An exception occurred in the database while saving changes for context type 'CRM_for_English_School.DAL.EF.Context.EnglishSchoolContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Age', table 'EnglishSchoolDB.dbo.Requests'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:a2dbaf00-f7c9-42d1-b5ce-50ba68aa0d90
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Groups/Index". 12.09.2021 15:30:32
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Groups/Index". 12.09.2021 15:31:26
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Groups/Index". 12.09.2021 15:31:46
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Groups". 12.09.2021 15:33:02
+[Error] Request from the addres string - "/Groups". 12.09.2021 15:33:07
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Groups". 12.09.2021 15:33:45
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/StudentsGroups". 12.09.2021 15:42:05
+[Error] Request from the addres string - "/StudentsGroups". 12.09.2021 15:42:09
+[Error] Request from the addres string - "/StudentsGroups". 12.09.2021 15:42:10
+[Error] Request from the addres string - "/StudentsGroups". 12.09.2021 15:42:15
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School

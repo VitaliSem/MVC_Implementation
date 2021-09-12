@@ -4,14 +4,16 @@ using CRM_for_English_School.DAL.EF.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CRM_for_English_School.DAL.EF.Migrations
 {
     [DbContext(typeof(EnglishSchoolContext))]
-    partial class EnglishSchoolContextModelSnapshot : ModelSnapshot
+    [Migration("20210912121916_AgeNullable")]
+    partial class AgeNullable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -135,138 +137,6 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             MiddleName = "Петровна",
                             PhoneNumber = "+375(29)447-12-64",
                             Status = 0
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Age = 25,
-                            Email = "SergeiKurablev@gmail.com",
-                            FirstName = "Сергей",
-                            LastName = "Кураблев",
-                            MiddleName = "Иванович",
-                            PhoneNumber = "+375(29)987-16-48",
-                            Status = 0
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Age = 23,
-                            Email = "IrinaEgorova@gmail.com",
-                            FirstName = "Ирина",
-                            LastName = "Егорова",
-                            MiddleName = "Владимировна",
-                            PhoneNumber = "+375(29)875-65-32",
-                            Status = 0
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Age = 21,
-                            Email = "IgorUrigoev@gmail.com",
-                            FirstName = "Игорь",
-                            LastName = "Уригоев",
-                            MiddleName = "Александрович",
-                            PhoneNumber = "+375(29)129-45-78",
-                            Status = 0
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Age = 27,
-                            Email = "KateAltova@gmail.com",
-                            FirstName = "Екатерина",
-                            LastName = "Альтова",
-                            MiddleName = "Станиславовна",
-                            PhoneNumber = "+375(29)852-36-14",
-                            Status = 0
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Age = 25,
-                            Email = "SvetlanaZalikova@gmail.com",
-                            FirstName = "Светлана",
-                            LastName = "Заликова",
-                            MiddleName = "Викторовна",
-                            PhoneNumber = "+375(29)752-86-19",
-                            Status = 0
-                        },
-                        new
-                        {
-                            Id = 10,
-                            Age = 24,
-                            Email = "DmitriKrilov@gmail.com",
-                            FirstName = "Дмитрий",
-                            LastName = "Крылов",
-                            MiddleName = "Иванович",
-                            PhoneNumber = "+375(29)782-22-19",
-                            Status = 0
-                        },
-                        new
-                        {
-                            Id = 11,
-                            Age = 22,
-                            Email = "AndleiBurkin@gmail.com",
-                            FirstName = "Андрей",
-                            LastName = "Буркин",
-                            MiddleName = "Петрович",
-                            PhoneNumber = "+375(29)982-76-78",
-                            Status = 0
-                        },
-                        new
-                        {
-                            Id = 12,
-                            Age = 32,
-                            Email = "SergeiZnakov@gmail.com",
-                            FirstName = "Сергей",
-                            LastName = "Знаков",
-                            MiddleName = "Степанович",
-                            PhoneNumber = "+375(29)181-29-92",
-                            Status = 0
-                        },
-                        new
-                        {
-                            Id = 13,
-                            Age = 23,
-                            Email = "StepanHoroshigin@gmail.com",
-                            FirstName = "Степан",
-                            LastName = "Хорошигин",
-                            MiddleName = "Григорьевич",
-                            PhoneNumber = "+375(29)455-62-38",
-                            Status = 0
-                        },
-                        new
-                        {
-                            Id = 14,
-                            Age = 29,
-                            Email = "VictoriaKlim@gmail.com",
-                            FirstName = "Виктория",
-                            LastName = "Клим",
-                            MiddleName = "Андреевна",
-                            PhoneNumber = "+375(29)842-97-31",
-                            Status = 0
-                        },
-                        new
-                        {
-                            Id = 15,
-                            Age = 26,
-                            Email = "FedorKurabenko@gmail.com",
-                            FirstName = "Федор",
-                            LastName = "Курабенко",
-                            MiddleName = "Ильич",
-                            PhoneNumber = "+375(29)872-96-42",
-                            Status = 0
-                        },
-                        new
-                        {
-                            Id = 16,
-                            Age = 30,
-                            Email = "GalinaKlimenko@gmail.com",
-                            FirstName = "Галина",
-                            LastName = "Клименко",
-                            MiddleName = "Федоровна",
-                            PhoneNumber = "+375(29)149-75-63",
-                            Status = 0
                         });
                 });
 
@@ -309,104 +179,6 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                     b.HasIndex("GroupId");
 
                     b.ToTable("Students");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Age = 23,
-                            CurrentEnglishLevel = 2,
-                            Email = "KonstantinKvaskov@gmail.com",
-                            FirstName = "Константин",
-                            GroupdId = 0,
-                            LastName = "Квасков",
-                            MiddleName = "Игоревич",
-                            PhoneNumber = "+375(29)616-94-87"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Age = 21,
-                            CurrentEnglishLevel = 2,
-                            Email = "OlgaLabudco@gmail.com",
-                            FirstName = "Ольга",
-                            GroupdId = 0,
-                            LastName = "Лабудько",
-                            MiddleName = "Петрович",
-                            PhoneNumber = "+375(33)822-74-13"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Age = 24,
-                            CurrentEnglishLevel = 2,
-                            Email = "KateSoroka@gmail.com",
-                            FirstName = "Екатерина",
-                            GroupdId = 0,
-                            LastName = "Сорока",
-                            MiddleName = "Степановна",
-                            PhoneNumber = "+375(33)555-66-77"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Age = 28,
-                            CurrentEnglishLevel = 2,
-                            Email = "IvanLikov@gmail.com",
-                            FirstName = "Иван",
-                            GroupdId = 0,
-                            LastName = "Лыков",
-                            MiddleName = "Федорович",
-                            PhoneNumber = "+375(29)996-74-14"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Age = 23,
-                            CurrentEnglishLevel = 2,
-                            Email = "PolyGolubeva@gmail.com",
-                            FirstName = "Полина",
-                            GroupdId = 0,
-                            LastName = "Голубева",
-                            MiddleName = "Алексеевна",
-                            PhoneNumber = "+375(29)622-74-74"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Age = 27,
-                            CurrentEnglishLevel = 2,
-                            Email = "SvetoslavOgorodnik@gmail.com",
-                            FirstName = "Светослав",
-                            GroupdId = 0,
-                            LastName = "Огородник",
-                            MiddleName = "Дмитриевич",
-                            PhoneNumber = "+375(29)743-96-13"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Age = 28,
-                            CurrentEnglishLevel = 2,
-                            Email = "KristinaKarayl@gmail.com",
-                            FirstName = "Кристина",
-                            GroupdId = 0,
-                            LastName = "Караул",
-                            MiddleName = "Федоровна",
-                            PhoneNumber = "+375(29)120-19-84"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Age = 25,
-                            CurrentEnglishLevel = 2,
-                            Email = "EugeniaAlbegova@gmail.com",
-                            FirstName = "Евгения",
-                            GroupdId = 0,
-                            LastName = "Альбегова",
-                            MiddleName = "Петровна",
-                            PhoneNumber = "+375(29)545-75-75"
-                        });
                 });
 
             modelBuilder.Entity("CRM_for_English_School.BLL.Entities.StudentsGroup", b =>
@@ -478,9 +250,9 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             Degree = 1,
                             Email = "SvetlanaFedorova@gmail.com",
                             FirstName = "Светлана",
-                            GraduatedFrom = "МГЛУ",
+                            GraduatedFrom = "MSLU",
                             LastName = "Федорова",
-                            MainSpecialization = "Теоретическая и прикладная лингвистика",
+                            MainSpecialization = "Theoretical and applied linguistics",
                             MiddleName = "Георгиевна",
                             PhoneNumber = "+375(29)654-45-67"
                         },
@@ -491,37 +263,11 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             Degree = 0,
                             Email = "KateKalinina@gmail.com",
                             FirstName = "Екатерина",
-                            GraduatedFrom = "МГЛУ",
+                            GraduatedFrom = "MSLU",
                             LastName = "Калинина",
-                            MainSpecialization = "Современные иностранные языки",
+                            MainSpecialization = "Modern foreign languages",
                             MiddleName = "Викторовна",
                             PhoneNumber = "+375(33)151-16-19"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Age = 27,
-                            Degree = 0,
-                            Email = "IrinaStupco@gmail.com",
-                            FirstName = "Ирина",
-                            GraduatedFrom = "МГЛУ",
-                            LastName = "Ступко",
-                            MainSpecialization = "Современные иностранные языки",
-                            MiddleName = "Андреевна",
-                            PhoneNumber = "+375(33)742-86-95"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Age = 31,
-                            Degree = 1,
-                            Email = "KseniaFursina@gmail.com",
-                            FirstName = "Ксения",
-                            GraduatedFrom = "МГЛУ",
-                            LastName = "Фурсина",
-                            MainSpecialization = "Теоретическая и прикладная лингвистика",
-                            MiddleName = "Петровна",
-                            PhoneNumber = "+375(33)87565-41"
                         });
                 });
 

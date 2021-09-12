@@ -4,14 +4,16 @@ using CRM_for_English_School.DAL.EF.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CRM_for_English_School.DAL.EF.Migrations
 {
     [DbContext(typeof(EnglishSchoolContext))]
-    partial class EnglishSchoolContextModelSnapshot : ModelSnapshot
+    [Migration("20210912135057_NewValuesInDatabase")]
+    partial class NewValuesInDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -309,104 +311,6 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                     b.HasIndex("GroupId");
 
                     b.ToTable("Students");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Age = 23,
-                            CurrentEnglishLevel = 2,
-                            Email = "KonstantinKvaskov@gmail.com",
-                            FirstName = "Константин",
-                            GroupdId = 0,
-                            LastName = "Квасков",
-                            MiddleName = "Игоревич",
-                            PhoneNumber = "+375(29)616-94-87"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Age = 21,
-                            CurrentEnglishLevel = 2,
-                            Email = "OlgaLabudco@gmail.com",
-                            FirstName = "Ольга",
-                            GroupdId = 0,
-                            LastName = "Лабудько",
-                            MiddleName = "Петрович",
-                            PhoneNumber = "+375(33)822-74-13"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Age = 24,
-                            CurrentEnglishLevel = 2,
-                            Email = "KateSoroka@gmail.com",
-                            FirstName = "Екатерина",
-                            GroupdId = 0,
-                            LastName = "Сорока",
-                            MiddleName = "Степановна",
-                            PhoneNumber = "+375(33)555-66-77"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Age = 28,
-                            CurrentEnglishLevel = 2,
-                            Email = "IvanLikov@gmail.com",
-                            FirstName = "Иван",
-                            GroupdId = 0,
-                            LastName = "Лыков",
-                            MiddleName = "Федорович",
-                            PhoneNumber = "+375(29)996-74-14"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Age = 23,
-                            CurrentEnglishLevel = 2,
-                            Email = "PolyGolubeva@gmail.com",
-                            FirstName = "Полина",
-                            GroupdId = 0,
-                            LastName = "Голубева",
-                            MiddleName = "Алексеевна",
-                            PhoneNumber = "+375(29)622-74-74"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Age = 27,
-                            CurrentEnglishLevel = 2,
-                            Email = "SvetoslavOgorodnik@gmail.com",
-                            FirstName = "Светослав",
-                            GroupdId = 0,
-                            LastName = "Огородник",
-                            MiddleName = "Дмитриевич",
-                            PhoneNumber = "+375(29)743-96-13"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Age = 28,
-                            CurrentEnglishLevel = 2,
-                            Email = "KristinaKarayl@gmail.com",
-                            FirstName = "Кристина",
-                            GroupdId = 0,
-                            LastName = "Караул",
-                            MiddleName = "Федоровна",
-                            PhoneNumber = "+375(29)120-19-84"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Age = 25,
-                            CurrentEnglishLevel = 2,
-                            Email = "EugeniaAlbegova@gmail.com",
-                            FirstName = "Евгения",
-                            GroupdId = 0,
-                            LastName = "Альбегова",
-                            MiddleName = "Петровна",
-                            PhoneNumber = "+375(29)545-75-75"
-                        });
                 });
 
             modelBuilder.Entity("CRM_for_English_School.BLL.Entities.StudentsGroup", b =>

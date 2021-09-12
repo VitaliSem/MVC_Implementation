@@ -1,37 +1,16 @@
-﻿<div class="container col-xl-10 col-xxl-8 px-4 py-5">
-    <div class="row align-items-center g-lg-5 py-5">
-        <div class="col-lg-7 text-center text-lg-start">
-            <h2 class="display-4 fw-bold lh-1 mb-3">Оставьте заявку на курс и наш специалист свяжется с вами</h2>
-            <p class="col-lg-10 fs-4">Для регистрации на курс необходимо заполнить данные в форме, после чего наш специалист свяжется с вами и уточнит детали. Перед отправкой заявки рекомендуем скачать тестовое задание на определение уровня владения языком.</p>
-        </div>
-        <div class="col-md-10 mx-auto col-lg-5">
-            <form class="p-4 p-md-5 border rounded-3 bg-light">
-                <h4 class="mb-3">Форма заявки</h4>
-                <div class="col-sm-12">
-                    <label for="firstName" class="col-form-label">Имя</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="Имя" required />
-                    <div class="invalid-feedback">Требуется действительное имя</div>
-                </div>
-                <div class="col-sm-12">
-                    <label for="lastName" class="col-form-label">Фамилия</label>
-                    <input type="text" class="form-control" id="lastName" placeholder="Фамилия" required />
-                    <div class="invalid-feedback">Требуется действительное фамилия</div>
-                </div>
-                <div class="col-sm-12">
-                    <label for="email" class="col-form-label">Email</label>
-                    <input type="text" class="form-control" id="email" placeholder="you@example.com" required />
-                    <div class="invalid-feedback">Требуется корректный Email</div>
-                </div>
-                <div class="col-sm-12">
-                    <label for="phoneNumber" class="col-form-label">Номер телефона</label>
-                    <input type="text" class="form-control" id="phoneNumber" placeholder="Номер телефона" required />
-                    <div class="invalid-feedback">Требуется корректный номер телефона</div>
-                </div>
-                <br />
-                <button class="w-100 btn btn-lg btn-primary" type="submit">Оставить заявку</button>
-                <hr class="my-4">
-                <small class="text">Оставляя заявку вы соглашаетесь на отправку ваших персональных данных.</small>
-            </form>
-        </div>
-    </div>
-</div>
+﻿@if (User.IsInRole("manager"))
+{
+    <partial name="ManagerIndexPartial" />
+}
+else if (User.IsInRole("teacher"))
+{
+    <partial name="TeacherIndexPartial" />
+}
+else if (User.IsInRole("student"))
+{
+    <partial name="StudentPartial" />
+}
+else
+{
+    <partial name="UnauthenticatedPartial" />
+}

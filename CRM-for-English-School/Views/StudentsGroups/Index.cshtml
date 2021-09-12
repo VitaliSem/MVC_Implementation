@@ -1,0 +1,31 @@
+﻿@model List<StudentsGroupModel>
+
+<div class="container">
+    <div>
+        <table class="table table-sm table-hover">
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Название группы</th>
+                    <th scope="col">Уровень языка</th>
+                    <th scope="col">Преподаватель</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var studentsGroupModel in Model)
+                {
+                    <tr>
+                        <th scope="col">@studentsGroupModel.Id</th>
+                        <td scope="col"> <a asp-controller="StudentsGroupsController" asp-action="EditStudentsGroup" asp-route-id="@studentsGroupModel.Id">@studentsGroupModel.GroupName</a></td>
+                        <td scope="col">@studentsGroupModel.EnglishLevel</td>
+                        <td scope="col">@studentsGroupModel.Teacher</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+        <p><div class="text-info">Кол-во групп: @Model.Count()</div></p>
+    <div>
+        @Html.ActionLink("Добавить группу", "AddStudentsGroup", "StudentsGroups", null, new { @class = "btn btn-primary" })
+    </div>
+</div>
