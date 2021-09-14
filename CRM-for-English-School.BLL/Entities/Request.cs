@@ -3,7 +3,7 @@
     public class Request : Person
     {
         public int Id { get; set; }
-        public Status Status { get; set; }
+        public RequestStatus RequestStatus { get; set; }
         public EnglishLevel? CurrentEnglishLevel { get; set; }
     }
 }
