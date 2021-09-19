@@ -1,5 +1,6 @@
 ﻿using CRM_for_English_School.BLL.Interfaces;
 using CRM_for_English_School.DAL.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -18,6 +19,8 @@ namespace CRM_for_English_School.BLL.Services
         public void DeleteEntity(int id) => _repository.Delete(id);
 
         public void EditEntity(TEntity entity) => _repository.Update(entity);
+
+        public IEnumerable<TEntity> Find(Func<TEntity, bool> predicate) => _repository.Find(predicate);
 
         public IEnumerable<TEntity> GetAll() => _repository.GetAll();
 

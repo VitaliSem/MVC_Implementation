@@ -1,0 +1,60 @@
+﻿
+@model List<CourseModel>
+
+<div class="container align-content-sm-start">
+    <div class="row g-lg-5 py-5">
+        <h2>Фильтрация</h2>
+        <div class="col-lg-2">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" name="Elementary" id="Elementary">
+                <label class="form-check-label" for="Elementary">Elementary</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" name="PreIntermediate" id="PreIntermediate">
+                <label class="form-check-label" for="PreIntermediate">Pre-Intermediate</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" name="Intermediate" id="Intermediate">
+                <label class="form-check-label" for="Intermediate">Intermediate</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" name="UpperIntermediate" id="UpperIntermediate" >
+                <label class="form-check-label" for="UpperIntermediate">Upper-Intermediate</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" name="Advanced" id="Advanced" >
+                <label class="form-check-label" for="Advanced">Advanced</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" name="Proficiency" id="Proficiency">
+                <label class="form-check-label" for="Proficiency">Proficiency</label>
+            </div>
+
+        </div>
+        <div class="col-lg-10">
+            <h2>Резульаты поиска</h2>
+            <table class="table table-sm table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Название</th>
+                        <th scope="col">Уровень языка</th>
+                        <th scope="col">Дата старта</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var course in Model)
+                    {
+                        <tr>
+                            <th scope="col">@course.Id</th>
+                            <td scope="col">@course.Name</td>
+                            <td scope="col">@course.EnglishLevel</td>
+                            <td scope="col">@course.ExpectedStartDate</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <p><div class="text-info">Всего найдено: @Model.Count()</div></p>
+        </div>
+    </div>
+</div>

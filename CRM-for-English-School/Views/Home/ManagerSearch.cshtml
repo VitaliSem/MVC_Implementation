@@ -1,5 +1,6 @@
-﻿
-@model List<StudentModel>
+﻿@model IEnumerable<StudentModel>
+
+<h1>Search</h1>
 
 <div class="container">
     <div>
@@ -17,20 +18,17 @@
             <tbody>
                 @foreach (var student in Model)
                 {
-                    <tr>
-                        <th scope="col">@student.Id</th>
-                        <td scope="col"> <a asp-controller="Students" asp-action="EditStudent" asp-route-id="@student.Id">@student.FirstName @student.MiddleName @student.LastName</a></td>
-                        <td scope="col">@student.Age</td>
-                        <td scope="col">@student.Group</td>
-                        <td scope="col">@student.CurrentEnglishLevel</td>
-                        <td scope="col">@student.PhoneNumber</td>
-                    </tr>
+                <tr>
+                    <th scope="col">@student.Id</th>
+                    <td scope="col"> <a asp-controller="Students" asp-action="EditStudent" asp-route-id="@student.Id">@student.FirstName @student.MiddleName @student.LastName</a></td>
+                    <td scope="col">@student.Age</td>
+                    <td scope="col">@student.Group</td>
+                    <td scope="col">@student.CurrentEnglishLevel</td>
+                    <td scope="col">@student.PhoneNumber</td>
+                </tr>
                 }
             </tbody>
         </table>
     </div>
     <p><div class="text-info">Total participants: @Model.Count()</div></p>
-    <div>
-        @Html.ActionLink("Добавить студента", "AddStudent", "Students", null, new { @class = "btn btn-primary" })
-    </div>
 </div>

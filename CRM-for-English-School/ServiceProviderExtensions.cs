@@ -14,11 +14,13 @@ namespace CRM_for_English_School
             services.AddScoped<IRepository<Request>, BaseEntityRepository<Request>>();
             services.AddScoped<IRepository<Student>, BaseEntityRepository<Student>>();
             services.AddScoped<IRepository<Teacher>, BaseEntityRepository<Teacher>>();
+            services.AddScoped<IRepository<Course>, BaseEntityRepository<Course>>();
             services.AddScoped<IRepository<StudentsGroup>, BaseEntityRepository<StudentsGroup>>();
 
             services.AddScoped<IBaseEntityService<Request>, BaseEntityService<Request>>();
             services.AddScoped<IBaseEntityService<Student>, BaseEntityService<Student>>();
             services.AddScoped<IBaseEntityService<Teacher>, BaseEntityService<Teacher>>();
+            services.AddScoped<IBaseEntityService<Course>, BaseEntityService<Course>>();
             services.AddScoped<IBaseEntityService<StudentsGroup>, BaseEntityService<StudentsGroup>>();
         }
     }

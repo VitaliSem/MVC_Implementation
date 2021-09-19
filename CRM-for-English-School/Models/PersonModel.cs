@@ -1,5 +1,4 @@
-﻿using CRM_for_English_School.Validation;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace CRM_for_English_School.Models
 {
