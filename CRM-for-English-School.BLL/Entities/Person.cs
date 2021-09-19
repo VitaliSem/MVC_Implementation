@@ -9,8 +9,8 @@ namespace CRM_for_English_School.BLL.Entities
         public string LastName { get; set; }
         public int Age
         {
-            get => (DateTime.Now - BirthDate).Days * 365;
-        } //- придется обновлять каждый год )
+            get => (DateTime.Now - BirthDate).Days / 365;
+        }
         public DateTime BirthDate { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }

@@ -11,15 +11,15 @@ namespace CRM_for_English_School.DAL.EF.Seeds
             var course1 = new Course()
             {
                 Id = 1,
-                CourseName = "English for Adults",
-                EnglishLevel = EnglishLevel.Pre_Intermediate,
+                Name = "English for Adults",
+                EnglishLevel = EnglishLevel.PreIntermediate,
                 ExpectedStartDate = new DateTime(2021, 11, 1)
             };
 
             var course2 = new Course()
             {
                 Id = 2,
-                CourseName = "English for Business",
+                Name = "English for Business",
                 EnglishLevel = EnglishLevel.Intermediate,
                 ExpectedStartDate = new DateTime(2021, 11, 29)
             };
