@@ -6,67 +6,39 @@
     <title>@ViewData["Title"]CRM for English School</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
 <body>
-    <!--<header>
+    <header class="p-2 bg-dark text-white">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand mb-0 h1" href="#">Home</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
-                            <a class="nav-link active" aria-current="page" asp-controller="Requests" asp-action="Index">Requests</a>
-                            <a class="nav-link active" asp-controller="Students" asp-action="Index">Students</a>
-                            <a class="nav-link active" asp-controller="Teachers" asp-action="Index">Teachers</a>
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Groups</a>
-                        </div>
-                    </div>
-                    <partial name="_LoginPartial" />
-                </div>
-            </nav>
-        </div>
-    </header>
-        -->
-    <header class="p-3 bg-dark text-white">
-        <div class="container">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                    <!--<svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>-->
-                </a>
-
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a class="nav-link px-2 text-secondary" asp-controller="Home" asp-action="Index">Главная</a></li>
+            <div class="d-flex flex-wrap align-items-center">
+                <ul class="nav justify-content-center justify-content-lg-start">
+                    <li class="nav-item"><a class="nav-link px-2 text-white" asp-controller="Home" asp-action="Index">Главная</a></li>
                     @if (User.IsInRole("manager"))
                     {
-                        <li><a class="nav-link px-2 text-white" asp-controller="Requests" asp-action="Index">Заявки</a></li>
-                        <li><a class="nav-link px-2 text-white" onclick="return false" asp-controller="Courses" asp-action="Index">Курсы</a></li>
-                        <li><a class="nav-link px-2 text-white" onclick="return false" asp-controller="StudentsGroups" asp-action="Index">Группы</a></li>
-                        <li><a class="nav-link px-2 text-white" asp-controller="Teachers" asp-action="Index">Преподаватели</a></li>
-                        <li><a class="nav-link px-2 text-white" asp-controller="Students" asp-action="Index">Студенты</a></li>
+                        <li class="nav-item"><a class="nav-link px-2 text-white" asp-controller="Requests" asp-action="Index">Заявки</a></li>
+                        <li class="nav-item"><a class="nav-link px-2 text-white" onclick="return false" asp-controller="Courses" asp-action="Index">Курсы</a></li>
+                        <li class="nav-item"><a class="nav-link px-2 text-white" onclick="return false" asp-controller="StudentsGroups" asp-action="Index">Группы</a></li>
+                        <li class="nav-item"><a class="nav-link px-2 text-white" asp-controller="Teachers" asp-action="Index">Преподаватели</a></li>
+                        <li class="nav-item"><a class="nav-link px-2 text-white" asp-controller="Students" asp-action="Index">Студенты</a></li>
                     }
                     else
                     {
-                        <li><a href="#" class="nav-link px-2 text-white">Новости</a></li>
-                        <li><a href="#" class="nav-link px-2 text-white">Цены</a></li>
-                        <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-                        <li><a href="#" class="nav-link px-2 text-white">О нас</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Новости</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Цены</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">О нас</a></li>
                     }
                 </ul>
 
-                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                    <input type="search" class="form-control form-control-dark" placeholder="Поиск..." aria-label="Search">
+                <form class="col-xl-2 p-2 ml-auto">
+                    <input type="search" class="form-control form-control-dark" placeholder="Поиск...">
                 </form>
 
-                <div class="text-end">
+                <div class="text-end p-2">
                     <partial name="_LoginPartial" />
-                    <!--
-                                        <button type="button" class="btn btn-outline-light me-2">Войти</button>
-                    <button type="button" class="btn btn-warning">Регистрация</button>
-                                        -->
+
                 </div>
             </div>
         </div>
@@ -74,7 +46,7 @@
 
     <br />
     <div>
-        <main role="main" class="pb-3">
+        <main role="main" class="container pb-1">
             @RenderBody()
         </main>
     </div>
