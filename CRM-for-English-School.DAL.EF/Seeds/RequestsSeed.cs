@@ -17,7 +17,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 Age = 23,
                 PhoneNumber = "+375(29)888-88-88",
                 Email = "IvanIvanov@gmail.com",
-                Status = Status.Pending
+                RequestStatus = RequestStatus.Pending
             };
             requests[1] = new Request()
             {
@@ -28,7 +28,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 Age = 25,
                 PhoneNumber = "+375(33)454-44-55",
                 Email = "PetrPetrov@gmail.com",
-                Status = Status.Pending
+                RequestStatus = RequestStatus.Pending
             };
             requests[2] = new Request()
             {
@@ -39,7 +39,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 Age = 22,
                 PhoneNumber = "+375(33)776-54-32",
                 Email = "OlgaSinicina@gmail.com",
-                Status = Status.Pending
+                RequestStatus = RequestStatus.Pending
             };
             requests[3] = new Request()
             {
@@ -50,7 +50,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 Age = 23,
                 PhoneNumber = "+375(29)447-12-64",
                 Email = "DariaVasnecova@gmail.com",
-                Status = Status.Pending
+                RequestStatus = RequestStatus.Pending
             };
             requests[4] = new Request()
             {
@@ -61,7 +61,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 Age = 25,
                 PhoneNumber = "+375(29)987-16-48",
                 Email = "SergeiKurablev@gmail.com",
-                Status = Status.Pending
+                RequestStatus = RequestStatus.Pending
             };
             requests[5] = new Request()
             {
@@ -72,7 +72,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 Age = 23,
                 PhoneNumber = "+375(29)875-65-32",
                 Email = "IrinaEgorova@gmail.com",
-                Status = Status.Pending
+                RequestStatus = RequestStatus.Pending
             };
             requests[6] = new Request()
             {
@@ -83,7 +83,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 Age = 21,
                 PhoneNumber = "+375(29)129-45-78",
                 Email = "IgorUrigoev@gmail.com",
-                Status = Status.Pending
+                RequestStatus = RequestStatus.Pending
             };
             requests[7] = new Request()
             {
@@ -94,7 +94,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 Age = 27,
                 PhoneNumber = "+375(29)852-36-14",
                 Email = "KateAltova@gmail.com",
-                Status = Status.Pending
+                RequestStatus = RequestStatus.Pending
             };
             requests[8] = new Request()
             {
@@ -105,7 +105,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 Age = 25,
                 PhoneNumber = "+375(29)752-86-19",
                 Email = "SvetlanaZalikova@gmail.com",
-                Status = Status.Pending
+                RequestStatus = RequestStatus.Pending
             };
             requests[9] = new Request()
             {
@@ -116,7 +116,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 Age = 24,
                 PhoneNumber = "+375(29)782-22-19",
                 Email = "DmitriKrilov@gmail.com",
-                Status = Status.Pending
+                RequestStatus = RequestStatus.Pending
             };
             requests[10] = new Request()
             {
@@ -127,7 +127,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 Age = 22,
                 PhoneNumber = "+375(29)982-76-78",
                 Email = "AndleiBurkin@gmail.com",
-                Status = Status.Pending
+                RequestStatus = RequestStatus.Pending
             };
             requests[11] = new Request()
             {
@@ -138,7 +138,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 Age = 32,
                 PhoneNumber = "+375(29)181-29-92",
                 Email = "SergeiZnakov@gmail.com",
-                Status = Status.Pending
+                RequestStatus = RequestStatus.Pending
             };
             requests[12] = new Request()
             {
@@ -149,7 +149,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 Age = 23,
                 PhoneNumber = "+375(29)455-62-38",
                 Email = "StepanHoroshigin@gmail.com",
-                Status = Status.Pending
+                RequestStatus = RequestStatus.Pending
             };
             requests[13] = new Request()
             {
@@ -160,7 +160,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 Age = 29,
                 PhoneNumber = "+375(29)842-97-31",
                 Email = "VictoriaKlim@gmail.com",
-                Status = Status.Pending
+                RequestStatus = RequestStatus.Pending
             };
             requests[14] = new Request()
             {
@@ -171,7 +171,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 Age = 26,
                 PhoneNumber = "+375(29)872-96-42",
                 Email = "FedorKurabenko@gmail.com",
-                Status = Status.Pending
+                RequestStatus = RequestStatus.Pending
             };
             requests[15] = new Request()
             {
@@ -182,7 +182,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 Age = 30,
                 PhoneNumber = "+375(29)149-75-63",
                 Email = "GalinaKlimenko@gmail.com",
-                Status = Status.Pending
+                RequestStatus = RequestStatus.Pending
             };
 
             modelBuilder.Entity<Request>().HasData(requests);

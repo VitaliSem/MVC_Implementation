@@ -5,7 +5,7 @@ namespace CRM_for_English_School.Models
     public class RequestModel : PersonModel
     {
         public int Id { get; set; }
-        public Status Status { get; set; }
+        public RequestStatus RequestStatus { get; set; }
         public EnglishLevel? CurrentEnglishLevel { get; set; }
     }
 }
