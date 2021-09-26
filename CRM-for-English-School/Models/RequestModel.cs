@@ -7,5 +7,7 @@ namespace CRM_for_English_School.Models
         public int Id { get; set; }
         public RequestStatus RequestStatus { get; set; }
         public EnglishLevel? CurrentEnglishLevel { get; set; }
+        public Course DesiredCourse { get; set; }
+
     }
 }

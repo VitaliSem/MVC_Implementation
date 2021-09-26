@@ -5,5 +5,6 @@
         public int Id { get; set; }
         public RequestStatus RequestStatus { get; set; }
         public EnglishLevel? CurrentEnglishLevel { get; set; }
+        public Course Course { get; set; }
     }
 }

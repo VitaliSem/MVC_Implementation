@@ -1,8 +1,12 @@
 ﻿using CRM_for_English_School.BLL.Entities;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace CRM_for_English_School.BLL.Interfaces
 {
-    interface IRequestService : IBaseEntityService<Request>
+    public interface IRequestService : IBaseEntityService<Request>
     {
+        public Task<IEnumerable<Request>> GetConfirmedRequests();
+        public Task<IEnumerable<Request>> GetPendingRequests();
     }
 }

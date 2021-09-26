@@ -2,7 +2,7 @@
 
 @using CRM_for_English_School.BLL.Entities;
 
-@using (Html.BeginForm("AddRequestUnathenticated", "Requests", FormMethod.Post))
+@using (Html.BeginForm("FillRequestForm", "Home", FormMethod.Post))
 {
     <div class="col-xl-12 px-4 py-5">
         <div class="row align-items-center g-lg-5 py-5">
@@ -33,6 +33,16 @@
                         <input type="text" class="form-control" id="PhoneNumber" asp-for="PhoneNumber" placeholder="Номер телефона" required />
                         <div class="invalid-feedback">Требуется корректный номер телефона</div>
                     </div>
+                    <div class="col-sm-12">
+                        <label asp-for="DesiredCourse" class="col-form-label">Курс</label>
+                        <select class="form-select" asp-for="DesiredCourse">
+                            <option value=""></option>
+                            @foreach (var course in (List<CourseModel>)ViewBag.Courses)
+                            {
+                                <option value="@course.Id">@course.Name</option>
+                            }
+                        </select>
+                    </div>
                     <br />
                     <button type="submit" class="w-100 btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Отправить заявку</button>
                     <hr class="my-4">
@@ -47,15 +57,18 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title align-self-center" id="modalLabel">Подтвержение</h5>
+                    <!--
+                                    <button class="btn-close" data-dismiss="modal" aria-label="close" asp-controller="Home" asp-action="RefreshWindow"></button>
+                    -->
                 </div>
                 <div class="modal-body">
                     Заявка отправлена. Спасибо что выбрали наше учебное заведение.
                 </div>
                 <!--
-    <div class="modal-footer">
-        <button type="submit" class="btn btn-secondary btn-warning">Подтвердить</button>
-    </div>
-        -->
+                <div class="modal-footer">
+                    <button class="btn btn-secondary btn-warning" data-dismiss="modal" asp-controller="Home" asp-action="RefreshWindow">Ok</button>
+                </div>
+                    -->
             </div>
         </div>
     </div>

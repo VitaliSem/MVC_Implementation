@@ -5,17 +5,16 @@ using CRM_for_English_School.Models;
 using System.Collections.Generic;
 using CRM_for_English_School.BLL.Entities;
 using Microsoft.AspNetCore.Authorization;
-using System.Threading;
 
 namespace CRM_for_English_School.Controllers
 {
     [Authorize]
     public class RequestsController : Controller
     {
-        private readonly IBaseEntityService<Request> _requestService;
+        private readonly IRequestService _requestService;
         private readonly IMapper _mapper;
 
-        public RequestsController(IBaseEntityService<Request> requestService, IMapper mapper)
+        public RequestsController(IRequestService requestService, IMapper mapper)
         {
             _requestService = requestService;
             _mapper = mapper;
@@ -43,19 +42,6 @@ namespace CRM_for_English_School.Controllers
             }
             return View(requestModel);
         }
-
-        [AllowAnonymous]
-        public IActionResult AddRequestUnathenticated(RequestModel requestModel)
-        {
-            if (ModelState.IsValid)
-            {
-                _requestService.CreateEntity(_mapper.Map<Request>(requestModel));
-            }
-
-            Thread.Sleep(3000);
-            return RedirectToAction("Index", "Home");
-        }
-
 
         [Authorize (Roles = "manager")]
         [HttpGet]

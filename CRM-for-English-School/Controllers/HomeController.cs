@@ -3,11 +3,11 @@ using CRM_for_English_School.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using System.Linq;
 using AutoMapper;
 using System.Collections.Generic;
 using CRM_for_English_School.BLL.Interfaces;
 using CRM_for_English_School.BLL.Entities;
+using System.Threading;
 
 namespace CRM_for_English_School.Controllers
 {
@@ -19,26 +19,27 @@ namespace CRM_for_English_School.Controllers
         //{
         //    _logger = logger;
         //}
-        private readonly EnglishSchoolContext _context;
         private readonly IBaseEntityService<Course> _courseService;
+        private readonly IRequestService _requestService;
+        private readonly EnglishSchoolContext _context;
         private readonly IMapper _mapper;
-        
-        public HomeController(EnglishSchoolContext context, IBaseEntityService<Course> courseService, IMapper mapper)
+
+        public HomeController(EnglishSchoolContext context,
+            IBaseEntityService<Course> courseService,
+            IRequestService requestService,
+            IMapper mapper)
         {
             _context = context;
+            _requestService = requestService;
             _courseService = courseService;
             _mapper = mapper;
         }
 
         public IActionResult Index()
         {
+            var courses = _courseService.GetAll();
+            ViewBag.Courses = _mapper.Map<IEnumerable<CourseModel>>(courses);
             return View();
-        }
-        public IActionResult Search(string searchString)
-        {
-            //if (!string.IsNullOrEmpty(searchString))
-            var courses = _courseService.Find(c => c.Name.Contains(searchString)).ToList();
-            return View(_mapper.Map<IEnumerable<CourseModel>>(courses));
         }
 
         [Authorize(Roles = "manager")]
@@ -47,15 +48,16 @@ namespace CRM_for_English_School.Controllers
             return View();
         }
 
-        [Authorize(Roles = "manager")]
-        public IActionResult ManagerSearch(string searchString)
+        [HttpPost]
+        [AllowAnonymous]
+        public IActionResult FillRequestForm(RequestModel requestModel)
         {
-            var person = from p in _context.Students
-                          select p;
-            if (!string.IsNullOrEmpty(searchString))
-                person = person.Where(s => s.FirstName.Contains(searchString));
-            var searchResult = person.ToList();
-            return View(_mapper.Map<IEnumerable<StudentModel>>(searchResult));
+            if (ModelState.IsValid)
+            {
+                _requestService.CreateEntity(_mapper.Map<Request>(requestModel));
+            }
+            Thread.Sleep(3000);
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult Privacy()

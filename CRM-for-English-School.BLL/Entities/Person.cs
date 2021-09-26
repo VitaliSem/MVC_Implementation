@@ -9,7 +9,17 @@ namespace CRM_for_English_School.BLL.Entities
         public string LastName { get; set; }
         public int Age
         {
-            get => (DateTime.Now - BirthDate).Days / 365;
+            get
+            {
+                if (BirthDate == DateTime.MinValue)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return (DateTime.Now - BirthDate).Days / 365;
+                }
+            }
         }
         public DateTime BirthDate { get; set; }
         public string PhoneNumber { get; set; }
