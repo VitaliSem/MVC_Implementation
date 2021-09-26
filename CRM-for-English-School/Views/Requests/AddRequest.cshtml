@@ -26,9 +26,9 @@
                 <span class="alert-danger" asp-validation-for="MiddleName"></span>
             </div>
             <div class="col-md-12">
-                <label class="form-check-label" asp-for="Age">Возраст</label>
-                <input type="number" class="form-control" id="Age" name="Age" asp-for="Age">
-                <span class="alert-danger" asp-validation-for="Age"></span>
+                <label class="form-check-label" asp-for="BirthDate">Дата рождения</label>
+                <input type="text" class="form-control" id="BirthDate" name="BirthDate" asp-for="BirthDate">
+                <span asp-validation-for="BirthDate" class="alert-danger"></span>
             </div>
             <div class="col-md-12">
                 <label asp-for="Email">Email</label>
@@ -45,6 +45,16 @@
                     <input type="text" class="form-control" id="PhoneNumber" name="PhoneNumber" asp-for="PhoneNumber">
                     <span asp-validation-for="PhoneNumber" class="alert-danger"></span>
                 </div>
+            </div>
+            <div class="col-sm-12">
+                <label asp-for="CourseId" class="col-form-label">Курс</label>
+                <select class="form-select" asp-for="CourseId">
+                    <option value=""></option>
+                    @foreach (var course in (List<CourseModel>)ViewBag.Courses)
+                    {
+                        <option value="@course.Id">@course.Name</option>
+                    }
+                </select>
             </div>
             <div class="col-md-6">
                 <label asp-for="CurrentEnglishLevel">Текущий уровень владения языком</label>

@@ -4,14 +4,16 @@ using CRM_for_English_School.DAL.EF.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CRM_for_English_School.DAL.EF.Migrations
 {
     [DbContext(typeof(EnglishSchoolContext))]
-    partial class EnglishSchoolContextModelSnapshot : ModelSnapshot
+    [Migration("20210926104249_AddCourseToRequest")]
+    partial class AddCourseToRequest
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -757,7 +759,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
             modelBuilder.Entity("CRM_for_English_School.BLL.Entities.Request", b =>
                 {
                     b.HasOne("CRM_for_English_School.BLL.Entities.Course", "Course")
-                        .WithMany("Requests")
+                        .WithMany()
                         .HasForeignKey("CourseId");
 
                     b.Navigation("Course");
@@ -832,11 +834,6 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("CRM_for_English_School.BLL.Entities.Course", b =>
-                {
-                    b.Navigation("Requests");
                 });
 
             modelBuilder.Entity("CRM_for_English_School.BLL.Entities.StudentsGroup", b =>

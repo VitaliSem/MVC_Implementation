@@ -34,8 +34,8 @@
                         <div class="invalid-feedback">Требуется корректный номер телефона</div>
                     </div>
                     <div class="col-sm-12">
-                        <label asp-for="DesiredCourse" class="col-form-label">Курс</label>
-                        <select class="form-select" asp-for="DesiredCourse">
+                        <label asp-for="CourseId" class="col-form-label">Курс</label>
+                        <select class="form-select" asp-for="CourseId">
                             <option value=""></option>
                             @foreach (var course in (List<CourseModel>)ViewBag.Courses)
                             {

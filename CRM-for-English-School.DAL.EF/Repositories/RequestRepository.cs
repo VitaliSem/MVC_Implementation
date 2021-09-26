@@ -16,6 +16,13 @@ namespace CRM_for_English_School.DAL.EF.Repositories
             _englishSchoolContext = englishSchoolContext;
         }
 
+        public override IEnumerable<Request> GetAll()
+        {
+            var requests =  _englishSchoolContext.Requests.Include(r => r.Course).ToList();
+            return requests;
+        }
+
+        /*
         public async Task<IEnumerable<Request>> GetConfirmedRequests()
         {
             return await _englishSchoolContext.Requests.Where(r => r.RequestStatus.HasFlag(RequestStatus.Confirmed)).ToListAsync();
@@ -25,5 +32,6 @@ namespace CRM_for_English_School.DAL.EF.Repositories
         {
             return await _englishSchoolContext.Requests.Where(r => r.RequestStatus.HasFlag(RequestStatus.Pending)).ToListAsync();
         }
+        */
     }
 }

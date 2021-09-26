@@ -24,6 +24,10 @@ namespace CRM_for_English_School.DAL.EF.Context
             modelBuilder.TeachersSeed();
             modelBuilder.CourcesSeed();
             modelBuilder.StudentsSeed();
+
+            modelBuilder.Entity<Request>()
+                .HasOne(r => r.Course)
+                .WithMany(c => c.Requests);
         }
     }
 }

@@ -11,11 +11,13 @@ namespace CRM_for_English_School.Controllers
     [Authorize]
     public class RequestsController : Controller
     {
+        private readonly IBaseEntityService<Course> _courseService;
         private readonly IRequestService _requestService;
         private readonly IMapper _mapper;
 
-        public RequestsController(IRequestService requestService, IMapper mapper)
+        public RequestsController(IBaseEntityService<Course> courseService, IRequestService requestService, IMapper mapper)
         {
+            _courseService = courseService;
             _requestService = requestService;
             _mapper = mapper;
         }
@@ -29,6 +31,8 @@ namespace CRM_for_English_School.Controllers
         [HttpGet]
         public IActionResult AddRequest()
         {
+            var courses = _courseService.GetAll();
+            ViewBag.Courses = _mapper.Map<IEnumerable<CourseModel>>(courses);
             return View();
         }
 
@@ -47,6 +51,8 @@ namespace CRM_for_English_School.Controllers
         [HttpGet]
         public IActionResult EditRequest(int id)
         {
+            var courses = _courseService.GetAll();
+            ViewBag.Courses = _mapper.Map<IEnumerable<CourseModel>>(courses);
             var request = _requestService.GetEntity(id);
             return View(_mapper.Map<RequestModel>(request));
         }

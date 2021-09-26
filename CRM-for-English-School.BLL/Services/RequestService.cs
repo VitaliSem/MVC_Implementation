@@ -16,6 +16,12 @@ namespace CRM_for_English_School.BLL.Services
             _repository = repository;
         }
 
+        public async Task<IEnumerable<Request>> GetRequests()
+        {
+            return await _repository.GetAllAsync();
+        }
+
+        /*
         public async Task<IEnumerable<Request>> GetConfirmedRequests()
         {
 
@@ -27,5 +33,6 @@ namespace CRM_for_English_School.BLL.Services
             var requests = await _repository.GetAllAsync();
             return requests.Where(r => r.RequestStatus.HasFlag(RequestStatus.Pending));
         }
+        */
     }
 }

@@ -63,6 +63,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 PhoneNumber = "+375(29)987-16-48",
                 Email = "SergeiKurablev@gmail.com",
                 RequestStatus = RequestStatus.Pending
+
             };
             requests[5] = new Request()
             {

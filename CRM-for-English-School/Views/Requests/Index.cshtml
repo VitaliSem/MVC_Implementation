@@ -10,6 +10,7 @@
                     <th scope="col">Возраст</th>
                     <th scope="col">Номер телефона</th>
                     <th scope="col">Email</th>
+                    <th scope="col">Заявка на курс</th>
                     <th scope="col">Статус</th>
                 </tr>
             </thead>
@@ -22,6 +23,7 @@
                         <td scope="col">@request.Age</td>
                         <td scope="col">@request.PhoneNumber</td>
                         <td scope="col">@request.Email</td>
+                        <td scope="col">@request.Course?.Name</td>
                         <td scope="col">@request.RequestStatus</td>
                     </tr>
                 }
