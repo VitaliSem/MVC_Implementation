@@ -18,7 +18,7 @@
                     @if (User.IsInRole("manager"))
                     {
                         <li class="nav-item"><a class="nav-link px-2 text-white" asp-controller="Requests" asp-action="Index">Заявки</a></li>
-                        <li class="nav-item"><a class="nav-link px-2 text-white" onclick="return false" asp-controller="Courses" asp-action="Index">Курсы</a></li>
+                        <li class="nav-item"><a class="nav-link px-2 text-white" asp-controller="Courses" asp-action="Index">Курсы</a></li>
                         <li class="nav-item"><a class="nav-link px-2 text-white" onclick="return false" asp-controller="StudentsGroups" asp-action="Index">Группы</a></li>
                         <li class="nav-item"><a class="nav-link px-2 text-white" asp-controller="Teachers" asp-action="Index">Преподаватели</a></li>
                         <li class="nav-item"><a class="nav-link px-2 text-white" asp-controller="Students" asp-action="Index">Студенты</a></li>
@@ -32,8 +32,8 @@
                     }
                 </ul>
 
-                <form class="col-xl-2 p-2 ml-auto">
-                    <input type="search" class="form-control form-control-dark" placeholder="Поиск...">
+                <form class="col-xl-2 p-2 ml-auto" asp-controller="Home" asp-action="Search">
+                    <input type="search" name="searchString" class="form-control form-control-dark" placeholder="Поиск...">
                 </form>
 
                 <div class="text-end p-2">

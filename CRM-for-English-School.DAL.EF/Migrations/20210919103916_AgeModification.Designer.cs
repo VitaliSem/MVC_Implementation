@@ -4,14 +4,16 @@ using CRM_for_English_School.DAL.EF.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CRM_for_English_School.DAL.EF.Migrations
 {
     [DbContext(typeof(EnglishSchoolContext))]
-    partial class EnglishSchoolContextModelSnapshot : ModelSnapshot
+    [Migration("20210919103916_AgeModification")]
+    partial class AgeModification
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -45,42 +47,14 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             Id = 1,
                             EnglishLevel = 1,
                             ExpectedStartDate = new DateTime(2021, 11, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Анлийский для взрослых - PI_1"
+                            Name = "English for Adults"
                         },
                         new
                         {
                             Id = 2,
                             EnglishLevel = 2,
                             ExpectedStartDate = new DateTime(2021, 11, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Английский для бизнеса - B-I_1"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            EnglishLevel = 3,
-                            ExpectedStartDate = new DateTime(2022, 2, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Английский для взрослых - UI_1"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            EnglishLevel = 2,
-                            ExpectedStartDate = new DateTime(2022, 2, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Английский для взрослых - I_1"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            EnglishLevel = 0,
-                            ExpectedStartDate = new DateTime(2021, 12, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Английский для взрослых - E_1"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            EnglishLevel = 0,
-                            ExpectedStartDate = new DateTime(2022, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Английский для бизнеса - B-E_1"
+                            Name = "English for Business"
                         });
                 });
 
@@ -123,7 +97,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 1,
-                            BirthDate = new DateTime(1998, 4, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(45),
                             Email = "IvanIvanov@gmail.com",
                             FirstName = "Иван",
                             LastName = "Иванов",
@@ -134,7 +108,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 2,
-                            BirthDate = new DateTime(1996, 12, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(9),
                             Email = "PetrPetrov@gmail.com",
                             FirstName = "Петр",
                             LastName = "Петров",
@@ -145,7 +119,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 3,
-                            BirthDate = new DateTime(1999, 6, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(111),
                             Email = "OlgaSinicina@gmail.com",
                             FirstName = "Ольга",
                             LastName = "Синицина",
@@ -156,7 +130,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 4,
-                            BirthDate = new DateTime(1998, 9, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(7),
                             Email = "DariaVasnecova@gmail.com",
                             FirstName = "Дарья",
                             LastName = "Васнецова",
@@ -167,7 +141,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 5,
-                            BirthDate = new DateTime(1996, 3, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(31),
                             Email = "SergeiKurablev@gmail.com",
                             FirstName = "Сергей",
                             LastName = "Кураблев",
@@ -178,7 +152,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 6,
-                            BirthDate = new DateTime(1998, 2, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(76),
                             Email = "IrinaEgorova@gmail.com",
                             FirstName = "Ирина",
                             LastName = "Егорова",
@@ -189,7 +163,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 7,
-                            BirthDate = new DateTime(2000, 12, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(55),
                             Email = "IgorUrigoev@gmail.com",
                             FirstName = "Игорь",
                             LastName = "Уригоев",
@@ -200,7 +174,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 8,
-                            BirthDate = new DateTime(1994, 10, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(15),
                             Email = "KateAltova@gmail.com",
                             FirstName = "Екатерина",
                             LastName = "Альтова",
@@ -211,7 +185,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 9,
-                            BirthDate = new DateTime(1996, 4, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(33),
                             Email = "SvetlanaZalikova@gmail.com",
                             FirstName = "Светлана",
                             LastName = "Заликова",
@@ -222,7 +196,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 10,
-                            BirthDate = new DateTime(1997, 7, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(285),
                             Email = "DmitriKrilov@gmail.com",
                             FirstName = "Дмитрий",
                             LastName = "Крылов",
@@ -233,7 +207,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 11,
-                            BirthDate = new DateTime(1999, 11, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(7),
                             Email = "AndleiBurkin@gmail.com",
                             FirstName = "Андрей",
                             LastName = "Буркин",
@@ -244,7 +218,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 12,
-                            BirthDate = new DateTime(1989, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(45),
                             Email = "SergeiZnakov@gmail.com",
                             FirstName = "Сергей",
                             LastName = "Знаков",
@@ -255,7 +229,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 13,
-                            BirthDate = new DateTime(1998, 3, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(37),
                             Email = "StepanHoroshigin@gmail.com",
                             FirstName = "Степан",
                             LastName = "Хорошигин",
@@ -266,7 +240,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 14,
-                            BirthDate = new DateTime(1992, 10, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(66),
                             Email = "VictoriaKlim@gmail.com",
                             FirstName = "Виктория",
                             LastName = "Клим",
@@ -277,7 +251,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 15,
-                            BirthDate = new DateTime(1995, 9, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(20),
                             Email = "FedorKurabenko@gmail.com",
                             FirstName = "Федор",
                             LastName = "Курабенко",
@@ -288,7 +262,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 16,
-                            BirthDate = new DateTime(1991, 6, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(82),
                             Email = "GalinaKlimenko@gmail.com",
                             FirstName = "Галина",
                             LastName = "Клименко",
@@ -342,7 +316,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 1,
-                            BirthDate = new DateTime(1998, 8, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(11),
                             CurrentEnglishLevel = 2,
                             Email = "KonstantinKvaskov@gmail.com",
                             FirstName = "Константин",
@@ -354,7 +328,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 2,
-                            BirthDate = new DateTime(2000, 3, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(39),
                             CurrentEnglishLevel = 2,
                             Email = "OlgaLabudco@gmail.com",
                             FirstName = "Ольга",
@@ -366,7 +340,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 3,
-                            BirthDate = new DateTime(1997, 11, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(22),
                             CurrentEnglishLevel = 2,
                             Email = "KateSoroka@gmail.com",
                             FirstName = "Екатерина",
@@ -378,7 +352,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 4,
-                            BirthDate = new DateTime(1993, 5, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(20),
                             CurrentEnglishLevel = 2,
                             Email = "IvanLikov@gmail.com",
                             FirstName = "Иван",
@@ -390,7 +364,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 5,
-                            BirthDate = new DateTime(1998, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(99),
                             CurrentEnglishLevel = 2,
                             Email = "PolyGolubeva@gmail.com",
                             FirstName = "Полина",
@@ -402,7 +376,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 6,
-                            BirthDate = new DateTime(1994, 12, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(5),
                             CurrentEnglishLevel = 2,
                             Email = "SvetoslavOgorodnik@gmail.com",
                             FirstName = "Светослав",
@@ -414,7 +388,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 7,
-                            BirthDate = new DateTime(1993, 6, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(110),
                             CurrentEnglishLevel = 2,
                             Email = "KristinaKarayl@gmail.com",
                             FirstName = "Кристина",
@@ -426,7 +400,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 8,
-                            BirthDate = new DateTime(1996, 4, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(26),
                             CurrentEnglishLevel = 2,
                             Email = "EugeniaAlbegova@gmail.com",
                             FirstName = "Евгения",
@@ -502,7 +476,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 1,
-                            BirthDate = new DateTime(1986, 11, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(20),
                             Degree = 1,
                             Email = "SvetlanaFedorova@gmail.com",
                             FirstName = "Светлана",
@@ -515,7 +489,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 2,
-                            BirthDate = new DateTime(1992, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(664),
                             Degree = 0,
                             Email = "KateKalinina@gmail.com",
                             FirstName = "Екатерина",
@@ -528,7 +502,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 3,
-                            BirthDate = new DateTime(1994, 7, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(20),
                             Degree = 0,
                             Email = "IrinaStupco@gmail.com",
                             FirstName = "Ирина",
@@ -541,7 +515,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 4,
-                            BirthDate = new DateTime(1990, 8, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(20),
                             Degree = 1,
                             Email = "KseniaFursina@gmail.com",
                             FirstName = "Ксения",

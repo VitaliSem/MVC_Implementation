@@ -1,6 +1,7 @@
 ﻿using CRM_for_English_School.BLL.Entities;
 using CRM_for_English_School.BLL.Enums;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace CRM_for_English_School.DAL.EF.Seeds
 {
@@ -14,7 +15,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 FirstName = "Светлана",
                 MiddleName = "Георгиевна",
                 LastName = "Федорова",
-                Age = 35,
+                BirthDate = new DateTime(1986, 11, 9),
                 PhoneNumber = "+375(29)654-45-67",
                 Email = "SvetlanaFedorova@gmail.com",
                 Degree = Degree.Master,
@@ -28,7 +29,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 FirstName = "Екатерина",
                 MiddleName = "Викторовна",
                 LastName = "Калинина",
-                Age = 29,
+                BirthDate = new DateTime(1992, 3, 1),
                 PhoneNumber = "+375(33)151-16-19",
                 Email = "KateKalinina@gmail.com",
                 Degree = Degree.Bachelor,
@@ -42,7 +43,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 FirstName = "Ирина",
                 MiddleName = "Андреевна",
                 LastName = "Ступко",
-                Age = 27,
+                BirthDate = new DateTime(1994, 7, 14),
                 PhoneNumber = "+375(33)742-86-95",
                 Email = "IrinaStupco@gmail.com",
                 Degree = Degree.Bachelor,
@@ -56,7 +57,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 FirstName = "Ксения",
                 MiddleName = "Петровна",
                 LastName = "Фурсина",
-                Age = 31,
+                BirthDate = new DateTime(1990, 8, 12),
                 PhoneNumber = "+375(33)87565-41",
                 Email = "KseniaFursina@gmail.com",
                 Degree = Degree.Master,
@@ -65,7 +66,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 Groups = null
             };
 
-            modelBuilder.Entity<Teacher>().HasData(teacher1, teacher2,teacher3,teacher4);
+            modelBuilder.Entity<Teacher>().HasData(teacher1, teacher2, teacher3, teacher4);
         }
     }
 }

@@ -1,8 +1,9 @@
-﻿using System;
+﻿using CRM_for_English_School.BLL.Entities;
+using System;
 
-namespace CRM_for_English_School.BLL.Entities
+namespace CRM_for_English_School.Models
 {
-    public class Course
+    public class CourseModel
     {
         public int Id { get; set; }
         public string Name { get; set; }

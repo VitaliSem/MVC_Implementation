@@ -5,7 +5,7 @@ namespace CRM_for_English_School.BLL.Entities
     public enum EnglishLevel
     {
         Elementary,
-        PreIntermediate, //подчеркивание здесь не соответствует соглашениям кода C#
+        PreIntermediate,
         Intermediate,
         UpperIntermediate,
         Advanced,

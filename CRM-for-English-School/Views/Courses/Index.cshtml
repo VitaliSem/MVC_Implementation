@@ -1,0 +1,32 @@
+﻿
+@model List<CourseModel>
+
+<div class="container">
+    <div>
+        <table class="table table-sm table-hover">
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Название</th>
+                    <th scope="col">Уровень языка</th>
+                    <th scope="col">Дата старта</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var course in Model)
+                {
+                    <tr>
+                        <th scope="col">@course.Id</th>
+                        <td scope="col"> <a asp-controller="Courses" asp-action="EditCourse" asp-route-id="@course.Id">@course.Name</a></td>
+                        <td scope="col">@course.EnglishLevel</td>
+                        <td scope="col">@course.ExpectedStartDate</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <p><div class="text-info">Total participants: @Model.Count()</div></p>
+    <div>
+        @Html.ActionLink("Добавить курс", "AddCourse", "Courses", null, new { @class = "btn btn-primary" })
+    </div>
+</div>

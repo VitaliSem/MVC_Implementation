@@ -4,14 +4,16 @@ using CRM_for_English_School.DAL.EF.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CRM_for_English_School.DAL.EF.Migrations
 {
     [DbContext(typeof(EnglishSchoolContext))]
-    partial class EnglishSchoolContextModelSnapshot : ModelSnapshot
+    [Migration("20210919111336_AgeModificationAgain")]
+    partial class AgeModificationAgain
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -45,42 +47,14 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             Id = 1,
                             EnglishLevel = 1,
                             ExpectedStartDate = new DateTime(2021, 11, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Анлийский для взрослых - PI_1"
+                            Name = "English for Adults"
                         },
                         new
                         {
                             Id = 2,
                             EnglishLevel = 2,
                             ExpectedStartDate = new DateTime(2021, 11, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Английский для бизнеса - B-I_1"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            EnglishLevel = 3,
-                            ExpectedStartDate = new DateTime(2022, 2, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Английский для взрослых - UI_1"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            EnglishLevel = 2,
-                            ExpectedStartDate = new DateTime(2022, 2, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Английский для взрослых - I_1"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            EnglishLevel = 0,
-                            ExpectedStartDate = new DateTime(2021, 12, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Английский для взрослых - E_1"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            EnglishLevel = 0,
-                            ExpectedStartDate = new DateTime(2022, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Английский для бизнеса - B-E_1"
+                            Name = "English for Business"
                         });
                 });
 

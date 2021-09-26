@@ -1,5 +1,6 @@
 ﻿using CRM_for_English_School.BLL.Entities;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace CRM_for_English_School.DAL.EF.Seeds
 {
@@ -14,7 +15,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 FirstName = "Константин",
                 MiddleName = "Игоревич",
                 LastName = "Квасков",
-                Age = 23,
+                BirthDate = new DateTime(1998, 8, 21),
                 PhoneNumber = "+375(29)616-94-87",
                 Email = "KonstantinKvaskov@gmail.com",
                 CurrentEnglishLevel = EnglishLevel.Intermediate,
@@ -25,7 +26,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 FirstName = "Ольга",
                 MiddleName = "Петрович",
                 LastName = "Лабудько",
-                Age = 21,
+                BirthDate = new DateTime(2000, 3, 17),
                 PhoneNumber = "+375(33)822-74-13",
                 Email = "OlgaLabudco@gmail.com",
                 CurrentEnglishLevel = EnglishLevel.Intermediate,
@@ -36,7 +37,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 FirstName = "Екатерина",
                 MiddleName = "Степановна",
                 LastName = "Сорока",
-                Age = 24,
+                BirthDate = new DateTime(1997, 11, 8),
                 PhoneNumber = "+375(33)555-66-77",
                 Email = "KateSoroka@gmail.com",
                 CurrentEnglishLevel = EnglishLevel.Intermediate,
@@ -47,7 +48,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 FirstName = "Иван",
                 MiddleName = "Федорович",
                 LastName = "Лыков",
-                Age = 28,
+                BirthDate = new DateTime(1993, 5, 19),
                 PhoneNumber = "+375(29)996-74-14",
                 Email = "IvanLikov@gmail.com",
                 CurrentEnglishLevel = EnglishLevel.Intermediate,
@@ -58,7 +59,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 FirstName = "Полина",
                 MiddleName = "Алексеевна",
                 LastName = "Голубева",
-                Age = 23,
+                BirthDate = new DateTime(1998, 4, 5),
                 PhoneNumber = "+375(29)622-74-74",
                 Email = "PolyGolubeva@gmail.com",
                 CurrentEnglishLevel = EnglishLevel.Intermediate,
@@ -69,7 +70,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 FirstName = "Светослав",
                 MiddleName = "Дмитриевич",
                 LastName = "Огородник",
-                Age = 27,
+                BirthDate = new DateTime(1994, 12, 30),
                 PhoneNumber = "+375(29)743-96-13",
                 Email = "SvetoslavOgorodnik@gmail.com",
                 CurrentEnglishLevel = EnglishLevel.Intermediate,
@@ -80,7 +81,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 FirstName = "Кристина",
                 MiddleName = "Федоровна",
                 LastName = "Караул",
-                Age = 28,
+                BirthDate = new DateTime(1993, 6, 3),
                 PhoneNumber = "+375(29)120-19-84",
                 Email = "KristinaKarayl@gmail.com",
                 CurrentEnglishLevel = EnglishLevel.Intermediate,
@@ -91,7 +92,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 FirstName = "Евгения",
                 MiddleName = "Петровна",
                 LastName = "Альбегова",
-                Age = 25,
+                BirthDate = new DateTime(1996, 4, 19),
                 PhoneNumber = "+375(29)545-75-75",
                 Email = "EugeniaAlbegova@gmail.com",
                 CurrentEnglishLevel = EnglishLevel.Intermediate,
