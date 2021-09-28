@@ -2,9 +2,9 @@
 using AutoMapper;
 using CRM_for_English_School.BLL.Interfaces;
 using CRM_for_English_School.Models;
-using CRM_for_English_School.BLL.Entities;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Authorization;
+using CRM_for_English_School.AppCore.Entities;
 
 namespace CRM_for_English_School.Controllers
 {

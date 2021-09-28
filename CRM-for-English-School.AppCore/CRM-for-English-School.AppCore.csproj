@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>CRM_for_English_School.AppCore</RootNamespace>
+  </PropertyGroup>
+
+</Project>

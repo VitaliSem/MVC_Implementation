@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using CRM_for_English_School.Angular.DTO;
-using CRM_for_English_School.BLL.Entities;
+using CRM_for_English_School.AppCore.Entities;
 using CRM_for_English_School.BLL.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;

@@ -1,4 +1,5 @@
-﻿using CRM_for_English_School.BLL.Entities;
+﻿using CRM_for_English_School.AppCore.Entities;
+using CRM_for_English_School.AppCore.Enums;
 using Microsoft.EntityFrameworkCore;
 using System;
 

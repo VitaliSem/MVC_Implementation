@@ -1,7 +1,8 @@
-﻿using System;
+﻿using CRM_for_English_School.AppCore.Enums;
+using System;
 using System.Collections.Generic;
 
-namespace CRM_for_English_School.BLL.Entities
+namespace CRM_for_English_School.AppCore.Entities
 {
     public class Course
     {

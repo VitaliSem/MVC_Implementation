@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using CRM_for_English_School.Angular.DTO;
-using CRM_for_English_School.BLL.Entities;
+using CRM_for_English_School.AppCore.Entities;
 
 namespace CRM_for_English_School.Mapper
 {

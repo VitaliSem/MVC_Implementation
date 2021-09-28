@@ -1,4 +1,4 @@
-using CRM_for_English_School.BLL.Entities;
+using CRM_for_English_School.AppCore.Entities;
 using CRM_for_English_School.BLL.Interfaces;
 using CRM_for_English_School.BLL.Services;
 using CRM_for_English_School.DAL.EF.Context;

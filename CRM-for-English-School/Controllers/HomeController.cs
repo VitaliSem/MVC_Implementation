@@ -6,8 +6,8 @@ using System.Diagnostics;
 using AutoMapper;
 using System.Collections.Generic;
 using CRM_for_English_School.BLL.Interfaces;
-using CRM_for_English_School.BLL.Entities;
 using System.Threading;
+using CRM_for_English_School.AppCore.Entities;
 
 namespace CRM_for_English_School.Controllers
 {

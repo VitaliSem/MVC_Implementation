@@ -1,4 +1,4 @@
-﻿using CRM_for_English_School.BLL.Entities;
+﻿using CRM_for_English_School.AppCore.Entities;
 using System.ComponentModel.DataAnnotations;
 
 namespace CRM_for_English_School.Models

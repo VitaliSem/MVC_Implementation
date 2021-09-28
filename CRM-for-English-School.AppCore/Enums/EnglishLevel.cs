@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace CRM_for_English_School.BLL.Entities
+﻿namespace CRM_for_English_School.AppCore.Enums
 {
     public enum EnglishLevel
     {

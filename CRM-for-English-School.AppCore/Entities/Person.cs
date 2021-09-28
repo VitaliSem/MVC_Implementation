@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CRM_for_English_School.BLL.Entities
+namespace CRM_for_English_School.AppCore.Entities
 {
     public abstract class Person
     {

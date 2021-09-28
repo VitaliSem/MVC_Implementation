@@ -1,4 +1,4 @@
-﻿using CRM_for_English_School.BLL.Entities;
+﻿using CRM_for_English_School.AppCore.Entities;
 using CRM_for_English_School.DAL.EF.Seeds;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;

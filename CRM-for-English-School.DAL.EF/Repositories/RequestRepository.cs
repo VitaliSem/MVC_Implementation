@@ -1,9 +1,8 @@
 ﻿using CRM_for_English_School.DAL.EF.Context;
-using CRM_for_English_School.BLL.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using CRM_for_English_School.AppCore.Entities;
 
 namespace CRM_for_English_School.DAL.EF.Repositories
 {

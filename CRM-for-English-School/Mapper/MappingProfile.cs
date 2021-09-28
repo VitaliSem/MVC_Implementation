@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using CRM_for_English_School.BLL.Entities;
+using CRM_for_English_School.AppCore.Entities;
 using CRM_for_English_School.Models;
 
 namespace CRM_for_English_School.Mapper

@@ -1,9 +1,9 @@
-﻿using CRM_for_English_School.BLL.Entities;
-using CRM_for_English_School.BLL.Interfaces;
+﻿using CRM_for_English_School.BLL.Interfaces;
 using CRM_for_English_School.DAL.Interfaces;
 using System.Linq;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using CRM_for_English_School.AppCore.Entities;
 
 namespace CRM_for_English_School.BLL.Services
 {

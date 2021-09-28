@@ -1,4 +1,5 @@
-﻿using CRM_for_English_School.BLL.Entities;
+﻿using CRM_for_English_School.AppCore.Entities;
+using CRM_for_English_School.AppCore.Enums;
 using System.Collections.Generic;
 
 namespace CRM_for_English_School.Models
