@@ -4,22 +4,23 @@ using CRM_for_English_School.BLL.Interfaces;
 using CRM_for_English_School.Models;
 using System.Collections.Generic;
 using CRM_for_English_School.AppCore.Entities;
+using System.Threading.Tasks;
 
 namespace CRM_for_English_School.Controllers
 {
     public class CoursesController : Controller
     {
-        private readonly IBaseEntityService<Course> _courseService;
+        private readonly ICourseService _courseService;
         private readonly IMapper _mapper;
 
-        public CoursesController(IBaseEntityService<Course> courseService, IMapper mapper)
+        public CoursesController(ICourseService courseService, IMapper mapper)
         {
             _courseService = courseService;
             _mapper = mapper;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var courses = _courseService.GetAll();
+            var courses = await _courseService.GetAllAsync();
             return View(_mapper.Map<IEnumerable<CourseModel>>(courses));
         }
 

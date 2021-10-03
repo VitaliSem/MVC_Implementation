@@ -3,6 +3,8 @@ using AutoMapper;
 using CRM_for_English_School.BLL.Interfaces;
 using CRM_for_English_School.Models;
 using CRM_for_English_School.AppCore.Entities;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace CRM_for_English_School.Controllers
 {
@@ -16,10 +18,10 @@ namespace CRM_for_English_School.Controllers
             _studentsGroupService = studentsGroupService;
             _mapper = mapper;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var studentsgroups = _studentsGroupService.GetAll();
-            return View(_mapper.Map<StudentsGroupModel>(studentsgroups));
+            var studentsgroups = await _studentsGroupService.GetAllAsync();
+            return View(_mapper.Map<IEnumerable<StudentsGroupModel>>(studentsgroups));
         }
 
         [HttpGet]

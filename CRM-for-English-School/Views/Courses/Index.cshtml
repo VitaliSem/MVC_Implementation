@@ -1,5 +1,6 @@
-﻿
-@model List<CourseModel>
+﻿@model List<CourseModel>
+
+@using CRM_for_English_School.Html_helpers;
 
 <div class="container">
     <div>
@@ -10,6 +11,7 @@
                     <th scope="col">Название</th>
                     <th scope="col">Уровень языка</th>
                     <th scope="col">Дата старта</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
@@ -19,7 +21,17 @@
                         <th scope="col">@course.Id</th>
                         <td scope="col"> <a asp-controller="Courses" asp-action="EditCourse" asp-route-id="@course.Id">@course.Name</a></td>
                         <td scope="col">@course.EnglishLevel</td>
-                        <td scope="col">@course.ExpectedStartDate</td>
+                        <td scope="col">@course.ExpectedStartDate.ToShortDateString()</td>
+                        <td>
+                            @if (course.Requests.Count >= 3)
+                            {
+                                @Buttons.UseBadgedButton(Html, "Создать группу", buttonStatus: "success", course.Requests.Count, badgeStatus:"danger", isDisabled: false)
+                            }
+                            else
+                            {
+                                @Buttons.UseBadgedButton(Html, "Создать группу", buttonStatus:"light", course.Requests.Count, badgeStatus:"secondary", isDisabled: true)
+                            }
+                        </td>
                     </tr>
                 }
             </tbody>

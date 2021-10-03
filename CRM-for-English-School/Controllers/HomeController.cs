@@ -19,13 +19,13 @@ namespace CRM_for_English_School.Controllers
         //{
         //    _logger = logger;
         //}
-        private readonly IBaseEntityService<Course> _courseService;
+        private readonly ICourseService _courseService;
         private readonly IRequestService _requestService;
         private readonly EnglishSchoolContext _context;
         private readonly IMapper _mapper;
 
         public HomeController(EnglishSchoolContext context,
-            IBaseEntityService<Course> courseService,
+            ICourseService courseService,
             IRequestService requestService,
             IMapper mapper)
         {

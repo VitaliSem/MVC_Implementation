@@ -2,7 +2,7 @@
 
 namespace CRM_for_English_School.BLL.Interfaces
 {
-    interface ICourseService : IBaseEntityService<Course>
+    public interface ICourseService : IBaseEntityService<Course>
     {
     }
 }
