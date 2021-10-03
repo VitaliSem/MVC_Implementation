@@ -5,17 +5,18 @@ using CRM_for_English_School.Models;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Authorization;
 using CRM_for_English_School.AppCore.Entities;
+using System.Threading.Tasks;
 
 namespace CRM_for_English_School.Controllers
 {
     [Authorize]
     public class RequestsController : Controller
     {
-        private readonly IBaseEntityService<Course> _courseService;
+        private readonly ICourseService _courseService;
         private readonly IRequestService _requestService;
         private readonly IMapper _mapper;
 
-        public RequestsController(IBaseEntityService<Course> courseService, IRequestService requestService, IMapper mapper)
+        public RequestsController(ICourseService courseService, IRequestService requestService, IMapper mapper)
         {
             _courseService = courseService;
             _requestService = requestService;
@@ -74,6 +75,19 @@ namespace CRM_for_English_School.Controllers
         public IActionResult DeleteRequest(int id)
         {
             _requestService.DeleteEntity(id);
+            return RedirectToAction("Index", "Requests");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Search(RequestSearchModel searchModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var courses = _courseService.GetAll();
+                ViewBag.Courses = _mapper.Map<IEnumerable<CourseModel>>(courses);
+                var filteredRequests = await _requestService.SearchAsync(_mapper.Map<RequestSearch>(searchModel));
+                return View("Index", _mapper.Map<IEnumerable<RequestModel>>(filteredRequests));
+            }
             return RedirectToAction("Index", "Requests");
         }
     }

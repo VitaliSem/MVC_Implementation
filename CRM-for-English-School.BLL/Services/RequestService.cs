@@ -1,6 +1,5 @@
 ﻿using CRM_for_English_School.BLL.Interfaces;
 using CRM_for_English_School.DAL.Interfaces;
-using System.Linq;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using CRM_for_English_School.AppCore.Entities;
@@ -9,9 +8,9 @@ namespace CRM_for_English_School.BLL.Services
 {
     public class RequestService : BaseEntityService<Request>, IRequestService
     {
-        private readonly IRepository<Request> _repository;
+        private readonly IRequestRepository _repository;
 
-        public RequestService(IRepository<Request> repository) : base(repository)
+        public RequestService(IRequestRepository repository) : base(repository)
         {
             _repository = repository;
         }
@@ -21,18 +20,9 @@ namespace CRM_for_English_School.BLL.Services
             return await _repository.GetAllAsync();
         }
 
-        /*
-        public async Task<IEnumerable<Request>> GetConfirmedRequests()
+        public async Task<IEnumerable<Request>> SearchAsync(RequestSearch requestSearch)
         {
-
-            var requests = await _repository.GetAllAsync();
-            return requests.Where(r => r.RequestStatus.HasFlag(RequestStatus.Confirmed));
+            return await _repository.SearchAsync(requestSearch);
         }
-        public async Task<IEnumerable<Request>> GetPendingRequests()
-        {
-            var requests = await _repository.GetAllAsync();
-            return requests.Where(r => r.RequestStatus.HasFlag(RequestStatus.Pending));
-        }
-        */
     }
 }

@@ -1,6 +1,12 @@
 ﻿@model List<RequestModel>
 
+@using CRM_for_English_School.AppCore.Entities;
+
 <div class="container">
+    @await Html.PartialAsync("RequestSearchPartial")
+    <!--
+    <partial name="RequestSearchPartial" />
+        -->
     <div>
         <table class="table table-sm table-hover">
             <thead class="table-light">

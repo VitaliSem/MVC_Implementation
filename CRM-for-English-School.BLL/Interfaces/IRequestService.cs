@@ -6,9 +6,6 @@ namespace CRM_for_English_School.BLL.Interfaces
 {
     public interface IRequestService : IBaseEntityService<Request>
     {
-        /*
-        public Task<IEnumerable<Request>> GetConfirmedRequests();
-        public Task<IEnumerable<Request>> GetPendingRequests();
-        */
+        Task<IEnumerable<Request>> SearchAsync(RequestSearch requestSearch);
     }
 }

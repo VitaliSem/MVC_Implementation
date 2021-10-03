@@ -3,34 +3,48 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using CRM_for_English_School.AppCore.Entities;
+using CRM_for_English_School.DAL.Interfaces;
+using System.Threading.Tasks;
+using System;
+using CRM_for_English_School.AppCore.Enums;
 
 namespace CRM_for_English_School.DAL.EF.Repositories
 {
-    public class RequestRepository : BaseEntityRepository<Request>
+    public class RequestRepository : BaseEntityRepository<Request>, IRequestRepository
     {
         private readonly EnglishSchoolContext _englishSchoolContext;
 
-        public RequestRepository(EnglishSchoolContext englishSchoolContext) : base (englishSchoolContext)
+        public RequestRepository(EnglishSchoolContext englishSchoolContext) : base(englishSchoolContext)
         {
             _englishSchoolContext = englishSchoolContext;
         }
 
         public override IEnumerable<Request> GetAll()
         {
-            var requests =  _englishSchoolContext.Requests.Include(r => r.Course).ToList();
+            var requests = _englishSchoolContext.Requests.Include(r => r.Course).ToList();
             return requests;
         }
 
-        /*
-        public async Task<IEnumerable<Request>> GetConfirmedRequests()
+        public async Task<IEnumerable<Request>> SearchAsync(RequestSearch requestSearch)
         {
-            return await _englishSchoolContext.Requests.Where(r => r.RequestStatus.HasFlag(RequestStatus.Confirmed)).ToListAsync();
+            var requests = _englishSchoolContext.Requests.AsQueryable();
+            if (!string.IsNullOrWhiteSpace(requestSearch.FirstName))
+                requests = requests.Where(r => r.FirstName.Contains(requestSearch.FirstName));
+            if (!string.IsNullOrWhiteSpace(requestSearch.LastName))
+                requests = requests.Where(r => r.LastName.Contains(requestSearch.LastName));
+            if (requestSearch.AgeLowBorder.HasValue)
+                requests = requests.Where(r => r.BirthDate.Year <= (DateTime.Now.Year - requestSearch.AgeLowBorder.Value));
+            if (requestSearch.AgeHighBorder.HasValue)
+                requests = requests.Where(r => r.BirthDate.Year >= (DateTime.Now.Year - requestSearch.AgeHighBorder.Value));
+            if (requestSearch.CourseId.HasValue)
+                requests = requests.Where(r => r.CourseId.Value == requestSearch.CourseId);
+            if (requestSearch.CurrentEnglishLevel.Length != 0)
+            {
+                var levelsSet = new HashSet<EnglishLevel>(requestSearch.CurrentEnglishLevel);
+                requests = requests.Where(r => levelsSet.Contains(r.CurrentEnglishLevel.Value));
+            }
+            var result = await requests.ToListAsync();
+            return result;
         }
-
-        public async Task<IEnumerable<Request>> GetPendingRequests()
-        {
-            return await _englishSchoolContext.Requests.Where(r => r.RequestStatus.HasFlag(RequestStatus.Pending)).ToListAsync();
-        }
-        */
     }
 }

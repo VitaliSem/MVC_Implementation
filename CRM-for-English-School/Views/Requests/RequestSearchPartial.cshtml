@@ -1,0 +1,75 @@
+﻿
+@using CRM_for_English_School.AppCore.Enums;
+
+@using (Html.BeginForm("Search", "Requests", FormMethod.Post))
+{
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Расширенный поиск
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="row g-lg-1">
+                        <div class="col-lg-8">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <label>Фамилия</label>
+                                    <input type="text" class="form-control" name="LastName"/>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label>Имя</label>
+                                    <input type="text" class="form-control" name="FirstName"/>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label>Возраст</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">От</span>
+                                        <input type="number" class="form-control" name="AgeLowBorder"/>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="input-group" style="padding-top: 32px">
+                                        <span class="input-group-text">До</span>
+                                        <input type="number" class="form-control" name="AgeHighBorder"/>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>Курс</label>
+                                    <select class="form-select" name="CourseId">
+                                        <option value=""></option>
+                                        @foreach (var course in (List<CourseModel>)ViewBag.Courses)
+                                        {
+                                            <option name="CourseId" value="@course.Id">@course.Name</option>
+                                        }
+                                    </select>
+                                </div>
+                                <br />
+                                <div class="pt-sm-3">
+                                    <input type="submit" class="btn btn-primary" value="Поиск" />
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="col-sm-12">
+                                <label>Текущий уровень языка</label>
+                                @foreach (var level in @Html.GetEnumSelectList<EnglishLevel>())
+                                {
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="@level.Value" id="flexCheckDefault" name="CurrentEnglishLevel">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            @level.Text
+                                        </label>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
