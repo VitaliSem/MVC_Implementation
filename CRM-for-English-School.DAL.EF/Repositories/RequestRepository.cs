@@ -29,18 +29,18 @@ namespace CRM_for_English_School.DAL.EF.Repositories
         {
             var requests = _englishSchoolContext.Requests.AsQueryable();
             if (!string.IsNullOrWhiteSpace(requestSearch.FirstName))
-                requests = requests.Where(r => r.FirstName.Contains(requestSearch.FirstName));
+                requests = requests.Where(r => r.FirstName.ToLower().Contains(requestSearch.FirstName.ToLower()));
             if (!string.IsNullOrWhiteSpace(requestSearch.LastName))
-                requests = requests.Where(r => r.LastName.Contains(requestSearch.LastName));
+                requests = requests.Where(r => r.LastName.ToLower().Contains(requestSearch.LastName.ToLower()));
             if (requestSearch.AgeLowBorder.HasValue)
                 requests = requests.Where(r => r.BirthDate.Year <= (DateTime.Now.Year - requestSearch.AgeLowBorder.Value));
             if (requestSearch.AgeHighBorder.HasValue)
                 requests = requests.Where(r => r.BirthDate.Year >= (DateTime.Now.Year - requestSearch.AgeHighBorder.Value));
             if (requestSearch.CourseId.HasValue)
                 requests = requests.Where(r => r.CourseId.Value == requestSearch.CourseId);
-            if (requestSearch.CurrentEnglishLevel.Length != 0)
+            if (requestSearch.EnglishLevel.Length != 0)
             {
-                var levelsSet = new HashSet<EnglishLevel>(requestSearch.CurrentEnglishLevel);
+                var levelsSet = new HashSet<EnglishLevel>(requestSearch.EnglishLevel);
                 requests = requests.Where(r => levelsSet.Contains(r.CurrentEnglishLevel.Value));
             }
             var result = await requests.ToListAsync();
