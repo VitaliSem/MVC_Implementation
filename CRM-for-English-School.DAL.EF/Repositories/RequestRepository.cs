@@ -25,6 +25,11 @@ namespace CRM_for_English_School.DAL.EF.Repositories
             return requests;
         }
 
+        public async Task<IEnumerable<Request>> GetRequestsByCourse(int id)
+        {
+            return await _englishSchoolContext.Requests.Where(r => r.CourseId == id).ToListAsync();
+        }
+
         public async Task<IEnumerable<Request>> SearchAsync(RequestSearch requestSearch)
         {
             var requests = _englishSchoolContext.Requests.AsQueryable();

@@ -1,6 +1,7 @@
 using AutoMapper;
 using CRM_for_English_School.Configuration;
 using CRM_for_English_School.DAL.EF.Context;
+using CRM_for_English_School.Filters;
 using CRM_for_English_School.Logger;
 using CRM_for_English_School.Mapper;
 using Microsoft.AspNetCore.Builder;
@@ -40,6 +41,7 @@ namespace CRM_for_English_School
 
             services.AddCRMService();
             services.Configure<AccessOptions>(Configuration.GetSection(AccessOptions.Access));
+            services.AddMvc(options => options.Filters.Add(typeof(CustomExceptionFilter)));
 
             var mapperConfig = new MapperConfiguration(cfg => { cfg.AddProfile(new MappingProfile()); });
             IMapper mapper = mapperConfig.CreateMapper();
@@ -57,7 +59,7 @@ namespace CRM_for_English_School
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                //app.UseDeveloperExceptionPage();
             }
             else
             {
@@ -65,6 +67,7 @@ namespace CRM_for_English_School
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

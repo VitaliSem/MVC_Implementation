@@ -20,6 +20,11 @@ namespace CRM_for_English_School.BLL.Services
             return await _repository.GetAllAsync();
         }
 
+        public async Task<IEnumerable<Request>> GetRequestsByCourse(int id)
+        {
+            return await _repository.GetRequestsByCourse(id);
+        }
+
         public async Task<IEnumerable<Request>> SearchAsync(RequestSearch requestSearch)
         {
             return await _repository.SearchAsync(requestSearch);

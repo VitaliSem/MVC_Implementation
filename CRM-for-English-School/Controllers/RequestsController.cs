@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Authorization;
 using CRM_for_English_School.AppCore.Entities;
 using System.Threading.Tasks;
+using System;
+using CRM_for_English_School.Filters;
 
 namespace CRM_for_English_School.Controllers
 {
@@ -22,6 +24,7 @@ namespace CRM_for_English_School.Controllers
             _requestService = requestService;
             _mapper = mapper;
         }
+
         public IActionResult Index()
         {
             var courses = _courseService.GetAll();
