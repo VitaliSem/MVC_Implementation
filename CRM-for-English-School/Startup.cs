@@ -57,6 +57,7 @@ namespace CRM_for_English_School
             IOptions<AccessOptions> accessOptions,
             ILoggerFactory loggerFactory)
         {
+            app.UseExceptionHandlerMiddleware();
             if (env.IsDevelopment())
             {
                 //app.UseDeveloperExceptionPage();
