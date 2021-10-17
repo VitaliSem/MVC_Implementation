@@ -26,13 +26,12 @@ namespace CRM_for_English_School.Filters
             {
                 return;
             }
-
             var result = new ViewResult { ViewName = "Error" };
             result.ViewData = new ViewDataDictionary(_modelMetadataProvider,
                 context.ModelState);
             result.ViewData.Add("Exception", context.Exception);
-            // TODO: Pass additional detailed data via ViewData
             context.Result = result;
+            context.ExceptionHandled = true;
         }
     }
 }

@@ -3,10 +3,16 @@
     ViewData["Title"] = "Error";
 }
 
-@{ var exception = ViewData["Exception"] as Exception; }
-
 <h1 class="text-danger">Error</h1>
-<h2 class="text-danger">An error occurred while processing @exception.TargetSite.Name</h2>
+<h2 class="text-danger">An error occurred while processing your request.</h2>
+
+<h2>Error Info</h2>
+<p>
+    @{ var exception = ViewData["Exception"] as Exception;
+        var errorMessage = $"Message: {exception?.Message}, \nStack Trace: {exception?.StackTrace}";
+    }
+    @Html.Raw(errorMessage)
+</p>
 
 
 @if (Model.ShowRequestId)
