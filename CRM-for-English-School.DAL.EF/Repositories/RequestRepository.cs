@@ -18,13 +18,13 @@ namespace CRM_for_English_School.DAL.EF.Repositories
             _englishSchoolContext = englishSchoolContext;
         }
 
-        public override IEnumerable<Request> GetAll()
+        public override async Task<IEnumerable<Request>> GetAllAsync()
         {
-            var requests = _englishSchoolContext.Requests.Include(r => r.Course).ToList();
+            var requests = await _englishSchoolContext.Requests.Include(r => r.Course).ToListAsync();
             return requests;
         }
 
-        public async Task<IEnumerable<Request>> GetRequestsByCourse(int id)
+        public async Task<IEnumerable<Request>> GetRequestsByCourseAsync(int id)
         {
             return await _englishSchoolContext.Requests.Where(r => r.CourseId == id).ToListAsync();
         }

@@ -5,6 +5,7 @@ using CRM_for_English_School.Models;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Authorization;
 using CRM_for_English_School.AppCore.Entities;
+using System.Threading.Tasks;
 
 namespace CRM_for_English_School.Controllers
 {
@@ -19,9 +20,9 @@ namespace CRM_for_English_School.Controllers
             _teacherService = teacherervice;
             _mapper = mapper;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> IndexAsync()
         {
-            var teachers = _teacherService.GetAll();
+            var teachers = await _teacherService.GetAllAsync();
             return View(_mapper.Map<IEnumerable<TeacherModel>>(teachers));
         }
 
@@ -33,31 +34,31 @@ namespace CRM_for_English_School.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddTeacher(TeacherModel teacherModel)
+        public async Task<IActionResult> AddTeacherAsync(TeacherModel teacherModel)
         {
-            _teacherService.CreateEntity(_mapper.Map<Teacher>(teacherModel));
+            await _teacherService.CreateEntityAsync(_mapper.Map<Teacher>(teacherModel));
             return RedirectToAction("Index", "Teachers");
         }
 
         [Authorize (Roles = "manager")]
         [HttpGet]
-        public IActionResult EditTeacher(int id)
+        public async Task<IActionResult> EditTeacherAsync(int id)
         {
-            var teacher = _teacherService.GetEntity(id);
+            var teacher = await _teacherService.GetEntityAsync(id);
             return View(_mapper.Map<TeacherModel>(teacher));
         }
 
         [HttpPost]
-        public IActionResult EditTeacher(TeacherModel teacherModel)
+        public async Task<IActionResult> EditTeacherAsync(TeacherModel teacherModel)
         {
-            _teacherService.EditEntity(_mapper.Map<Teacher>(teacherModel));
+            await _teacherService.EditEntityAsync(_mapper.Map<Teacher>(teacherModel));
             return RedirectToAction("Index", "Teachers");
         }
 
         [HttpGet]
-        public IActionResult DeleteTeacher(int id)
+        public async Task<IActionResult> DeleteTeacherAsync(int id)
         {
-            _teacherService.DeleteEntity(id);
+            await _teacherService.DeleteEntityAsync(id);
             return RedirectToAction("Index", "Teachers");
         }
     }

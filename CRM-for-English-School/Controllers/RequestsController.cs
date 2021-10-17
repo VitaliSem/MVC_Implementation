@@ -6,8 +6,6 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Authorization;
 using CRM_for_English_School.AppCore.Entities;
 using System.Threading.Tasks;
-using System;
-using CRM_for_English_School.Filters;
 
 namespace CRM_for_English_School.Controllers
 {
@@ -25,29 +23,29 @@ namespace CRM_for_English_School.Controllers
             _mapper = mapper;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var courses = _courseService.GetAll();
+            var courses = await _courseService.GetAllAsync();
             ViewBag.Courses = _mapper.Map<IEnumerable<CourseModel>>(courses);
-            var requests = _requestService.GetAll();
+            var requests = await _requestService.GetAllAsync();
             return View(_mapper.Map<IEnumerable<RequestModel>>(requests));
         }
 
         [Authorize(Roles = "manager")]
         [HttpGet]
-        public IActionResult AddRequest()
+        public async Task<IActionResult> AddRequest()
         {
-            var courses = _courseService.GetAll();
+            var courses = await _courseService.GetAllAsync();
             ViewBag.Courses = _mapper.Map<IEnumerable<CourseModel>>(courses);
             return View();
         }
 
         [HttpPost]
-        public IActionResult AddRequest(RequestModel requestModel)
+        public async Task<IActionResult> AddRequestAsync(RequestModel requestModel)
         {
             if (ModelState.IsValid)
             {
-                _requestService.CreateEntity(_mapper.Map<Request>(requestModel));
+                await _requestService.CreateEntityAsync(_mapper.Map<Request>(requestModel));
                 return RedirectToAction("Index", "Requests");
             }
             return View(requestModel);
@@ -55,29 +53,29 @@ namespace CRM_for_English_School.Controllers
 
         [Authorize (Roles = "manager")]
         [HttpGet]
-        public IActionResult EditRequest(int id)
+        public async Task<IActionResult> EditRequestAsync(int id)
         {
-            var courses = _courseService.GetAll();
+            var courses = await _courseService.GetAllAsync();
             ViewBag.Courses = _mapper.Map<IEnumerable<CourseModel>>(courses);
-            var request = _requestService.GetEntity(id);
+            var request = await _requestService.GetEntityAsync(id);
             return View(_mapper.Map<RequestModel>(request));
         }
 
         [HttpPost]
-        public IActionResult EditRequest(RequestModel requestModel)
+        public async Task<IActionResult> EditRequestAsync(RequestModel requestModel)
         {
             if (ModelState.IsValid)
             {
-                _requestService.EditEntity(_mapper.Map<Request>(requestModel));
+                await _requestService.EditEntityAsync(_mapper.Map<Request>(requestModel));
                 return RedirectToAction("Index", "Requests");
             }
             return View(requestModel);
         }
 
         [HttpGet]
-        public IActionResult DeleteRequest(int id)
+        public async Task<IActionResult> DeleteRequestAsync(int id)
         {
-            _requestService.DeleteEntity(id);
+            await _requestService.DeleteEntityAsync(id);
             return RedirectToAction("Index", "Requests");
         }
 
@@ -86,7 +84,7 @@ namespace CRM_for_English_School.Controllers
         {
             if (ModelState.IsValid)
             {
-                var courses = _courseService.GetAll();
+                IEnumerable<Course> courses = await _courseService.GetAllAsync();
                 ViewBag.Courses = _mapper.Map<IEnumerable<CourseModel>>(courses);
                 var filteredRequests = await _requestService.SearchAsync(_mapper.Map<RequestSearch>(searchModel));
                 return View("Index", _mapper.Map<IEnumerable<RequestModel>>(filteredRequests));

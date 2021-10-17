@@ -31,30 +31,30 @@ namespace CRM_for_English_School.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddCourse(CourseModel courseModel)
+        public async Task<IActionResult> AddCourseAsync(CourseModel courseModel)
         {
-            _courseService.CreateEntity(_mapper.Map<Course>(courseModel));
+            await _courseService.CreateEntityAsync(_mapper.Map<Course>(courseModel));
             return RedirectToAction("Index", "Courses");
         }
 
         [HttpGet]
-        public IActionResult EditCourse(int id)
+        public async Task<IActionResult> EditCourse(int id)
         {
-            var course = _courseService.GetEntity(id);
+            var course = await _courseService.GetEntityAsync(id);
             return View(_mapper.Map<CourseModel>(course));
         }
 
         [HttpPost]
-        public IActionResult EditCourse(CourseModel courseModel)
+        public async Task<IActionResult> EditCourseAsync(CourseModel courseModel)
         {
-            _courseService.EditEntity(_mapper.Map<Course>(courseModel));
+            await _courseService.EditEntityAsync(_mapper.Map<Course>(courseModel));
             return RedirectToAction("Index", "Courses");
         }
 
         [HttpGet]
-        public IActionResult DeleteCourse(int id)
+        public async Task<IActionResult> DeleteCourseAsync(int id)
         {
-            _courseService.DeleteEntity(id);
+            await _courseService.DeleteEntityAsync(id);
             return RedirectToAction("Index", "Courses");
         }
     }

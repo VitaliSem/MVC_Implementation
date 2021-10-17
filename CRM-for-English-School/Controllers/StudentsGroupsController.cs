@@ -31,30 +31,30 @@ namespace CRM_for_English_School.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddStudentsGroup(StudentsGroupModel studentsGroupModel)
+        public async Task<IActionResult> AddStudentsGroupAsync(StudentsGroupModel studentsGroupModel)
         {
-            _studentsGroupService.CreateEntity(_mapper.Map<StudentsGroup>(studentsGroupModel));
+            await _studentsGroupService.CreateEntityAsync(_mapper.Map<StudentsGroup>(studentsGroupModel));
             return RedirectToAction("Index", "StudentsGroups");
         }
 
         [HttpGet]
-        public IActionResult EditStudentsGroup(int id)
+        public async Task<IActionResult> EditStudentsGroupAsync(int id)
         {
-            var studentsgroup = _studentsGroupService.GetEntity(id);
+            var studentsgroup = await _studentsGroupService.GetEntityAsync(id);
             return View(_mapper.Map<StudentsGroupModel>(studentsgroup));
         }
 
         [HttpPost]
-        public IActionResult EditStudentsGroup(StudentsGroupModel studentsGroupModel)
+        public async Task<IActionResult> EditStudentsGroupAsync(StudentsGroupModel studentsGroupModel)
         {
-            _studentsGroupService.EditEntity(_mapper.Map<StudentsGroup>(studentsGroupModel));
+            await _studentsGroupService.EditEntityAsync(_mapper.Map<StudentsGroup>(studentsGroupModel));
             return RedirectToAction("Index", "StudentsGroups");
         }
 
         [HttpGet]
-        public IActionResult DeleteStudentsGroup(int id)
+        public async Task<IActionResult> DeleteStudentsGroupAsync(int id)
         {
-            _studentsGroupService.DeleteEntity(id);
+            await _studentsGroupService.DeleteEntityAsync(id);
             return RedirectToAction("Index", "StudentsGroups");
         }
     }

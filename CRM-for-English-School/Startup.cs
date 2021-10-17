@@ -55,6 +55,11 @@ namespace CRM_for_English_School
             IOptions<AccessOptions> accessOptions,
             ILoggerFactory loggerFactory)
         {
+            if (loggerFactory is null)
+            {
+                throw new ArgumentNullException(nameof(loggerFactory));
+            }
+
             app.UseExceptionHandlerMiddleware();
             if (env.IsDevelopment())
             {

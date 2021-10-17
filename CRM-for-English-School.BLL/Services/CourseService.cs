@@ -15,10 +15,9 @@ namespace CRM_for_English_School.BLL.Services
             _courseRepository = courseRepository;
         }
 
-        public async Task<IEnumerable<Course>> GetCourses()
+        public Task<IEnumerable<Course>> GetCoursesAsync()
         {
-            var courses = await _courseRepository.GetAllAsync();
-            return courses;
+            return _courseRepository.GetAllAsync();
         }
     }
 }

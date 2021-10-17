@@ -33,7 +33,7 @@ namespace CRM_for_English_School.Middleware
             {
                 StatusCode = statusCode,
                 ErrorMessage = ex.Message,
-                StackTrace = ex.StackTrace
+                ex.StackTrace
             });
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = statusCode;

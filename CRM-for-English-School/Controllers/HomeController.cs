@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using CRM_for_English_School.BLL.Interfaces;
 using System.Threading;
 using CRM_for_English_School.AppCore.Entities;
+using System.Threading.Tasks;
 
 namespace CRM_for_English_School.Controllers
 {
@@ -35,9 +36,9 @@ namespace CRM_for_English_School.Controllers
             _mapper = mapper;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var courses = _courseService.GetAll();
+            var courses = await _courseService.GetAllAsync();
             ViewBag.Courses = _mapper.Map<IEnumerable<CourseModel>>(courses);
             return View();
         }
@@ -50,11 +51,11 @@ namespace CRM_for_English_School.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public IActionResult FillRequestForm(RequestModel requestModel)
+        public async Task<IActionResult> FillRequestFormAsync(RequestModel requestModel)
         {
             if (ModelState.IsValid)
             {
-                _requestService.CreateEntity(_mapper.Map<Request>(requestModel));
+                await _requestService.CreateEntityAsync(_mapper.Map<Request>(requestModel));
             }
             Thread.Sleep(3000);
             return RedirectToAction("Index", "Home");
