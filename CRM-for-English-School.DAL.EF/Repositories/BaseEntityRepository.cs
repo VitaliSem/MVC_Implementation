@@ -19,18 +19,19 @@ namespace CRM_for_English_School.DAL.EF.Repositories
             _entities = englishSchoolContext.Set<TEntity>();
         }
 
-        public void Create(TEntity item)
+        public async Task CreateAsync(TEntity item)
         {
-            _englishSchoolContext.Add(item).State = EntityState.Added;
-            _englishSchoolContext.SaveChanges();
+            var entity = await _englishSchoolContext.AddAsync(item);
+            entity.State = EntityState.Added;
+            await _englishSchoolContext.SaveChangesAsync();
         }
 
-        public void Delete(int id)
+        public async Task DeleteAsync(int id)
         {
             var entity = _englishSchoolContext.Find<TEntity>(id);
             if (entity != null)
                 _englishSchoolContext.Remove(entity).State = EntityState.Deleted;
-            _englishSchoolContext.SaveChanges();
+            await _englishSchoolContext.SaveChangesAsync();
         }
 
         public IEnumerable<TEntity> Find(Func<TEntity, bool> predicate) => 
@@ -40,16 +41,15 @@ namespace CRM_for_English_School.DAL.EF.Repositories
                 .Where(predicate)
                 .ToList();
 
-        public TEntity Get(int id) => _entities.Find(id);
-
-        public virtual IEnumerable<TEntity> GetAll() => _entities.ToList();
+        public async Task<TEntity> GetAsync(int id) => await _entities.FindAsync(id);
 
         public virtual async Task<IEnumerable<TEntity>> GetAllAsync() => await _entities.ToListAsync();
 
-        public void Update(TEntity item)
+        public async Task UpdateAsync(TEntity item)
         {
             _englishSchoolContext.Entry(item).State = EntityState.Modified;
-            _englishSchoolContext.SaveChanges();
+            await _englishSchoolContext.SaveChangesAsync();
         }
+
     }
 }

@@ -4,6 +4,7 @@ using CRM_for_English_School.AppCore.Entities;
 using CRM_for_English_School.BLL.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace CRM_for_English_School.Angular.Controllers
 {
@@ -21,9 +22,9 @@ namespace CRM_for_English_School.Angular.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<CourseDTO> Get()
+        public async Task<IEnumerable<CourseDTO>> GetAsync()
         {
-            return _mapper.Map<IEnumerable<CourseDTO>>(_courseService.GetAll());
+            return _mapper.Map<IEnumerable<CourseDTO>>(await _courseService.GetAllAsync());
         }
     }
 }

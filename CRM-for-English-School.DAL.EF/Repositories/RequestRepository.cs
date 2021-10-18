@@ -6,7 +6,6 @@ using CRM_for_English_School.AppCore.Entities;
 using CRM_for_English_School.DAL.Interfaces;
 using System.Threading.Tasks;
 using System;
-using CRM_for_English_School.AppCore.Enums;
 
 namespace CRM_for_English_School.DAL.EF.Repositories
 {
@@ -19,19 +18,24 @@ namespace CRM_for_English_School.DAL.EF.Repositories
             _englishSchoolContext = englishSchoolContext;
         }
 
-        public override IEnumerable<Request> GetAll()
+        public override async Task<IEnumerable<Request>> GetAllAsync()
         {
-            var requests = _englishSchoolContext.Requests.Include(r => r.Course).ToList();
+            var requests = await _englishSchoolContext.Requests.Include(r => r.Course).ToListAsync();
             return requests;
+        }
+
+        public async Task<IEnumerable<Request>> GetRequestsByCourseAsync(int id)
+        {
+            return await _englishSchoolContext.Requests.Where(r => r.CourseId == id).ToListAsync();
         }
 
         public async Task<IEnumerable<Request>> SearchAsync(RequestSearch requestSearch)
         {
             var requests = _englishSchoolContext.Requests.AsQueryable();
             if (!string.IsNullOrWhiteSpace(requestSearch.FirstName))
-                requests = requests.Where(r => r.FirstName.ToLower().Contains(requestSearch.FirstName.ToLower()));
+                requests = requests.Where(r => Microsoft.EntityFrameworkCore.EF.Functions.Like(r.FirstName, requestSearch.FirstName));
             if (!string.IsNullOrWhiteSpace(requestSearch.LastName))
-                requests = requests.Where(r => r.LastName.ToLower().Contains(requestSearch.LastName.ToLower()));
+                requests = requests.Where(r => Microsoft.EntityFrameworkCore.EF.Functions.Like(r.LastName, requestSearch.LastName));
             if (requestSearch.AgeLowBorder.HasValue)
                 requests = requests.Where(r => r.BirthDate.Year <= (DateTime.Now.Year - requestSearch.AgeLowBorder.Value));
             if (requestSearch.AgeHighBorder.HasValue)
@@ -40,8 +44,7 @@ namespace CRM_for_English_School.DAL.EF.Repositories
                 requests = requests.Where(r => r.CourseId.Value == requestSearch.CourseId);
             if (requestSearch.EnglishLevel.Length != 0)
             {
-                var levelsSet = new HashSet<EnglishLevel>(requestSearch.EnglishLevel);
-                requests = requests.Where(r => levelsSet.Contains(r.CurrentEnglishLevel.Value));
+                requests = requests.Where(r => requestSearch.EnglishLevel.Contains(r.CurrentEnglishLevel.Value));
             }
             var result = await requests.ToListAsync();
             return result;

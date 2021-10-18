@@ -18,45 +18,39 @@ namespace CRM_for_English_School.WEB.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Teacher> GetTeachers()
-        {
-            return _teacherService.GetAll();
-        }
-
-        [HttpGet("async")]
         public async Task<IEnumerable<Teacher>> GetTeachersAsync()
         {
             return await _teacherService.GetAllAsync();
         }
 
         [HttpGet("{id}")]
-        public Teacher GetTeacher(int id)
+        public async Task<Teacher> GetTeacherAsync(int id)
         {
-            return _teacherService.GetEntity(id);
+            return await _teacherService.GetEntityAsync(id);
         }
 
         [HttpPost]
-        public Teacher AddTeacher(Teacher teacher)
+        public async Task<Teacher> AddTeacherAsync(Teacher teacher)
         {
             if (teacher != null)
-                _teacherService.CreateEntity(teacher);
+                await _teacherService.CreateEntityAsync(teacher);
 
             return teacher;
         }
 
         [HttpPut("{id}")]
-        public Teacher EditTeacher(Teacher teacher)
+        public async Task<Teacher> EditTeacherAsync(Teacher teacher)
         {
             if (teacher != null)
-                _teacherService.EditEntity(teacher);
+                await _teacherService.EditEntityAsync(teacher);
 
             return teacher;
         }
 
         [HttpDelete("{id}")]
-        public void DeleteTeacher(int id)
+        public async Task DeleteTeacherAsync(int id)
         {
-            _teacherService.DeleteEntity(id);
+            await _teacherService.DeleteEntityAsync(id);
         }
     }
 }

@@ -1,7 +1,7 @@
 using AutoMapper;
 using CRM_for_English_School.Configuration;
 using CRM_for_English_School.DAL.EF.Context;
-using CRM_for_English_School.Logger;
+using CRM_for_English_School.Filters;
 using CRM_for_English_School.Mapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -13,7 +13,6 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System;
-using System.IO;
 using System.Threading.Tasks;
 
 namespace CRM_for_English_School
@@ -31,7 +30,7 @@ namespace CRM_for_English_School
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<EnglishSchoolContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(Configuration.GetConnectionString("MSSQLServer")));
 
             services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddDefaultUI()
@@ -40,6 +39,7 @@ namespace CRM_for_English_School
 
             services.AddCRMService();
             services.Configure<AccessOptions>(Configuration.GetSection(AccessOptions.Access));
+            services.AddMvc(options => options.Filters.Add<CustomExceptionFilter>());
 
             var mapperConfig = new MapperConfiguration(cfg => { cfg.AddProfile(new MappingProfile()); });
             IMapper mapper = mapperConfig.CreateMapper();
@@ -55,16 +55,23 @@ namespace CRM_for_English_School
             IOptions<AccessOptions> accessOptions,
             ILoggerFactory loggerFactory)
         {
+            if (loggerFactory is null)
+            {
+                throw new ArgumentNullException(nameof(loggerFactory));
+            }
+
+            app.UseExceptionHandlerMiddleware();
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                //app.UseDeveloperExceptionPage();
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/Shared/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -82,17 +89,17 @@ namespace CRM_for_English_School
             });
 
             CreateRoles(serviceProvider, accessOptions).Wait();
-
-            loggerFactory.AddFile(Path.Combine(Directory.GetCurrentDirectory(), "logfile.txt"));
-            var logger = loggerFactory.CreateLogger("FileLogger");
-
-            app.Run(async (context) =>
-            {
-                logger.LogInformation("[Error] Request from the addres string - \"{0}\". " + DateTime.Now.ToString(), context.Request.Path);
-                await context.Response.CompleteAsync();
-            });
         }
 
+
+        //loggerFactory.AddFile(Path.Combine(Directory.GetCurrentDirectory(), "logfile.txt"));
+        //    var logger = loggerFactory.CreateLogger("FileLogger");
+
+        //app.Run(async (context) =>
+        //{
+        //    logger.LogInformation("[Error] Request from the addres string - \"{0}\". " + DateTime.Now.ToString(), context.Request.Path);
+        //    await context.Response.CompleteAsync();
+        //});
         private static async Task CreateRoles(IServiceProvider serviceProvider, IOptions<AccessOptions> accessOptions)
         {
             var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();

@@ -1,7 +1,5 @@
 ﻿@model List<CourseModel>
 
-@using CRM_for_English_School.Html_helpers;
-
 <div class="container">
     <div>
         <table class="table table-sm table-hover">
@@ -25,11 +23,22 @@
                         <td>
                             @if (course.Requests.Count >= 3)
                             {
-                                @Buttons.UseBadgedButton(Html, "Создать группу", buttonStatus: "success", course.Requests.Count, badgeStatus:"danger", isDisabled: false)
+                                <button type="button" class="btn btn-primary btn-sm position-relative" onclick="location.href='@Url.Action("Index", "StudentsGroups")'">
+                                    Создать группу
+                                    <span class="position-absolute top-25 start-100 translate-middle badge rounded-pill bg-danger">
+                                        @course.Requests.Count
+                                    </span>
+                                </button>
+
                             }
                             else
                             {
-                                @Buttons.UseBadgedButton(Html, "Создать группу", buttonStatus:"light", course.Requests.Count, badgeStatus:"secondary", isDisabled: true)
+                                <button type="button" class="btn btn-secondary btn-sm position-relative" disabled>
+                                    Создать группу
+                                    <span class="position-absolute top-25 start-100 translate-middle badge rounded-pill bg-danger">
+                                        @course.Requests.Count
+                                    </span>
+                                </button>
                             }
                         </td>
                     </tr>

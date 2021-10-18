@@ -1,0 +1,45 @@
+﻿@model StudentsGroupModel
+@using CRM_for_English_School.AppCore.Enums;
+@{ ViewData["Title"] = "Добавление группы"; }
+<div class="container">
+    <h2>Добавить группу</h2>
+    @using (Html.BeginForm("AddStudentsGroupByCourseId", "StudentsGroups", FormMethod.Post))
+    {
+        <div>
+            @Html.ValidationSummary()
+        </div>
+
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label asp-for="GroupName" class="form-label px-1">Название группы</label>
+                <input type="text" class="form-control" id="GroupName" name="GroupName" asp-for="GroupName">
+                <span class="alert-danger" asp-validation-for="GroupName"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="EnglishLevel">Уровень владения языком</label>
+                <div>
+                    <select class="form-select" asp-for="EnglishLevel" asp-items="Html.GetEnumSelectList<EnglishLevel>()">
+                        <option selected="selected" value="Please select"></option>
+                    </select>
+                    <span asp-validation-for="EnglishLevel" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <label asp-for="Teacher" class="col-form-label">Преподаватель</label>
+                <select class="form-select" asp-for="Teacher">
+                    <option value=""></option>
+                    @foreach (var teacher in (List<TeacherModel>)ViewBag.Teacher)
+                    {
+                        <option value="@teacher.Id">@teacher.LastName @teacher.FirstName</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        <br />
+        <button type="submit" class="btn btn-success">Добавить</button>
+    }
+</div>
+
+
+@section Scripts{ @await Html.PartialAsync("_ValidationScriptsPartial.cshtml") }

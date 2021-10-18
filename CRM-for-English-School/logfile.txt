@@ -2657,3 +2657,426 @@ Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Ко�
 Application started. Press Ctrl+C to shut down.
 Hosting environment: Development
 Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18230571306091282435", Request ID "80000004-0003-fd00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18230571306091282437", Request ID "80000006-0003-fd00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+An unhandled exception has occurred while executing the request.
+An exception was thrown attempting to execute the error handler.
+Connection ID "18374686485577203719", Request ID "80000008-0001-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+An unhandled exception has occurred while executing the request.
+An exception was thrown attempting to execute the error handler.
+Connection ID "18302628913014112263", Request ID "80000008-0006-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+An unhandled exception has occurred while executing the request.
+An exception was thrown attempting to execute the error handler.
+Connection ID "18374686485577203721", Request ID "8000000a-0001-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+An unhandled exception has occurred while executing the request.
+An exception was thrown attempting to execute the error handler.
+Connection ID "18374686485577203723", Request ID "8000000c-0001-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+The view 'CustomError' was not found. Searched locations: /Views/Requests/CustomError.cshtml, /Views/Shared/CustomError.cshtml, /Pages/Shared/CustomError.cshtml
+Connection ID "18230571297501347843", Request ID "80000004-0001-fd00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18374686481282236423", Request ID "80000008-0000-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18374686485577203731", Request ID "80000014-0001-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18302628887244308486", Request ID "80000007-0000-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/Requests12". 10.10.2021 19:41:02
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+An unhandled exception has occurred while executing the request.
+An exception was thrown attempting to execute the error handler.
+Connection ID "18374686502757072916", Request ID "80000015-0005-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18374686502757072918", Request ID "80000017-0005-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18374686481282236434", Request ID "80000013-0000-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18302628913014112277", Request ID "80000016-0006-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Connection ID "18374686481282236436", Request ID "80000015-0000-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18302628913014112279", Request ID "80000018-0006-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18374686485577203756", Request ID "8000002d-0001-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18374686485577203758", Request ID "8000002f-0001-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18374686511347007524", Request ID "80000025-0007-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18302628913014112285", Request ID "8000001e-0006-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18302628904424177666", Request ID "80000003-0004-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+The view '~/Shared/Error' was not found. Searched locations: ~/Shared/Error
+Connection ID "18374686502757072932", Request ID "80000025-0005-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+The view '~/Shared/Error.cshtml' was not found. Searched locations: ~/Shared/Error.cshtml
+Connection ID "18302628913014112288", Request ID "80000021-0006-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+The view 'Error.cshtml' was not found. Searched locations: /Error.cshtml
+Connection ID "18374686502757072935", Request ID "80000028-0005-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+The view 'Error.cshtml' was not found. Searched locations: /Error.cshtml
+An unhandled exception has occurred while executing the request.
+An exception was thrown attempting to execute the error handler.
+Connection ID "18374686502757072937", Request ID "8000002a-0005-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18374686511347007534", Request ID "8000002f-0007-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18302628913014112294", Request ID "80000027-0006-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18230571323271151621", Request ID "80000006-0007-fd00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18374686485577203713", Request ID "80000002-0001-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+The view 'AddStudentsGroup' was not found. Searched locations: /Views/StudentsGroups/AddStudentsGroup.cshtml, /Views/Shared/AddStudentsGroup.cshtml, /Pages/Shared/AddStudentsGroup.cshtml
+Connection ID "18374686494167138306", Request ID "80000003-0003-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+The view 'AddStudentsGroup' was not found. Searched locations: /Views/StudentsGroups/AddStudentsGroup.cshtml, /Views/Shared/AddStudentsGroup.cshtml, /Pages/Shared/AddStudentsGroup.cshtml
+Connection ID "18374686507052040204", Request ID "8000000d-0006-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18158513729233223681", Request ID "80000002-0007-fc00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18230571323271151626", Request ID "8000000b-0007-fd00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18374686507052040209", Request ID "80000012-0006-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+The view 'AddStudentsGroup' was not found. Searched locations: /Views/StudentsGroups/AddStudentsGroup.cshtml, /Views/Shared/AddStudentsGroup.cshtml, /Pages/Shared/AddStudentsGroup.cshtml
+Connection ID "18374686507052040211", Request ID "80000014-0006-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18374686494167138326", Request ID "80000017-0003-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Connection ID "18302628887244308488", Request ID "80000009-0000-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18374686507052040217", Request ID "8000001a-0006-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18374686485577203735", Request ID "80000018-0001-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Connection ID "18374686485577203737", Request ID "8000001a-0001-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18374686481282236437", Request ID "80000016-0000-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18374686481282236439", Request ID "80000018-0000-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Connection ID "18374686485577203745", Request ID "80000022-0001-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18374686481282236445", Request ID "8000001e-0000-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18302628908719144965", Request ID "80000006-0005-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18230571310386249743", Request ID "80000010-0004-fd00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18158513716348321817", Request ID "8000001a-0004-fc00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Connection ID "18374686481282236449", Request ID "80000022-0000-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Connection ID "18302628913014112273", Request ID "80000012-0006-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18302628917309079579", Request ID "8000001c-0007-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/StudentsGroups". 12.10.2021 22:17:21
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18302628917309079581", Request ID "8000001e-0007-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18374686489872171018", Request ID "8000000b-0002-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/StudentsGroupsController". 12.10.2021 22:20:52
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18374686485577203755", Request ID "8000002c-0001-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18302628913014112281", Request ID "8000001a-0006-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18374686511347007522", Request ID "80000023-0007-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+[Error] Request from the addres string - "/StrudentsGroups". 12.10.2021 22:52:55
+[Error] Request from the addres string - "/StrudentsGroups". 12.10.2021 22:53:02
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18302628908719144963", Request ID "80000004-0005-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School
+Connection ID "18230571306091282439", Request ID "80000008-0003-fd00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Vitalik\Google Диск\О_Обучение\К_Компьютер\O_IT-Academy\P_Final Project\Project\CRM-for-English-School

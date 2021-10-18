@@ -5,6 +5,7 @@ using CRM_for_English_School.Models;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Authorization;
 using CRM_for_English_School.AppCore.Entities;
+using System.Threading.Tasks;
 
 namespace CRM_for_English_School.Controllers
 {
@@ -19,9 +20,9 @@ namespace CRM_for_English_School.Controllers
             _studentService = studentService;
             _mapper = mapper;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> IndexAsync()
         {
-            var students = _studentService.GetAll();
+            var students = await _studentService.GetAllAsync();
             return View(_mapper.Map<IEnumerable<StudentModel>>(students));
         }
 
@@ -33,11 +34,11 @@ namespace CRM_for_English_School.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddStudent(StudentModel studentModel)
+        public async Task<IActionResult> AddStudentAsync(StudentModel studentModel)
         {
             if (ModelState.IsValid)
             {
-                _studentService.CreateEntity(_mapper.Map<Student>(studentModel));
+                await _studentService.CreateEntityAsync(_mapper.Map<Student>(studentModel));
                 return RedirectToAction("Index", "Students");
             }
             return View(studentModel);
@@ -45,27 +46,27 @@ namespace CRM_for_English_School.Controllers
 
         [Authorize (Roles = "manager")]
         [HttpGet]
-        public IActionResult EditStudent(int id)
+        public async Task<IActionResult> EditStudentAsync(int id)
         {
-            var student = _studentService.GetEntity(id);
+            var student = await _studentService.GetEntityAsync(id);
             return View(_mapper.Map<StudentModel>(student));
         }
 
         [HttpPost]
-        public IActionResult EditStudent(StudentModel studentModel)
+        public async Task<IActionResult> EditStudentAsync(StudentModel studentModel)
         {
             if (ModelState.IsValid)
             {
-                _studentService.EditEntity(_mapper.Map<Student>(studentModel));
+                await _studentService.EditEntityAsync(_mapper.Map<Student>(studentModel));
                 return RedirectToAction("Index", "Students");
             }
             return View(studentModel);
         }
 
         [HttpGet]
-        public IActionResult DeleteStudent(int id)
+        public async Task<IActionResult> DeleteStudentAsync(int id)
         {
-            _studentService.DeleteEntity(id);
+            await _studentService.DeleteEntityAsync(id);
             return RedirectToAction("Index", "Students");
         }
     }

@@ -15,14 +15,19 @@ namespace CRM_for_English_School.BLL.Services
             _repository = repository;
         }
 
-        public async Task<IEnumerable<Request>> GetRequests()
+        public Task<IEnumerable<Request>> GetRequests()
         {
-            return await _repository.GetAllAsync();
+            return _repository.GetAllAsync();
         }
 
-        public async Task<IEnumerable<Request>> SearchAsync(RequestSearch requestSearch)
+        public Task<IEnumerable<Request>> GetRequestsByCourseAsync(int id)
         {
-            return await _repository.SearchAsync(requestSearch);
+            return _repository.GetRequestsByCourseAsync(id);
+        }
+
+        public Task<IEnumerable<Request>> SearchAsync(RequestSearch requestSearch)
+        {
+            return _repository.SearchAsync(requestSearch);
         }
     }
 }
