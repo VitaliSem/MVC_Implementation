@@ -20,7 +20,7 @@ namespace CRM_for_English_School.BLL.Services
 
         public Task EditEntityAsync(TEntity entity) => _repository.UpdateAsync(entity);
 
-        public IEnumerable<TEntity> Find(Func<TEntity, bool> predicate) => _repository.Find(predicate);
+        public Task<IEnumerable<TEntity>> FindAsync(Func<TEntity, bool> predicate) => _repository.FindAsync(predicate);
 
         public Task<IEnumerable<TEntity>> GetAllAsync() =>_repository.GetAllAsync();
         public Task<TEntity> GetEntityAsync(int id) => _repository.GetAsync(id);
