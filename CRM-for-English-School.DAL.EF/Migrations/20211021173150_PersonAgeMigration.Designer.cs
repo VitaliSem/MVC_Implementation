@@ -4,14 +4,16 @@ using CRM_for_English_School.DAL.EF.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CRM_for_English_School.DAL.EF.Migrations
 {
     [DbContext(typeof(EnglishSchoolContext))]
-    partial class EnglishSchoolContextModelSnapshot : ModelSnapshot
+    [Migration("20211021173150_PersonAgeMigration")]
+    partial class PersonAgeMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -92,9 +94,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int?>("Age")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("int")
-                        .HasComputedColumnSql("DATEDIFF(YEAR,BirthDate,GETDATE())");
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("BirthDate")
                         .HasColumnType("datetime2");
@@ -133,6 +133,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         new
                         {
                             Id = 1,
+                            Age = 23,
                             BirthDate = new DateTime(1998, 4, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "IvanIvanov@gmail.com",
                             FirstName = "Иван",

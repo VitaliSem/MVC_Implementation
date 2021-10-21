@@ -37,9 +37,9 @@ namespace CRM_for_English_School.DAL.EF.Repositories
             if (!string.IsNullOrWhiteSpace(requestSearch.LastName))
                 requests = requests.Where(r => Microsoft.EntityFrameworkCore.EF.Functions.Like(r.LastName, requestSearch.LastName));
             if (requestSearch.AgeLowBorder.HasValue)
-                requests = requests.Where(r => r.BirthDate.Year <= (DateTime.Now.Year - requestSearch.AgeLowBorder.Value));
+                requests = requests.Where(r => r.BirthDate.Value.Year <= (DateTime.Now.Year - requestSearch.AgeLowBorder.Value));
             if (requestSearch.AgeHighBorder.HasValue)
-                requests = requests.Where(r => r.BirthDate.Year >= (DateTime.Now.Year - requestSearch.AgeHighBorder.Value));
+                requests = requests.Where(r => r.BirthDate.Value.Year >= (DateTime.Now.Year - requestSearch.AgeHighBorder.Value));
             if (requestSearch.CourseId.HasValue)
                 requests = requests.Where(r => r.CourseId.Value == requestSearch.CourseId);
             if (requestSearch.EnglishLevel.Length != 0)
