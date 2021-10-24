@@ -12,6 +12,7 @@ namespace CRM_for_English_School.Controllers
     [Authorize]
     public class RequestsController : Controller
     {
+        const int pageSize = 10;
         private readonly ICourseService _courseService;
         private readonly IRequestService _requestService;
         private readonly IMapper _mapper;
@@ -23,12 +24,20 @@ namespace CRM_for_English_School.Controllers
             _mapper = mapper;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
             var courses = await _courseService.GetAllAsync();
             ViewBag.Courses = _mapper.Map<IEnumerable<CourseModel>>(courses);
-            var requests = await _requestService.GetAllAsync();
-            return View(_mapper.Map<IEnumerable<RequestModel>>(requests));
+            var countOfRequests = await _requestService.CountAsync();
+            ViewBag.RequestCount = countOfRequests;
+            var requests = _mapper.Map<IEnumerable<RequestModel>>(await _requestService.TakeRequestsFromPageAsync(page, pageSize));
+            PageViewModel pageViewModel = new(countOfRequests, page, pageSize);
+            PaginationModel paginationModel = new()
+            {
+                Requests = requests,
+                PageViewModel = pageViewModel
+            };
+            return View(paginationModel);
         }
 
         [Authorize(Roles = "manager")]

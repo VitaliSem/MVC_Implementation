@@ -15,6 +15,11 @@ namespace CRM_for_English_School.BLL.Services
             _repository = repository;
         }
 
+        public Task<int> CountAsync()
+        {
+            return _repository.GetCountAsync();
+        }
+
         public Task<IEnumerable<Request>> GetRequests()
         {
             return _repository.GetAllAsync();
@@ -28,6 +33,11 @@ namespace CRM_for_English_School.BLL.Services
         public Task<IEnumerable<Request>> SearchAsync(RequestSearch requestSearch)
         {
             return _repository.SearchAsync(requestSearch);
+        }
+
+        public Task<IEnumerable<Request>> TakeRequestsFromPageAsync(int page, int numberOfRequests)
+        {
+            return _repository.TakePortion(page, numberOfRequests);
         }
     }
 }

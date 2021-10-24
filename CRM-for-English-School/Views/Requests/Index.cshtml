@@ -1,12 +1,9 @@
-﻿@model List<RequestModel>
+﻿@using CRM_for_English_School.TagHelpers
 
-@using CRM_for_English_School.AppCore.Entities;
+@model PaginationModel
 
 <div class="container">
     @await Html.PartialAsync("RequestSearchPartial")
-    <!--
-    <partial name="RequestSearchPartial" />
-        -->
     <div>
         <table class="table table-sm table-hover">
             <thead class="table-light">
@@ -22,7 +19,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var request in Model)
+                @foreach (var request in Model.Requests)
                 {
                     <tr>
                         <th scope="col">@request.Id</th>
@@ -38,8 +35,31 @@
             </tbody>
         </table>
     </div>
-    <p><div class="text-info">Кол-во запросов: @Model.Count()</div></p>
+    <p><div class="text-info">Заявки @((Model.PageViewModel.PageNumber-1)*10+1) - @(Model.PageViewModel.PageNumber*10) из @ViewBag.RequestCount</div></p>
     <div>
         @Html.ActionLink("Добавить запрос", "AddRequest", "Requests", null, new { @class = "btn btn-primary" })
     </div>
 </div>
+
+@if (Model.PageViewModel.TotalPages > 1)
+{
+    <ul class="pagination justify-content-center">
+        @if (Model.PageViewModel.PageNumber > 1)
+        {
+            <li class="page-item"><a class="page-link" asp-controller="Requests" asp-action="Index">Первая</a></li>
+            <li class="page-item"><a class="page-link" asp-controller="Requests" asp-action="Index" asp-route-page="@(Model.PageViewModel.PageNumber - 1)">Предыдущая</a>
+            </li>
+        }
+        @for (var page = 1; page <= Model.PageViewModel.TotalPages; page++)
+        {
+            <li class="page-item @(page == Model.PageViewModel.PageNumber ? "active" : "")">
+                <a class="page-link" asp-controller="Requests" asp-action="Index" asp-route-page="@(page)">@(page)</a>
+            </li>
+        }
+        @if (Model.PageViewModel.PageNumber < Model.PageViewModel.TotalPages)
+        {
+            <li class="page-item"><a class="page-link" asp-controller="Requests" asp-action="Index" asp-route-page="@(Model.PageViewModel.PageNumber + 1)">Следующая</a></li>
+            <li class="page-item"><a class="page-link" asp-controller="Requests" asp-action="Index" asp-route-page="@Model.PageViewModel.TotalPages">Последняя</a></li>
+        }
+    </ul>
+}

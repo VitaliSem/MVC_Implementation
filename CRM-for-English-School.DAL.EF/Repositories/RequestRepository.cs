@@ -20,8 +20,12 @@ namespace CRM_for_English_School.DAL.EF.Repositories
 
         public override async Task<IEnumerable<Request>> GetAllAsync()
         {
-            var requests = await _englishSchoolContext.Requests.Include(r => r.Course).ToListAsync();
-            return requests;
+            return await _englishSchoolContext.Requests.Include(r => r.Course).ToListAsync();
+        }
+
+        public async Task<IEnumerable<Request>> TakePortion(int pageNumber, int pageSize)
+        {
+            return await _englishSchoolContext.Requests.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToListAsync();
         }
 
         public async Task<IEnumerable<Request>> GetRequestsByCourseAsync(int id)
@@ -48,6 +52,11 @@ namespace CRM_for_English_School.DAL.EF.Repositories
             }
             var result = await requests.ToListAsync();
             return result;
+        }
+
+        public async Task<int> GetCountAsync()
+        {
+            return await _englishSchoolContext.Requests.CountAsync();
         }
     }
 }

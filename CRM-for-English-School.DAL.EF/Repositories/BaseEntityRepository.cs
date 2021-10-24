@@ -51,6 +51,5 @@ namespace CRM_for_English_School.DAL.EF.Repositories
             _englishSchoolContext.Entry(item).State = EntityState.Modified;
             await _englishSchoolContext.SaveChangesAsync();
         }
-
     }
 }
