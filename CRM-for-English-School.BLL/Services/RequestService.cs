@@ -30,7 +30,7 @@ namespace CRM_for_English_School.BLL.Services
             return _repository.GetRequestsByCourseAsync(id);
         }
 
-        public Task<IEnumerable<Request>> SearchAsync(RequestSearch requestSearch)
+        public Task<List<Request>> SearchAsync(RequestSearch requestSearch)
         {
             return _repository.SearchAsync(requestSearch);
         }

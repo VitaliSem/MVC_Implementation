@@ -33,7 +33,7 @@ namespace CRM_for_English_School.DAL.EF.Repositories
             return await _englishSchoolContext.Requests.Where(r => r.CourseId == id).ToListAsync();
         }
 
-        public async Task<IEnumerable<Request>> SearchAsync(RequestSearch requestSearch)
+        public async Task<List<Request>> SearchAsync(RequestSearch requestSearch)
         {
             var requests = _englishSchoolContext.Requests.AsQueryable();
             if (!string.IsNullOrWhiteSpace(requestSearch.FirstName))
@@ -41,15 +41,21 @@ namespace CRM_for_English_School.DAL.EF.Repositories
             if (!string.IsNullOrWhiteSpace(requestSearch.LastName))
                 requests = requests.Where(r => Microsoft.EntityFrameworkCore.EF.Functions.Like(r.LastName, requestSearch.LastName));
             if (requestSearch.AgeLowBorder.HasValue)
-                requests = requests.Where(r => r.BirthDate.Value.Year <= (DateTime.Now.Year - requestSearch.AgeLowBorder.Value));
+            {
+                if (requestSearch.AgeHighBorder.HasValue && requestSearch.AgeHighBorder.Value < requestSearch.AgeLowBorder.Value)
+                    throw new ArgumentException("Значение верхней границы возраста задано некорректно!");
+                requests = requests.Where(r => r.Age >= requestSearch.AgeLowBorder.Value);
+            }
             if (requestSearch.AgeHighBorder.HasValue)
-                requests = requests.Where(r => r.BirthDate.Value.Year >= (DateTime.Now.Year - requestSearch.AgeHighBorder.Value));
+            {
+                if (requestSearch.AgeLowBorder.HasValue && requestSearch.AgeLowBorder.Value > requestSearch.AgeHighBorder.Value)
+                    throw new ArgumentException("Значение нижней границы возраста задано некорректно!");
+                requests = requests.Where(r => r.Age <= requestSearch.AgeHighBorder.Value);
+            }
             if (requestSearch.CourseId.HasValue)
                 requests = requests.Where(r => r.CourseId.Value == requestSearch.CourseId);
-            if (requestSearch.EnglishLevel.Length != 0)
-            {
+            if (requestSearch.EnglishLevel?.Length > 0)
                 requests = requests.Where(r => requestSearch.EnglishLevel.Contains(r.CurrentEnglishLevel.Value));
-            }
             var result = await requests.ToListAsync();
             return result;
         }

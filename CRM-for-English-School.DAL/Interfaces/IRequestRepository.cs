@@ -9,6 +9,6 @@ namespace CRM_for_English_School.DAL.Interfaces
         Task<int> GetCountAsync();
         Task<IEnumerable<Request>> GetRequestsByCourseAsync(int id);
         Task<IEnumerable<Request>> TakePortion(int pageNumber, int pageSize);
-        Task<IEnumerable<Request>> SearchAsync(RequestSearch requestSearch);
+        Task<List<Request>> SearchAsync(RequestSearch requestSearch);
     }
 }
