@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace CRM_for_English_School.DAL.EF.Tests
@@ -31,15 +32,15 @@ namespace CRM_for_English_School.DAL.EF.Tests
             _context.Database.EnsureDeleted();
         }
         [Test]
-        public void SearchAsync_ReturnsAllEntities_WhenGetsNullableRequest()
+        public async Task SearchAsync_ReturnsAllEntities_WhenGetsNullableRequestAsync()
         {
             //Arrange
             RequestSearch request = new();
             //Act
-            var results = requestRepository.SearchAsync(request);
+            var results = await requestRepository.SearchAsync(request);
             //Assert
-            Assert.IsInstanceOf(typeof(Task<List<Request>>), results);
-            Assert.AreEqual(_context.Requests.CountAsync().Result, results.Result.Count);
+            Assert.IsInstanceOf(typeof(IEnumerable<Request>), results);
+            Assert.AreEqual(_context.Requests.CountAsync().Result, results.Count());
         }
 
         [TestCase("Ольга", "Синицина")]
@@ -47,7 +48,7 @@ namespace CRM_for_English_School.DAL.EF.Tests
         [TestCase("Ольга", "синицина")]
         [TestCase(null, "Синицина")]
         [TestCase("Ольга", null)]
-        public void SearchAsync_ReturnsEntity_WhenGetsIgnoreCaseRequest(string firstName, string lastName)
+        public async Task SearchAsync_ReturnsEntity_WhenGetsIgnoreCaseRequestAsync(string firstName, string lastName)
         {
             //Arrang
             RequestSearch request = new()
@@ -56,17 +57,17 @@ namespace CRM_for_English_School.DAL.EF.Tests
                 LastName = lastName
             };
             //Act
-            var result = requestRepository.SearchAsync(request);
+            var result = await requestRepository.SearchAsync(request);
             //Assert
-            Assert.AreEqual(1, result.Result.Count);
-            Assert.AreEqual("Ольга", result.Result.Find(r => r.FirstName == "Ольга").FirstName);
-            Assert.AreEqual("Синицина", result.Result.Find(r => r.LastName == "Синицина").LastName);
+            Assert.AreEqual(1, result.Count());
+            Assert.AreEqual("Ольга", result.Single().FirstName);
+            Assert.AreEqual("Синицина", result.Single().LastName);
         }
 
         [TestCase(23,25)]
         [TestCase(23,null)]
         [TestCase(null,23)]
-        public void SearchAsync_ReturnsEntityByAge_WhenGetsValidAgeRange(int? lowBorder, int? highBorder)
+        public async Task SearchAsync_ReturnsEntityByAge_WhenGetsValidAgeRangeAsync(int? lowBorder, int? highBorder)
         {
             //Arrange
             RequestSearch request = new()
@@ -75,9 +76,9 @@ namespace CRM_for_English_School.DAL.EF.Tests
                 AgeHighBorder = highBorder
             };
             //Act
-            var results = requestRepository.SearchAsync(request);
+            var results = await requestRepository.SearchAsync(request);
             //Assert
-            Assert.AreEqual(3, results.Result.Count);
+            Assert.AreEqual(3, results.Count());
         }
         [Test]
         public void SearchAsync_ThrowsException_WhenGetsInvalidAgeRange()
