@@ -34,12 +34,13 @@ namespace CRM_for_English_School.DAL.EF.Repositories
             await _englishSchoolContext.SaveChangesAsync();
         }
 
-        public IEnumerable<TEntity> Find(Func<TEntity, bool> predicate) => 
-            _entities
-                .AsNoTracking()
-                .AsEnumerable()
-                .Where(predicate)
-                .ToList();
+        public async Task<IEnumerable<TEntity>> FindAsync(Func<TEntity, bool> predicate) =>
+            await _entities
+            .AsNoTracking()
+            .AsEnumerable()
+            .Where(predicate)
+            .AsQueryable()
+            .ToListAsync();
 
         public async Task<TEntity> GetAsync(int id) => await _entities.FindAsync(id);
 
@@ -50,6 +51,5 @@ namespace CRM_for_English_School.DAL.EF.Repositories
             _englishSchoolContext.Entry(item).State = EntityState.Modified;
             await _englishSchoolContext.SaveChangesAsync();
         }
-
     }
 }

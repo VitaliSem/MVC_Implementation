@@ -25,4 +25,8 @@
     <ProjectReference Include="..\CRM-for-English-School.DAL\CRM-for-English-School.DAL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>

@@ -7,7 +7,7 @@ namespace CRM_for_English_School.BLL.Interfaces
     public interface IBaseEntityService<TEntity>
     {
         Task <IEnumerable<TEntity>> GetAllAsync();
-        IEnumerable<TEntity> Find(Func<TEntity, bool> predicate);
+        Task<IEnumerable<TEntity>> FindAsync(Func<TEntity, bool> predicate);
         Task<TEntity> GetEntityAsync(int id);
         Task CreateEntityAsync(TEntity entity);
         Task EditEntityAsync(TEntity entity);

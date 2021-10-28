@@ -6,7 +6,9 @@ namespace CRM_for_English_School.DAL.Interfaces
 {
     public interface IRequestRepository : IRepository<Request>
     {
+        Task<int> GetCountAsync();
         Task<IEnumerable<Request>> GetRequestsByCourseAsync(int id);
-        Task<IEnumerable<Request>> SearchAsync(RequestSearch requestSearch);
+        Task<IEnumerable<Request>> TakePortion(int pageNumber, int pageSize);
+        Task<List<Request>> SearchAsync(RequestSearch requestSearch);
     }
 }
