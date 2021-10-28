@@ -95,8 +95,13 @@ namespace CRM_for_English_School.Controllers
             {
                 IEnumerable<Course> courses = await _courseService.GetAllAsync();
                 ViewBag.Courses = _mapper.Map<IEnumerable<CourseModel>>(courses);
-                var filteredRequests = await _requestService.SearchAsync(_mapper.Map<RequestSearch>(searchModel));
-                return View("Index", _mapper.Map<IEnumerable<RequestModel>>(filteredRequests));
+                var filteredRequests = _mapper.Map<IEnumerable<RequestModel>>(await _requestService.SearchAsync(_mapper.Map<RequestSearch>(searchModel)));
+                PaginationModel paginationModel = new()
+                {
+                    Requests = filteredRequests,
+                    PageViewModel = null
+                };
+                return View("Index", paginationModel);
             }
             return RedirectToAction("Index", "Requests");
         }

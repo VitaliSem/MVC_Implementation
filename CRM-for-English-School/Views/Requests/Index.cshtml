@@ -34,14 +34,11 @@
                 }
             </tbody>
         </table>
-    </div>
-    <p><div class="text-info">Заявки @((Model.PageViewModel.PageNumber-1)*10+1) - @(Model.PageViewModel.PageNumber*10) из @ViewBag.RequestCount</div></p>
-    <div>
         @Html.ActionLink("Добавить запрос", "AddRequest", "Requests", null, new { @class = "btn btn-primary" })
     </div>
 </div>
 
-@if (Model.PageViewModel.TotalPages > 1)
+@if (Model.PageViewModel?.TotalPages > 1)
 {
     <ul class="pagination justify-content-center">
         @if (Model.PageViewModel.PageNumber > 1)
