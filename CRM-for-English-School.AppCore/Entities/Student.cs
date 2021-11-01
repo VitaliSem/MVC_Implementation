@@ -6,7 +6,8 @@ namespace CRM_for_English_School.AppCore.Entities
     {
         public int Id { get; set; }
         public EnglishLevel CurrentEnglishLevel { get; set; }
-        public int GroupdId { get; set; }
+        public StudentStatus Status { get; set; }
+        public int GroupId { get; set; }
         public StudentsGroup Group { get; set; }
     }
 }

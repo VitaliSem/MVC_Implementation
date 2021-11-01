@@ -28,9 +28,13 @@ namespace CRM_for_English_School.DAL.EF.Repositories
             return await _englishSchoolContext.Requests.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToListAsync();
         }
 
-        public async Task<IEnumerable<Request>> GetRequestsByCourseAsync(int id)
+        public async Task<IEnumerable<Request>> GetRequestsToCourseAsync(int id)
         {
-            return await _englishSchoolContext.Requests.Where(r => r.CourseId == id).ToListAsync();
+            return await _englishSchoolContext.Requests
+                .Where(r => r.CourseId == id)
+                .Where(r => r.RequestStatus == AppCore.Enums.RequestStatus.Confirmed)
+                .OrderBy(r => r.DateOfRequest)
+                .ToListAsync();
         }
 
         public async Task<IEnumerable<Request>> SearchAsync(RequestSearch requestSearch)

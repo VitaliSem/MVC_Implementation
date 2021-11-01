@@ -14,6 +14,11 @@ namespace CRM_for_English_School.BLL.Services
             _studentsGroupRepository = studentsGroupRepository;
         }
 
+        public Task<int> CreateGroupAsync(StudentsGroup studentsGroup)
+        {
+            return _studentsGroupRepository.CreateGroupAsync(studentsGroup);
+        }
+
         public Task<IEnumerable<StudentsGroup>> GetStudentsGroupsAsync()
         {
             return _studentsGroupRepository.GetAllAsync();

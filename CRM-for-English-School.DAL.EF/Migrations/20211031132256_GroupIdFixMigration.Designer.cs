@@ -4,19 +4,21 @@ using CRM_for_English_School.DAL.EF.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CRM_for_English_School.DAL.EF.Migrations
 {
     [DbContext(typeof(EnglishSchoolContext))]
-    partial class EnglishSchoolContextModelSnapshot : ModelSnapshot
+    [Migration("20211031132256_GroupIdFixMigration")]
+    partial class GroupIdFixMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.11")
+                .HasAnnotation("ProductVersion", "5.0.10")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("CRM_for_English_School.AppCore.Entities.Course", b =>
@@ -623,9 +625,6 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                     b.Property<string>("PhoneNumber")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("GroupId");
@@ -643,8 +642,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             GroupId = 0,
                             LastName = "Квасков",
                             MiddleName = "Игоревич",
-                            PhoneNumber = "+375(29)616-94-87",
-                            Status = 0
+                            PhoneNumber = "+375(29)616-94-87"
                         },
                         new
                         {
@@ -656,8 +654,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             GroupId = 0,
                             LastName = "Лабудько",
                             MiddleName = "Петрович",
-                            PhoneNumber = "+375(33)822-74-13",
-                            Status = 0
+                            PhoneNumber = "+375(33)822-74-13"
                         },
                         new
                         {
@@ -669,8 +666,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             GroupId = 0,
                             LastName = "Сорока",
                             MiddleName = "Степановна",
-                            PhoneNumber = "+375(33)555-66-77",
-                            Status = 0
+                            PhoneNumber = "+375(33)555-66-77"
                         },
                         new
                         {
@@ -682,8 +678,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             GroupId = 0,
                             LastName = "Лыков",
                             MiddleName = "Федорович",
-                            PhoneNumber = "+375(29)996-74-14",
-                            Status = 0
+                            PhoneNumber = "+375(29)996-74-14"
                         },
                         new
                         {
@@ -695,8 +690,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             GroupId = 0,
                             LastName = "Голубева",
                             MiddleName = "Алексеевна",
-                            PhoneNumber = "+375(29)622-74-74",
-                            Status = 0
+                            PhoneNumber = "+375(29)622-74-74"
                         },
                         new
                         {
@@ -708,8 +702,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             GroupId = 0,
                             LastName = "Огородник",
                             MiddleName = "Дмитриевич",
-                            PhoneNumber = "+375(29)743-96-13",
-                            Status = 0
+                            PhoneNumber = "+375(29)743-96-13"
                         },
                         new
                         {
@@ -721,8 +714,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             GroupId = 0,
                             LastName = "Караул",
                             MiddleName = "Федоровна",
-                            PhoneNumber = "+375(29)120-19-84",
-                            Status = 0
+                            PhoneNumber = "+375(29)120-19-84"
                         },
                         new
                         {
@@ -734,8 +726,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             GroupId = 0,
                             LastName = "Альбегова",
                             MiddleName = "Петровна",
-                            PhoneNumber = "+375(29)545-75-75",
-                            Status = 0
+                            PhoneNumber = "+375(29)545-75-75"
                         });
                 });
 
@@ -1058,8 +1049,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                 {
                     b.HasOne("CRM_for_English_School.AppCore.Entities.Course", "Course")
                         .WithMany("Requests")
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .HasForeignKey("CourseId");
 
                     b.Navigation("Course");
                 });

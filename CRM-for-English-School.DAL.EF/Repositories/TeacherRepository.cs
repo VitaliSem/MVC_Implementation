@@ -7,18 +7,17 @@ using System.Threading.Tasks;
 
 namespace CRM_for_English_School.DAL.EF.Repositories
 {
-    public class CourseRepository : BaseEntityRepository<Course>, ICourseRepository
+    public class TeacherRepository : BaseEntityRepository<Teacher>, ITeacherRepository
     {
         private readonly EnglishSchoolContext _englishSchoolContext;
 
-        public CourseRepository(EnglishSchoolContext englishSchoolContext) : base(englishSchoolContext)
+        public TeacherRepository(EnglishSchoolContext englishSchoolContext) : base(englishSchoolContext)
         {
             _englishSchoolContext = englishSchoolContext;
         }
-
-        public override async Task<IEnumerable<Course>> GetAllAsync()
+        public override async Task<IEnumerable<Teacher>> GetAllAsync()
         {
-            return await _englishSchoolContext.Courses.Include(c => c.Requests).ToListAsync();
+            return await _englishSchoolContext.Teachers.ToListAsync();
         }
     }
 }

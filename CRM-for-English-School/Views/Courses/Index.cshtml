@@ -1,5 +1,7 @@
 ﻿@model List<CourseModel>
 
+@using CRM_for_English_School.AppCore.Enums;
+
 <div class="container">
     <div>
         <table class="table table-sm table-hover">
@@ -21,12 +23,12 @@
                         <td scope="col">@course.EnglishLevel</td>
                         <td scope="col">@course.ExpectedStartDate.ToShortDateString()</td>
                         <td>
-                            @if (course.Requests.Count >= 3)
+                            @if (course.Requests.Where(r => r.RequestStatus == RequestStatus.Confirmed).Count() >= 3)
                             {
-                                <button type="button" class="btn btn-primary btn-sm position-relative" onclick="location.href='@Url.Action("Index", "StudentsGroups")'">
+                                <button type="button" class="btn btn-primary btn-sm position-relative" onclick="location.href='@Url.Action("AddStudentsGroup", "StudentsGroups", new { id = course.Id})'">
                                     Создать группу
                                     <span class="position-absolute top-25 start-100 translate-middle badge rounded-pill bg-danger">
-                                        @course.Requests.Count
+                                        @course.Requests.Where(r => r.RequestStatus == RequestStatus.Confirmed).Count()
                                     </span>
                                 </button>
 
@@ -36,7 +38,7 @@
                                 <button type="button" class="btn btn-secondary btn-sm position-relative" disabled>
                                     Создать группу
                                     <span class="position-absolute top-25 start-100 translate-middle badge rounded-pill bg-danger">
-                                        @course.Requests.Count
+                                        @course.Requests.Where(r => r.RequestStatus == RequestStatus.Confirmed).Count()
                                     </span>
                                 </button>
                             }
@@ -46,7 +48,7 @@
             </tbody>
         </table>
     </div>
-    <p><div class="text-info">Total participants: @Model.Count()</div></p>
+    <p><div class="text-info">Кол-во курсов: @Model.Count()</div></p>
     <div>
         @Html.ActionLink("Добавить курс", "AddCourse", "Courses", null, new { @class = "btn btn-primary" })
     </div>

@@ -1,5 +1,4 @@
-﻿using CRM_for_English_School.AppCore.Entities;
-using CRM_for_English_School.BLL.Interfaces;
+﻿using CRM_for_English_School.BLL.Interfaces;
 using CRM_for_English_School.BLL.Services;
 using CRM_for_English_School.DAL.EF.Repositories;
 using CRM_for_English_School.DAL.Interfaces;
@@ -12,14 +11,14 @@ namespace CRM_for_English_School
         public static void AddCRMService(this IServiceCollection services)
         {
             services.AddScoped<IRequestRepository, RequestRepository>();
-            services.AddScoped<IRepository<Student>, BaseEntityRepository<Student>>();
-            services.AddScoped<IRepository<Teacher>, BaseEntityRepository<Teacher>>();
+            services.AddScoped<IStudentRepository, StudentRepository>();
+            services.AddScoped<ITeacherRepository, TeacherRepository>();
             services.AddScoped<ICourseRepository, CourseRepository>();
             services.AddScoped<IStudentsGroupRepository, StudentsGroupRepository>();
 
             services.AddScoped<IRequestService, RequestService>();
-            services.AddScoped<IBaseEntityService<Student>, BaseEntityService<Student>>();
-            services.AddScoped<IBaseEntityService<Teacher>, BaseEntityService<Teacher>>();
+            services.AddScoped<IStudentService, StudentService>();
+            services.AddScoped<ITeacherService, TeacherService>();
             services.AddScoped<ICourseService, CourseService>();
             services.AddScoped<IStudentsGroupService, StudentsGroupService>();
         }

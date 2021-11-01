@@ -27,7 +27,8 @@ namespace CRM_for_English_School.DAL.EF.Context
 
             modelBuilder.Entity<Request>()
                 .HasOne(r => r.Course)
-                .WithMany(c => c.Requests);
+                .WithMany(c => c.Requests)
+                .OnDelete(DeleteBehavior.SetNull);
             modelBuilder.Entity<Request>()
                 .Property(p => p.Age)
                 .HasComputedColumnSql("DATEDIFF(YEAR,BirthDate,GETDATE())");

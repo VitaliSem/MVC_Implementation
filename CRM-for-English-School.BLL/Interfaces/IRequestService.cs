@@ -8,7 +8,7 @@ namespace CRM_for_English_School.BLL.Interfaces
     {
         Task<int> CountAsync();
         Task<IEnumerable<Request>> TakeRequestsFromPageAsync(int page, int numberOfRequests);
-        Task<IEnumerable<Request>> GetRequestsByCourseAsync(int id);
+        Task<IEnumerable<Request>> GetRequestsToCourseAsync(int id);
         Task<IEnumerable<Request>> SearchAsync(RequestSearch requestSearch);
     }
 }

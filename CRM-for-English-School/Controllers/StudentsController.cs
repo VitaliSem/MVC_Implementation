@@ -12,10 +12,10 @@ namespace CRM_for_English_School.Controllers
     [Authorize]
     public class StudentsController : Controller
     {
-        private readonly IBaseEntityService<Student> _studentService;
+        private readonly IStudentService _studentService;
         private readonly IMapper _mapper;
 
-        public StudentsController(IBaseEntityService<Student> studentService, IMapper mapper)
+        public StudentsController(IStudentService studentService, IMapper mapper)
         {
             _studentService = studentService;
             _mapper = mapper;

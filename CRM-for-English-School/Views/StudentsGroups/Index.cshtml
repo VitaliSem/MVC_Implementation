@@ -1,6 +1,30 @@
 ﻿@model List<StudentsGroupModel>
 
+@using CRM_for_English_School.AppCore.Enums
+
 <div class="container">
+    @using (Html.BeginForm("AddStudentsGroup", "StudentsGroups", FormMethod.Get))
+    {
+        <h3>Добавить группу на курс</h3>
+        <div class="row">
+            <div class="col-sm-6">
+                <select class="form-select" name="id">
+                    <option value=""></option>
+                    @foreach (var course in (List<CourseModel>)ViewBag.Courses)
+                    {
+                        if (course.Requests.Where(r => r.RequestStatus == RequestStatus.Confirmed).Count() >= 3)
+                        {
+                            <option name="CourseId" value="@course.Id">@course.Name</option>
+                        }
+                    }
+                </select>
+            </div>
+            <div class="col-sm-3">
+                <input type="submit" class="btn btn-primary" value="Добавить"/>
+            </div>
+        </div>
+    }
+    <br />
     <div>
         <table class="table table-sm table-hover">
             <thead class="table-light">
@@ -9,6 +33,7 @@
                     <th scope="col">Название группы</th>
                     <th scope="col">Уровень языка</th>
                     <th scope="col">Преподаватель</th>
+                    <th scope="col">Кол-во студентов</th>
                 </tr>
             </thead>
             <tbody>
@@ -18,14 +43,12 @@
                         <th scope="col">@studentsGroupModel.Id</th>
                         <td scope="col"> <a asp-controller="StudentsGroupsController" asp-action="EditStudentsGroup" asp-route-id="@studentsGroupModel.Id">@studentsGroupModel.GroupName</a></td>
                         <td scope="col">@studentsGroupModel.EnglishLevel</td>
-                        <td scope="col">@studentsGroupModel.Teacher</td>
+                        <td scope="col">@studentsGroupModel.Teacher.LastName @studentsGroupModel.Teacher.FirstName</td>
+                        <td scope="col">@studentsGroupModel.Students.Count()</td>
                     </tr>
                 }
             </tbody>
         </table>
     </div>
     <p><div class="text-info">Кол-во групп: @Model.Count()</div></p>
-    <div>
-        @Html.ActionLink("Добавить группу", "AddStudentsGroup", "StudentsGroups", null, new { @class = "btn btn-primary" })
-    </div>
 </div>

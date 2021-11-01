@@ -60,10 +60,10 @@ namespace CRM_for_English_School
                 throw new ArgumentNullException(nameof(loggerFactory));
             }
 
-            app.UseExceptionHandlerMiddleware();
+            //app.UseExceptionHandlerMiddleware();
             if (env.IsDevelopment())
             {
-                //app.UseDeveloperExceptionPage();
+                app.UseDeveloperExceptionPage();
             }
             else
             {

@@ -9,7 +9,6 @@
     @using (Html.BeginForm("EditRequest", "Requests", FormMethod.Post))
     {
         @Html.HiddenFor(x => x.Id)
-        ;
 
         <div>
             @Html.ValidationSummary()

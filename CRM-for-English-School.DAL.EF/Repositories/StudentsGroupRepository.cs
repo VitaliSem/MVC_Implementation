@@ -18,8 +18,14 @@ namespace CRM_for_English_School.DAL.EF.Repositories
 
         public override async Task<IEnumerable<StudentsGroup>> GetAllAsync()
         {
-            var studentsGroups = await _englishSchoolContext.StudentsGroups.ToListAsync();
-            return studentsGroups;
+            return await _englishSchoolContext.StudentsGroups.Include(g => g.Teacher).Include(g => g.Students).ToListAsync();
+        }
+        public async Task<int> CreateGroupAsync(StudentsGroup studentsGroup)
+        {
+            var entity = await _englishSchoolContext.AddAsync(studentsGroup);
+            entity.State = EntityState.Added;
+            await _englishSchoolContext.SaveChangesAsync();
+            return entity.Entity.Id;
         }
     }
 }

@@ -8,10 +8,12 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">ФИО</th>
+                    <th scope="col">Статус</th>
                     <th scope="col">Возраст</th>
                     <th scope="col">Группа</th>
-                    <th scope="col">Текущий уровень владения языком</th>
+                    <th scope="col">Текущий уровень языка</th>
                     <th scope="col">Номер телефона</th>
+                    <th scope="col">Email</th>
                 </tr>
             </thead>
             <tbody>
@@ -20,10 +22,12 @@
                     <tr>
                         <th scope="col">@student.Id</th>
                         <td scope="col"> <a asp-controller="Students" asp-action="EditStudent" asp-route-id="@student.Id">@student.FirstName @student.MiddleName @student.LastName</a></td>
+                        <td scope="col">@student.Status</td>
                         <td scope="col">@student.Age</td>
-                        <td scope="col">@student.Group</td>
+                        <td scope="col">@student.Group.Name</td>
                         <td scope="col">@student.CurrentEnglishLevel</td>
                         <td scope="col">@student.PhoneNumber</td>
+                        <td scope="col">@student.Email</td>
                     </tr>
                 }
             </tbody>
