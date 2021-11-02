@@ -21,7 +21,7 @@
                 {
                     <tr>
                         <th scope="col">@request.Id</th>
-                        <td scope="col"> <a asp-controller="Requests" asp-action="EditRequest" asp-route-id="@request.Id">@request.FirstName @request.MiddleName @request.LastName</a></td>
+                        <td scope="col"><a asp-controller="Requests" asp-action="EditRequest" asp-route-id="@request.Id">@request.FirstName @request.MiddleName @request.LastName</a></td>
                         <td scope="col">@request.Age</td>
                         <td scope="col">@request.PhoneNumber</td>
                         <td scope="col">@request.Email</td>
@@ -32,13 +32,15 @@
                 }
             </tbody>
         </table>
-        @Html.ActionLink("Добавить запрос", "AddRequest", "Requests", null, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Добавить заявку", "AddRequest", "Requests", null, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Загрузить все заявки в .csv", "DownloadAllRequests", "Requests", null, new { @class = "btn btn-success"})
+
     </div>
 </div>
 
 @if (Model.PageViewModel?.TotalPages > 1)
 {
-    <ul class="pagination justify-content-center">
+    <ul class="pagination justify-content-center pt-2">
         @if (Model.PageViewModel.PageNumber > 1)
         {
             <li class="page-item"><a class="page-link" asp-controller="Requests" asp-action="Index">Первая</a></li>

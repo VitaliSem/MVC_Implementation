@@ -3,6 +3,7 @@ using CRM_for_English_School.Configuration;
 using CRM_for_English_School.DAL.EF.Context;
 using CRM_for_English_School.Filters;
 using CRM_for_English_School.Mapper;
+using CRM_for_English_School.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -19,12 +20,15 @@ namespace CRM_for_English_School
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(Microsoft.AspNetCore.Hosting.IHostingEnvironment env)
         {
-            Configuration = configuration;
+            var builder = new ConfigurationBuilder()
+            .SetBasePath(env.ContentRootPath)
+            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+            Configuration = builder.Build();
         }
 
-        public IConfiguration Configuration { get; }
+        public IConfigurationRoot Configuration { get; set; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -36,6 +40,8 @@ namespace CRM_for_English_School
                 .AddDefaultUI()
                 .AddEntityFrameworkStores<EnglishSchoolContext>()
                 .AddDefaultTokenProviders();
+
+            services.Configure<FileModel>(Configuration.GetSection("FileModel"));
 
             services.AddCRMService();
             services.Configure<AccessOptions>(Configuration.GetSection(AccessOptions.Access));
