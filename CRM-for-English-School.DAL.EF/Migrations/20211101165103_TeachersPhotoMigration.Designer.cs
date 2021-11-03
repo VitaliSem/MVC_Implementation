@@ -4,14 +4,16 @@ using CRM_for_English_School.DAL.EF.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CRM_for_English_School.DAL.EF.Migrations
 {
     [DbContext(typeof(EnglishSchoolContext))]
-    partial class EnglishSchoolContextModelSnapshot : ModelSnapshot
+    [Migration("20211101165103_TeachersPhotoMigration")]
+    partial class TeachersPhotoMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -770,9 +772,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int?>("Age")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("int")
-                        .HasComputedColumnSql("DATEDIFF(YEAR,BirthDate,GETDATE())");
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("BirthDate")
                         .HasColumnType("datetime2");
@@ -788,9 +788,6 @@ namespace CRM_for_English_School.DAL.EF.Migrations
 
                     b.Property<string>("GraduatedFrom")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("HasPhoto")
-                        .HasColumnType("bit");
 
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
@@ -820,7 +817,6 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             Email = "SvetlanaFedorova@gmail.com",
                             FirstName = "Светлана",
                             GraduatedFrom = "МГЛУ",
-                            HasPhoto = false,
                             LastName = "Федорова",
                             MainSpecialization = "Теоретическая и прикладная лингвистика",
                             MiddleName = "Георгиевна",
@@ -834,7 +830,6 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             Email = "KateKalinina@gmail.com",
                             FirstName = "Екатерина",
                             GraduatedFrom = "МГЛУ",
-                            HasPhoto = false,
                             LastName = "Калинина",
                             MainSpecialization = "Современные иностранные языки",
                             MiddleName = "Викторовна",
@@ -848,7 +843,6 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             Email = "IrinaStupco@gmail.com",
                             FirstName = "Ирина",
                             GraduatedFrom = "МГЛУ",
-                            HasPhoto = false,
                             LastName = "Ступко",
                             MainSpecialization = "Современные иностранные языки",
                             MiddleName = "Андреевна",
@@ -862,7 +856,6 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             Email = "KseniaFursina@gmail.com",
                             FirstName = "Ксения",
                             GraduatedFrom = "МГЛУ",
-                            HasPhoto = false,
                             LastName = "Фурсина",
                             MainSpecialization = "Теоретическая и прикладная лингвистика",
                             MiddleName = "Петровна",

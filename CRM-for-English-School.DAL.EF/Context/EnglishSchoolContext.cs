@@ -32,6 +32,9 @@ namespace CRM_for_English_School.DAL.EF.Context
             modelBuilder.Entity<Request>()
                 .Property(p => p.Age)
                 .HasComputedColumnSql("DATEDIFF(YEAR,BirthDate,GETDATE())");
+            modelBuilder.Entity<Teacher>()
+                .Property(p => p.Age)
+                .HasComputedColumnSql("DATEDIFF(YEAR,BirthDate,GETDATE())");
         }
     }
 }

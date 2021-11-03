@@ -1,13 +1,15 @@
 ﻿@model TeacherModel
+
+@using CRM_for_English_School.AppCore.Enums
+
 @{ ViewData["Title"] = "Добавление преподавателя"; }
 <div class="container">
     <h2>Добавить преподавателя</h2>
-    @using (Html.BeginForm("AddTeacher", "Teachers", FormMethod.Post))
+    @using (Html.BeginForm("AddTeacher", "Teachers", FormMethod.Post, new { @enctype = "multipart/form-data" }))
     {
         <div>
             @Html.ValidationSummary()
         </div>
-
         <div class="row g-3">
             <div class="col-md-6">
                 <label asp-for="LastName">Фамилия</label>
@@ -25,24 +27,32 @@
                 <span class="alert-danger" asp-validation-for="MiddleName"></span>
             </div>
             <div class="col-md-12">
-                <label class="form-check-label" asp-for="Age">Возраст</label>
-                <input type="number" class="form-control" id="Age" name="Age" asp-for="Age">
-                <span class="alert-danger" asp-validation-for="Age"></span>
+                <label class="form-check-label" asp-for="BirthDate">Дата рождения</label>
+                <input type="date" class="form-control" id="BirthDate" name="BirthDate" asp-for="BirthDate">
+                <span asp-validation-for="BirthDate" class="alert-danger"></span>
             </div>
             <div class="col-md-6">
                 <label for="GraduatedFrom">Учебное заведение</label>
                 <input type="text" class="form-control" id="GraduatedFrom" name="GraduatedFrom" required>
             </div>
             <div class="col-md-6">
-                <label for="Degree">Степень</label>
-                <input type="text" class="form-control" id="Degree" name="Degree" required>
+                <label asp-for="Degree">Ученая степень</label>
+                <div>
+                    <select class="form-select" asp-for="Degree" asp-items="Html.GetEnumSelectList<Degree>()">
+                        <option selected="selected" value="Please select"></option>
+                    </select>
+                    <span asp-validation-for="Degree" class="text-danger"></span>
+                </div>
             </div>
             <div class="col-md-12">
                 <label for="MainSpecialization">Основная специализация</label>
                 <input type="text" class="form-control" id="MainSpecialization" name="MainSpecialization" required>
             </div>
+            <div class="col-md-6">
+                <label>Загрузить фото</label>
+                <input name="PhotoFile" type="file" class="form-control" />
+            </div>
         </div>
-
         <br />
         <button type="submit" class="btn btn-success">Добавить</button>
     }

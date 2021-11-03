@@ -6,6 +6,10 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Authorization;
 using CRM_for_English_School.AppCore.Entities;
 using System.Threading.Tasks;
+using CsvHelper;
+using System.IO;
+using System.Globalization;
+using System.Text;
 
 namespace CRM_for_English_School.Controllers
 {
@@ -86,6 +90,17 @@ namespace CRM_for_English_School.Controllers
         {
             await _requestService.DeleteEntityAsync(id);
             return RedirectToAction("Index", "Requests");
+        }
+        public async Task<IActionResult> DownloadAllRequestsAsync()
+        {
+            var requests = await _requestService.GetAllAsync();
+            var stream = new MemoryStream();
+            var writer = new StreamWriter(stream, encoding: Encoding.UTF8);
+            var csvWriter = new CsvWriter(writer, CultureInfo.InvariantCulture);
+            csvWriter.WriteRecords(requests);
+            writer.Flush();
+            stream.Position = 0;
+            return File(stream, contentType: "text/plain", fileDownloadName: "requests.csv");
         }
 
         [HttpPost]
