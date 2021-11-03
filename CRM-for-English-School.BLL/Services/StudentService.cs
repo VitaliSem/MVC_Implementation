@@ -18,5 +18,10 @@ namespace CRM_for_English_School.BLL.Services
         {
             return _studentRepository.GetAllAsync();
         }
+
+        public Task<IEnumerable<Student>> GetStudentsByGroupId(int id)
+        {
+            return _studentRepository.GetStudentsByGroupId(id);
+        }
     }
 }

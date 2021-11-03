@@ -40,11 +40,11 @@
                 @foreach (var studentsGroupModel in Model)
                 {
                     <tr>
-                        <th scope="col">@studentsGroupModel.Id</th>
-                        <td scope="col"> <a asp-controller="StudentsGroupsController" asp-action="EditStudentsGroup" asp-route-id="@studentsGroupModel.Id">@studentsGroupModel.GroupName</a></td>
-                        <td scope="col">@studentsGroupModel.EnglishLevel</td>
-                        <td scope="col">@studentsGroupModel.Teacher.LastName @studentsGroupModel.Teacher.FirstName</td>
-                        <td scope="col">@studentsGroupModel.Students.Count()</td>
+                        <th scope="col" class="align-middle">@studentsGroupModel.Id</th>
+                        <td scope="col" class="align-middle"> <a asp-controller="StudentsGroups" asp-action="EditStudentsGroup" asp-route-id="@studentsGroupModel.Id">@studentsGroupModel.GroupName</a></td>
+                        <td scope="col" class="align-middle">@studentsGroupModel.EnglishLevel</td>
+                        <td scope="col" class="align-middle">@studentsGroupModel.Teacher.LastName @studentsGroupModel.Teacher.FirstName</td>
+                        <td scope="col" class="align-middle">@studentsGroupModel.Students.Count()</td>
                     </tr>
                 }
             </tbody>

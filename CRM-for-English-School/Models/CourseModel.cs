@@ -9,6 +9,7 @@ namespace CRM_for_English_School.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public double Price { get; set; }
         public EnglishLevel EnglishLevel { get; set; }
         public DateTime ExpectedStartDate { get; set; }
         public List<Request> Requests { get; set; }

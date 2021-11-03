@@ -68,10 +68,9 @@ namespace CRM_for_English_School.Controllers
         [HttpGet]
         public async Task<IActionResult> EditRequestAsync(int id)
         {
-            var courses = await _courseService.GetAllAsync();
-            ViewBag.Courses = _mapper.Map<IEnumerable<CourseModel>>(courses);
-            var request = await _requestService.GetEntityAsync(id);
-            return View(_mapper.Map<RequestModel>(request));
+            ViewBag.Courses = _mapper.Map<IEnumerable<CourseModel>>(await _courseService.GetAllAsync());
+            var request = _mapper.Map<RequestModel>(await _requestService.GetEntityAsync(id));
+            return View(request);
         }
 
         [HttpPost]

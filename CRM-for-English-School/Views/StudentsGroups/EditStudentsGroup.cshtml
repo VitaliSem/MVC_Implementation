@@ -1,18 +1,19 @@
 ﻿@model StudentsGroupModel
 
-@{ ViewData["Title"] = "Добавление группы "; }
+@{ ViewData["Title"] = "Редактировать группу "; }
 
 <div class="container">
-    <h2>Добавить группу на курс @ViewBag.Course.Name</h2>
-    @using (Html.BeginForm("AddStudentsGroup", "StudentsGroups", FormMethod.Post))
+    <h2>Редактирование группы @Model.GroupName</h2>
+    @using (Html.BeginForm("EditStudentsGroup", "StudentsGroups", FormMethod.Post))
     {
         <div>
             @Html.ValidationSummary()
         </div>
-        @Html.Hidden("EnglishLevel", (object)ViewBag.Course.EnglishLevel)
-        @Html.Hidden("Id", (object)ViewBag.Course.Id)
-        @Html.Hidden("CourseId", (object)ViewBag.Course.Id)
-        <div class="row g-3">
+        @Html.HiddenFor(g => g.Id)
+        @Html.HiddenFor(g => g.CourseId)
+        @Html.HiddenFor(g => g.EnglishLevel)
+        @Html.Hidden("RequestIds", new List<int> (3))
+        <div class="row">
             <div class="col-md-6">
                 <label asp-for="GroupName" class="form-label">Название группы</label>
                 <input type="text" class="form-control" id="GroupName" name="GroupName" asp-for="GroupName">
@@ -21,7 +22,7 @@
             <div class="col-sm-6">
                 <label asp-for="TeacherId" class="col-form-label py-1">Преподаватель</label>
                 <select class="form-select" asp-for="TeacherId">
-                    <option value=""></option>
+                    <option value="@Model.Teacher.LastName @Model.Teacher.FirstName"></option>
                     @foreach (var teacher in (List<TeacherModel>)ViewBag.Teachers)
                     {
                         <option value="@teacher.Id">@teacher.LastName @teacher.FirstName</option>
@@ -34,36 +35,35 @@
             <table class="table table-sm table-hover">
                 <thead class="table-light">
                     <tr>
-                        <th scope="col"></th>
                         <th scope="col">ФИО</th>
-                        <th scope="col">Дата подачи заявки</th>
                         <th scope="col">Возраст</th>
+                        <th scope="col">Статус</th>
+                        <th scope="col">Текущий уровень языка</th>
                         <th scope="col">Номер телефона</th>
                         <th scope="col">Email</th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var request in ViewBag.Requests)
+                    @foreach (var student in Model.Students)
                     {
                         <tr>
+                            <td scope="col" class="align-middle"><a asp-controller="Students" asp-action="EditStudent" asp-route-id="@student.Id">@student.LastName @student.MiddleName @student.FirstName</a></td>
+                            <td scope="col" class="align-middle">@student.Age</td>
+                            <td scope="col" class="align-middle">@student.Status</td>
+                            <td scope="col" class="align-middle">@student.CurrentEnglishLevel</td>
+                            <td scope="col" class="align-middle">@student.PhoneNumber</td>
+                            <td scope="col" class="align-middle">@student.Email</td>
                             <td>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="@request.Id" name="RequestIds">
-                                    <label class="form-check-label" for="flexCheckDefault"></label>
-                                </div>
+                                <button type="button" class="btn btn-danger btn-sm" onclick="location.href='@Url.Action("Exclude", "Students", new { id = student.Id})'">Исключить</button>
                             </td>
-                            <td scope="col">@request.FirstName @request.MiddleName @request.LastName</td>
-                            <td scope="col">@request.DateOfRequest</td>
-                            <td scope="col">@request.Age</td>
-                            <td scope="col">@request.PhoneNumber</td>
-                            <td scope="col">@request.Email</td>
                         </tr>
                     }
                 </tbody>
             </table>
         </div>
-        <p><b>Для добавления группы необходимо выбрать не менее 3 и не более 5 студентов.</b></p>
-        <button type="submit" class="btn btn-success">Добавить</button>
+        <br />
+        <button type="submit" class="btn btn-success">Сохранить</button>
     }
 </div>
 

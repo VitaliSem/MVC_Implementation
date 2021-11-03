@@ -25,9 +25,14 @@
                 </div>
             </div>
             <div class="col-md-12">
-                <label class="form-check-label" asp-for="ExpectedStartDate">Дата старта</label>
+                <label asp-for="ExpectedStartDate">Дата старта</label>
                 <input type="date" class="form-control" id="ExpectedStartDate" name="ExpectedStartDate" asp-for="ExpectedStartDate">
                 <span class="alert-danger" asp-validation-for="ExpectedStartDate"></span>
+            </div>
+            <div class="col-md-12">
+                <label asp-for="Price">Стоимость</label>
+                <input type="number" class="form-control" id="LastName" name="LastName" asp-for="Price">
+                <span asp-validation-for="Price" class="alert-danger"></span>
             </div>
         </div>
 

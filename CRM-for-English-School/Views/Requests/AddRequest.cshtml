@@ -26,7 +26,7 @@
                 <span class="alert-danger" asp-validation-for="MiddleName"></span>
             </div>
             <div class="col-md-12">
-                <label class="form-check-label" asp-for="BirthDate">Дата рождения</label>
+                <label asp-for="BirthDate">Дата рождения</label>
                 <input type="date" class="form-control" id="BirthDate" name="BirthDate" asp-for="BirthDate">
                 <span asp-validation-for="BirthDate" class="alert-danger"></span>
             </div>
@@ -57,7 +57,7 @@
                 </select>
             </div>
             <div class="col-md-6">
-                <label asp-for="CurrentEnglishLevel">Текущий уровень владения языком</label>
+                <label asp-for="CurrentEnglishLevel">Текущий уровень языка</label>
                 <div>
                     <select class="form-select" asp-for="CurrentEnglishLevel" asp-items="Html.GetEnumSelectList<EnglishLevel>()">
                         <option selected="selected" value="Please select"></option>

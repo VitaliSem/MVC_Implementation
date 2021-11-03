@@ -5,7 +5,6 @@
 }
 <div class="container">
     <h2>Редактировать запрос</h2>
-    <br />
     @using (Html.BeginForm("EditRequest", "Requests", FormMethod.Post))
     {
         @Html.HiddenFor(x => x.Id)
@@ -30,7 +29,7 @@
                 <span asp-validation-for="MiddleName" class="alert-danger"></span>
             </div>
             <div class="col-md-12">
-                <label class="form-check-label" asp-for="BirthDate">Дата рождения</label>
+                <label asp-for="BirthDate">Дата рождения</label>
                 <input type="date" class="form-control" id="BirthDate" name="BirthDate" asp-for="BirthDate">
                 <span asp-validation-for="BirthDate" class="alert-danger"></span>
             </div>
@@ -51,7 +50,7 @@
                 </div>
             </div>
             <div class="col-md-12">
-                <label asp-for="CurrentEnglishLevel">Current English Level</label>
+                <label asp-for="CurrentEnglishLevel">Текущий уровень языка</label>
                 <div>
                     <select class="form-select" asp-for="CurrentEnglishLevel" asp-items="Html.GetEnumSelectList<EnglishLevel>()">
                         <option selected="selected" value="Please select"></option>
@@ -61,7 +60,7 @@
             </div>
             <div class="col-sm-12">
                 <label asp-for="CourseId" class="col-form-label">Курс</label>
-                <select class="form-select" asp-for="CourseId" required>
+                <select class="form-select" asp-for="CourseId">
                     <option value=""></option>
                     @foreach (var course in (List<CourseModel>)ViewBag.Courses)
                     {
@@ -70,7 +69,7 @@
                 </select>
             </div>
             <div class="col-md-12">
-                <label asp-for="RequestStatus">RequestStatus</label>
+                <label asp-for="RequestStatus">Статус заявки</label>
                 <div>
                     <select class="form-select" asp-for="RequestStatus" asp-items="Html.GetEnumSelectList<RequestStatus>()">
                         <option selected="selected" value="Please select"></option>

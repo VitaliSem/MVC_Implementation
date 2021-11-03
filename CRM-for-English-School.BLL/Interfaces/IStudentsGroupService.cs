@@ -6,5 +6,6 @@ namespace CRM_for_English_School.BLL.Interfaces
     public interface IStudentsGroupService : IBaseEntityService<StudentsGroup>
     {
         public Task<int> CreateGroupAsync(StudentsGroup studentsGroup);
+        public Task<StudentsGroup> GetStudentsGroupAsync(int id);
     }
 }

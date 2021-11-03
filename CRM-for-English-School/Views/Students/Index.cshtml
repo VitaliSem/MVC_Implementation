@@ -24,7 +24,7 @@
                         <td scope="col"> <a asp-controller="Students" asp-action="EditStudent" asp-route-id="@student.Id">@student.FirstName @student.MiddleName @student.LastName</a></td>
                         <td scope="col">@student.Status</td>
                         <td scope="col">@student.Age</td>
-                        <td scope="col">@student.Group.Name</td>
+                        <td scope="col">@student.Group?.Name</td>
                         <td scope="col">@student.CurrentEnglishLevel</td>
                         <td scope="col">@student.PhoneNumber</td>
                         <td scope="col">@student.Email</td>

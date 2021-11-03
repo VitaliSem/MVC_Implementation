@@ -5,7 +5,6 @@
 }
 <div class="container">
     <h2>Редактировать курс</h2>
-    <br />
     @using (Html.BeginForm("EditCourse", "Courses", FormMethod.Post))
     {
         @Html.HiddenFor(x => x.Id)
@@ -31,11 +30,17 @@
                 </div>
             </div>
             <div class="col-md-12">
-                <label class="form-check-label" asp-for="ExpectedStartDate">Дата старта</label>
+                <label asp-for="ExpectedStartDate">Дата старта</label>
                 <input type="date" class="form-control" id="ExpectedStartDate" name="ExpectedStartDate" asp-for="ExpectedStartDate">
                 <span class="alert-danger" asp-validation-for="ExpectedStartDate"></span>
             </div>
+            <div class="col-md-12">
+                <label asp-for="Price">Стоимость</label>
+                <input type="number" class="form-control" id="LastName" name="LastName" asp-for="Price">
+                <span asp-validation-for="Price" class="alert-danger"></span>
+            </div>
         </div>
+
         <br />
         <button type="submit" class="btn btn-success">Сохранить</button>
         @Html.ActionLink("Удалить", "DeleteCourse", "Courses", new { id = Model.Id }, new { @class = "btn btn-danger" })

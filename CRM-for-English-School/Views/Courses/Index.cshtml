@@ -11,6 +11,7 @@
                     <th scope="col">Название</th>
                     <th scope="col">Уровень языка</th>
                     <th scope="col">Дата старта</th>
+                    <th scope="col">Стоимость</th>
                     <th scope="col"></th>
                 </tr>
             </thead>
@@ -18,10 +19,11 @@
                 @foreach (var course in Model)
                 {
                     <tr>
-                        <th scope="col">@course.Id</th>
-                        <td scope="col"> <a asp-controller="Courses" asp-action="EditCourse" asp-route-id="@course.Id">@course.Name</a></td>
-                        <td scope="col">@course.EnglishLevel</td>
-                        <td scope="col">@course.ExpectedStartDate.ToShortDateString()</td>
+                        <th scope="col" class="align-middle">@course.Id</th>
+                        <td scope="col" class="align-middle"><a asp-controller="Courses" asp-action="EditCourse" asp-route-id="@course.Id">@course.Name</a></td>
+                        <td scope="col" class="align-middle">@course.EnglishLevel</td>
+                        <td scope="col" class="align-middle">@course.ExpectedStartDate.ToShortDateString()</td>
+                        <td scope="col" class="align-middle">@course.Price BYN</td>
                         <td>
                             @if (course.Requests.Where(r => r.RequestStatus == RequestStatus.Confirmed).Count() >= 3)
                             {

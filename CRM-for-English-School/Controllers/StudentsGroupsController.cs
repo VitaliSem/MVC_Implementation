@@ -52,6 +52,7 @@ namespace CRM_for_English_School.Controllers
             if (!ModelState.IsValid)
                 return RedirectToAction("AddStudentsGroup", new { id = studentsGroupModel.CourseId });
             studentsGroupModel.Teacher = await _teacherService.GetEntityAsync(studentsGroupModel.TeacherId);
+            studentsGroupModel.Id = 0;
             int groupId = await _studentsGroupService.CreateGroupAsync(_mapper.Map<StudentsGroup>(studentsGroupModel));
             foreach(var requestId in studentsGroupModel.RequestIds)
             {
@@ -68,13 +69,17 @@ namespace CRM_for_English_School.Controllers
         [HttpGet]
         public async Task<IActionResult> EditStudentsGroupAsync(int id)
         {
-            var studentsgroup = await _studentsGroupService.GetEntityAsync(id);
-            return View(_mapper.Map<StudentsGroupModel>(studentsgroup));
+            ViewBag.Teachers = _mapper.Map<IEnumerable<TeacherModel>>(await _teacherService.GetAllAsync());
+            ViewBag.StudentsGroups = _mapper.Map<IEnumerable<StudentsGroupModel>>(await _studentsGroupService.GetAllAsync());
+            var studentsgroup = _mapper.Map<StudentsGroupModel>(await _studentsGroupService.GetStudentsGroupAsync(id));
+            return View(studentsgroup);
         }
 
         [HttpPost]
         public async Task<IActionResult> EditStudentsGroupAsync(StudentsGroupModel studentsGroupModel)
         {
+            var students = await _studentService.GetStudentsByGroupId(studentsGroupModel.Id);
+            studentsGroupModel.Students = (List<Student>)students;
             await _studentsGroupService.EditEntityAsync(_mapper.Map<StudentsGroup>(studentsGroupModel));
             return RedirectToAction("Index", "StudentsGroups");
         }

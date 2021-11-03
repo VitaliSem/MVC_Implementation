@@ -13,11 +13,13 @@ namespace CRM_for_English_School.Controllers
     public class StudentsController : Controller
     {
         private readonly IStudentService _studentService;
+        private readonly IStudentsGroupService _studentsGroupService;
         private readonly IMapper _mapper;
 
-        public StudentsController(IStudentService studentService, IMapper mapper)
+        public StudentsController(IStudentService studentService, IStudentsGroupService studentsGroupService, IMapper mapper)
         {
             _studentService = studentService;
+            _studentsGroupService = studentsGroupService;
             _mapper = mapper;
         }
         public async Task<IActionResult> IndexAsync()
@@ -48,8 +50,9 @@ namespace CRM_for_English_School.Controllers
         [HttpGet]
         public async Task<IActionResult> EditStudentAsync(int id)
         {
-            var student = await _studentService.GetEntityAsync(id);
-            return View(_mapper.Map<StudentModel>(student));
+            ViewBag.StudentsGroups = _mapper.Map<IEnumerable<StudentsGroupModel>>(await _studentsGroupService.GetAllAsync());
+            var student = _mapper.Map<StudentModel>(await _studentService.GetEntityAsync(id));
+            return View(student);
         }
 
         [HttpPost]
@@ -68,6 +71,15 @@ namespace CRM_for_English_School.Controllers
         {
             await _studentService.DeleteEntityAsync(id);
             return RedirectToAction("Index", "Students");
+        }
+        public async Task<IActionResult> ExcludeAsync(int id)
+        {
+            var student = await _studentService.GetEntityAsync(id);
+            var groupId = student.GroupId;
+            student.GroupId = null;
+            student.Status = AppCore.Enums.StudentStatus.Expelled;
+            await _studentService.EditEntityAsync(student);
+            return RedirectToAction("EditStudentsGroup", "StudentsGroups", new { id=groupId });
         }
     }
 }
