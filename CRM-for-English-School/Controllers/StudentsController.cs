@@ -12,6 +12,7 @@ namespace CRM_for_English_School.Controllers
     [Authorize]
     public class StudentsController : Controller
     {
+        const int pageSize = 10;
         private readonly IStudentService _studentService;
         private readonly IStudentsGroupService _studentsGroupService;
         private readonly IMapper _mapper;
@@ -22,10 +23,18 @@ namespace CRM_for_English_School.Controllers
             _studentsGroupService = studentsGroupService;
             _mapper = mapper;
         }
-        public async Task<IActionResult> IndexAsync()
+        public async Task<IActionResult> IndexAsync(int page = 1)
         {
-            var students = await _studentService.GetAllAsync();
-            return View(_mapper.Map<IEnumerable<StudentModel>>(students));
+            var countOfStudents = await _studentService.CountAsync();
+            ViewBag.Groups = _mapper.Map<IEnumerable<StudentsGroupModel>>(await _studentsGroupService.GetAllAsync());
+            var students = _mapper.Map<IEnumerable<StudentModel>>(await _studentService.TakeStudentsFromPageAsync(page, pageSize));
+            PageViewModel pageViewModel = new(countOfStudents, page, pageSize);
+            PaginationModel paginationModel = new()
+            {
+                Students = students,
+                PageViewModel = pageViewModel
+            };
+            return View(paginationModel);
         }
 
         [Authorize(Roles = "manager")]
@@ -80,6 +89,23 @@ namespace CRM_for_English_School.Controllers
             student.Status = AppCore.Enums.StudentStatus.Expelled;
             await _studentService.EditEntityAsync(student);
             return RedirectToAction("EditStudentsGroup", "StudentsGroups", new { id=groupId });
+        }
+        [HttpPost]
+        public async Task<IActionResult> Search(StudentSearchModel searchModel)
+        {
+            if (ModelState.IsValid)
+            {
+                IEnumerable<StudentsGroup> groups = await _studentsGroupService.GetAllAsync();
+                ViewBag.Groups = _mapper.Map<IEnumerable<StudentsGroupModel>>(groups);
+                var filteredStudents = _mapper.Map<IEnumerable<StudentModel>>(await _studentService.SearchAsync(_mapper.Map<StudentSearch>(searchModel)));
+                PaginationModel paginationModel = new()
+                {
+                    Students = filteredStudents,
+                    PageViewModel = null
+                };
+                return View("Index", paginationModel);
+            }
+            return RedirectToAction("Index", "Requests");
         }
     }
 }

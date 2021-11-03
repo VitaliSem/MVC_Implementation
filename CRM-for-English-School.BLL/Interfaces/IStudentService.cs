@@ -6,6 +6,9 @@ namespace CRM_for_English_School.BLL.Interfaces
 {
     public interface IStudentService : IBaseEntityService<Student>
     {
-        public Task<IEnumerable<Student>> GetStudentsByGroupId(int id);
+        Task<int> CountAsync();
+        Task<IEnumerable<Student>> GetStudentsByGroupId(int id);
+        Task<IEnumerable<Student>> TakeStudentsFromPageAsync(int page, int numberOfStudents);
+        Task<IEnumerable<Student>> SearchAsync(StudentSearch studentSearch);
     }
 }

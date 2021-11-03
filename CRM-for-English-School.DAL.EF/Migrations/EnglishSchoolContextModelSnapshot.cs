@@ -625,7 +625,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                     b.Property<string>("PhoneNumber")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Status")
+                    b.Property<int?>("Status")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -644,8 +644,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             FirstName = "Константин",
                             LastName = "Квасков",
                             MiddleName = "Игоревич",
-                            PhoneNumber = "+375(29)616-94-87",
-                            Status = 0
+                            PhoneNumber = "+375(29)616-94-87"
                         },
                         new
                         {
@@ -656,8 +655,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             FirstName = "Ольга",
                             LastName = "Лабудько",
                             MiddleName = "Петрович",
-                            PhoneNumber = "+375(33)822-74-13",
-                            Status = 0
+                            PhoneNumber = "+375(33)822-74-13"
                         },
                         new
                         {
@@ -668,8 +666,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             FirstName = "Екатерина",
                             LastName = "Сорока",
                             MiddleName = "Степановна",
-                            PhoneNumber = "+375(33)555-66-77",
-                            Status = 0
+                            PhoneNumber = "+375(33)555-66-77"
                         },
                         new
                         {
@@ -680,8 +677,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             FirstName = "Иван",
                             LastName = "Лыков",
                             MiddleName = "Федорович",
-                            PhoneNumber = "+375(29)996-74-14",
-                            Status = 0
+                            PhoneNumber = "+375(29)996-74-14"
                         },
                         new
                         {
@@ -692,8 +688,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             FirstName = "Полина",
                             LastName = "Голубева",
                             MiddleName = "Алексеевна",
-                            PhoneNumber = "+375(29)622-74-74",
-                            Status = 0
+                            PhoneNumber = "+375(29)622-74-74"
                         },
                         new
                         {
@@ -704,8 +699,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             FirstName = "Светослав",
                             LastName = "Огородник",
                             MiddleName = "Дмитриевич",
-                            PhoneNumber = "+375(29)743-96-13",
-                            Status = 0
+                            PhoneNumber = "+375(29)743-96-13"
                         },
                         new
                         {
@@ -716,8 +710,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             FirstName = "Кристина",
                             LastName = "Караул",
                             MiddleName = "Федоровна",
-                            PhoneNumber = "+375(29)120-19-84",
-                            Status = 0
+                            PhoneNumber = "+375(29)120-19-84"
                         },
                         new
                         {
@@ -728,8 +721,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             FirstName = "Евгения",
                             LastName = "Альбегова",
                             MiddleName = "Петровна",
-                            PhoneNumber = "+375(29)545-75-75",
-                            Status = 0
+                            PhoneNumber = "+375(29)545-75-75"
                         });
                 });
 

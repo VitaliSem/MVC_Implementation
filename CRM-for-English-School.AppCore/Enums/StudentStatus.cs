@@ -2,7 +2,7 @@
 {
     public enum StudentStatus
     {
-        IsStudying,
+        IsStudying = 1,
         Expelled,
         Finished
     }

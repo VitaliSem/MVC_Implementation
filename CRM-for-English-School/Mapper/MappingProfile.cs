@@ -14,6 +14,7 @@ namespace CRM_for_English_School.Mapper
             CreateMap<Teacher, TeacherModel>().ReverseMap();
             CreateMap<Course, CourseModel>().ReverseMap();
             CreateMap<RequestSearch, RequestSearchModel>().ReverseMap();
+            CreateMap<StudentSearch, StudentSearchModel>().ReverseMap();
             CreateMap<Request, Student>()
                 .ForMember("GroupId", opt => opt.MapFrom(r => r.CourseId))
                 .ForMember("Id", opt => opt.Ignore()).ReverseMap();

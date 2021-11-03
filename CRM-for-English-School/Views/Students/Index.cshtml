@@ -1,8 +1,8 @@
-﻿
-@model List<StudentModel>
+﻿@model PaginationModel
 
 <div class="container">
     <div>
+        @await Html.PartialAsync("StudentSearchPartial")
         <table class="table table-sm table-hover">
             <thead class="table-light">
                 <tr>
@@ -17,7 +17,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var student in Model)
+                @foreach (var student in Model.Students)
                 {
                     <tr>
                         <th scope="col">@student.Id</th>
@@ -33,8 +33,31 @@
             </tbody>
         </table>
     </div>
-    <p><div class="text-info">Total participants: @Model.Count()</div></p>
+    <p><div class="text-info">Total participants: @Model.Students.Count()</div></p>
     <div>
         @Html.ActionLink("Добавить студента", "AddStudent", "Students", null, new { @class = "btn btn-primary" })
     </div>
 </div>
+@if (Model.PageViewModel?.TotalPages > 1)
+{
+    <ul class="pagination justify-content-center pt-2">
+        @if (Model.PageViewModel.PageNumber > 1)
+        {
+            <li class="page-item"><a class="page-link" asp-controller="Students" asp-action="Index">Первая</a></li>
+            <li class="page-item">
+                <a class="page-link" asp-controller="Students" asp-action="Index" asp-route-page="@(Model.PageViewModel.PageNumber - 1)">Предыдущая</a>
+            </li>
+        }
+        @for (var page = 1; page <= Model.PageViewModel.TotalPages; page++)
+        {
+            <li class="page-item @(page == Model.PageViewModel.PageNumber ? "active" : "")">
+                <a class="page-link" asp-controller="Students" asp-action="Index" asp-route-page="@(page)">@(page)</a>
+            </li>
+        }
+        @if (Model.PageViewModel.PageNumber < Model.PageViewModel.TotalPages)
+        {
+            <li class="page-item"><a class="page-link" asp-controller="Students" asp-action="Index" asp-route-page="@(Model.PageViewModel.PageNumber + 1)">Следующая</a></li>
+            <li class="page-item"><a class="page-link" asp-controller="Students" asp-action="Index" asp-route-page="@Model.PageViewModel.TotalPages">Последняя</a></li>
+        }
+    </ul>
+}
