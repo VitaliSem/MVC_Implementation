@@ -14,13 +14,12 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System;
-using System.Threading.Tasks;
 
 namespace CRM_for_English_School
 {
     public class Startup
     {
-        public Startup(Microsoft.AspNetCore.Hosting.IHostingEnvironment env)
+        public Startup(IWebHostEnvironment env)
         {
             var builder = new ConfigurationBuilder()
             .SetBasePath(env.ContentRootPath)
@@ -36,15 +35,18 @@ namespace CRM_for_English_School
             services.AddDbContext<EnglishSchoolContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddDefaultUI()
-                .AddEntityFrameworkStores<EnglishSchoolContext>()
-                .AddDefaultTokenProviders();
+            services.AddIdentity<IdentityUser, IdentityRole>(options => {
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+                options.SignIn.RequireConfirmedAccount = true;
+            }).AddDefaultUI()
+            .AddEntityFrameworkStores<EnglishSchoolContext>()
+            .AddDefaultTokenProviders();
 
             services.Configure<FileModel>(Configuration.GetSection("FileModel"));
+            services.Configure<AccessOptions>(Configuration.GetSection(AccessOptions.Access));
 
             services.AddCRMService();
-            services.Configure<AccessOptions>(Configuration.GetSection(AccessOptions.Access));
             services.AddMvc(options => options.Filters.Add<CustomExceptionFilter>());
 
             var mapperConfig = new MapperConfiguration(cfg => { cfg.AddProfile(new MappingProfile()); });
@@ -93,8 +95,6 @@ namespace CRM_for_English_School
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
-
-            CreateRoles(serviceProvider, accessOptions).Wait();
         }
 
 
@@ -106,22 +106,5 @@ namespace CRM_for_English_School
         //    logger.LogInformation("[Error] Request from the addres string - \"{0}\". " + DateTime.Now.ToString(), context.Request.Path);
         //    await context.Response.CompleteAsync();
         //});
-        private static async Task CreateRoles(IServiceProvider serviceProvider, IOptions<AccessOptions> accessOptions)
-        {
-            var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-            var roles = new[] { "manager", "teacher", "student" };
-            foreach(var role in roles)
-            {
-                await roleManager.CreateAsync(new IdentityRole
-                {
-                    Name = role,
-                    NormalizedName = role.ToUpper()
-                });
-            }
-            var userManager = serviceProvider.GetRequiredService<UserManager<IdentityUser>>();
-            var user = await userManager.FindByEmailAsync(accessOptions.Value.ManagerUserEmail);
-            if (user != null)
-                await userManager.AddToRoleAsync(user, "manager");
-        }
     }
 }
