@@ -4,14 +4,16 @@ using CRM_for_English_School.DAL.EF.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CRM_for_English_School.DAL.EF.Migrations
 {
     [DbContext(typeof(EnglishSchoolContext))]
-    partial class EnglishSchoolContextModelSnapshot : ModelSnapshot
+    [Migration("20211104161223_TeacherUserMigration")]
+    partial class TeacherUserMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -827,7 +829,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             MainSpecialization = "Теоретическая и прикладная лингвистика",
                             MiddleName = "Георгиевна",
                             PhoneNumber = "+375(29)654-45-67",
-                            UserId = new Guid("18fedd72-d3e2-4033-9744-877b60a5a2ff")
+                            UserId = new Guid("00000000-0000-0000-0000-000000000000")
                         },
                         new
                         {
@@ -842,7 +844,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             MainSpecialization = "Современные иностранные языки",
                             MiddleName = "Викторовна",
                             PhoneNumber = "+375(33)151-16-19",
-                            UserId = new Guid("2aa85a78-dba9-49d8-8215-89f793f1fd74")
+                            UserId = new Guid("00000000-0000-0000-0000-000000000000")
                         },
                         new
                         {
@@ -857,7 +859,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             MainSpecialization = "Современные иностранные языки",
                             MiddleName = "Андреевна",
                             PhoneNumber = "+375(33)742-86-95",
-                            UserId = new Guid("465f38e5-9d8b-4ddb-9a9a-67c6d9c9f5e9")
+                            UserId = new Guid("00000000-0000-0000-0000-000000000000")
                         },
                         new
                         {
@@ -872,7 +874,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             MainSpecialization = "Теоретическая и прикладная лингвистика",
                             MiddleName = "Петровна",
                             PhoneNumber = "+375(33)87565-41",
-                            UserId = new Guid("008120a7-6d9c-4f2e-83aa-52764cc6e3b7")
+                            UserId = new Guid("00000000-0000-0000-0000-000000000000")
                         });
                 });
 
@@ -990,68 +992,6 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "18fedd72-d3e2-4033-9744-877b60a5a2ff",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "e4d8624b-73a4-410e-9b16-dda408f9e6a9",
-                            Email = "SvetlanaFedorova@gmail.com",
-                            EmailConfirmed = false,
-                            LockoutEnabled = false,
-                            NormalizedEmail = "SVETLANAFEDOROVA@GMAIL.COM",
-                            NormalizedUserName = "SVETLANAFEDOROVA@GMAIL.COM",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "5e4d66ef-9f69-4b6f-a8cd-227cfc3a2fd8",
-                            TwoFactorEnabled = false,
-                            UserName = "SvetlanaFedorova@gmail.com"
-                        },
-                        new
-                        {
-                            Id = "2aa85a78-dba9-49d8-8215-89f793f1fd74",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "642d6e01-899a-4984-b5ee-af3198a48c1f",
-                            Email = "KateKalinina@gmail.com",
-                            EmailConfirmed = false,
-                            LockoutEnabled = false,
-                            NormalizedEmail = "KATEKALININA@GMAIL.COM",
-                            NormalizedUserName = "KATEKALININA@GMAIL.COM",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "7fd5a340-fff0-442a-9b67-fec3acf2ce21",
-                            TwoFactorEnabled = false,
-                            UserName = "KateKalinina@gmail.com"
-                        },
-                        new
-                        {
-                            Id = "465f38e5-9d8b-4ddb-9a9a-67c6d9c9f5e9",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "60de6ca1-744d-46b1-863e-e989dc96c7e2",
-                            Email = "IrinaStupco@gmail.com",
-                            EmailConfirmed = false,
-                            LockoutEnabled = false,
-                            NormalizedEmail = "IRINASTUPCO@GMAIL.COM",
-                            NormalizedUserName = "IRINASTUPCO@GMAIL.COM",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "90a0fcf4-1e8a-4600-89fa-262683d2f609",
-                            TwoFactorEnabled = false,
-                            UserName = "IrinaStupco@gmail.com"
-                        },
-                        new
-                        {
-                            Id = "008120a7-6d9c-4f2e-83aa-52764cc6e3b7",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "980b685b-cd70-4f81-a331-3fb67c91c4c4",
-                            Email = "KseniaFursina@gmail.com",
-                            EmailConfirmed = false,
-                            LockoutEnabled = false,
-                            NormalizedEmail = "KSENIAFURSINA@GMAIL.COM",
-                            NormalizedUserName = "KSENIAFURSINA@GMAIL.COM",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "f50de42a-4f1c-496d-bd8f-d09c4ad3ef04",
-                            TwoFactorEnabled = false,
-                            UserName = "KseniaFursina@gmail.com"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -1113,28 +1053,6 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles");
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = "18fedd72-d3e2-4033-9744-877b60a5a2ff",
-                            RoleId = "cc51b262-0dbf-442d-a121-3fcb5f25d9fb"
-                        },
-                        new
-                        {
-                            UserId = "2aa85a78-dba9-49d8-8215-89f793f1fd74",
-                            RoleId = "cc51b262-0dbf-442d-a121-3fcb5f25d9fb"
-                        },
-                        new
-                        {
-                            UserId = "465f38e5-9d8b-4ddb-9a9a-67c6d9c9f5e9",
-                            RoleId = "cc51b262-0dbf-442d-a121-3fcb5f25d9fb"
-                        },
-                        new
-                        {
-                            UserId = "008120a7-6d9c-4f2e-83aa-52764cc6e3b7",
-                            RoleId = "cc51b262-0dbf-442d-a121-3fcb5f25d9fb"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>

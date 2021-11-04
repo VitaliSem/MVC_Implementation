@@ -21,10 +21,14 @@ namespace CRM_for_English_School.DAL.EF.Context
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.RequestsSeed();
+            modelBuilder.UsersSeed();
             modelBuilder.TeachersSeed();
+            modelBuilder.UserRolesSeed();
             modelBuilder.CourcesSeed();
             modelBuilder.StudentsSeed();
 
+            modelBuilder.Entity<Teacher>()
+                .HasOne(t => t.User);
             modelBuilder.Entity<Request>()
                 .HasOne(r => r.Course)
                 .WithMany(c => c.Requests)

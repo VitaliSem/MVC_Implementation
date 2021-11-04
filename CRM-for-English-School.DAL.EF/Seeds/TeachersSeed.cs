@@ -11,6 +11,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
         {
             var teacher1 = new Teacher()
             {
+                UserId = new Guid("18fedd72-d3e2-4033-9744-877b60a5a2ff"),
                 Id = 1,
                 FirstName = "Светлана",
                 MiddleName = "Георгиевна",
@@ -25,6 +26,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
             };
             var teacher2 = new Teacher()
             {
+                UserId = new Guid("2aa85a78-dba9-49d8-8215-89f793f1fd74"),
                 Id = 2,
                 FirstName = "Екатерина",
                 MiddleName = "Викторовна",
@@ -39,6 +41,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
             };
             var teacher3 = new Teacher()
             {
+                UserId = new Guid("465f38e5-9d8b-4ddb-9a9a-67c6d9c9f5e9"),
                 Id = 3,
                 FirstName = "Ирина",
                 MiddleName = "Андреевна",
@@ -53,6 +56,7 @@ namespace CRM_for_English_School.DAL.EF.Seeds
             };
             var teacher4 = new Teacher()
             {
+                UserId = new Guid("008120a7-6d9c-4f2e-83aa-52764cc6e3b7"),
                 Id = 4,
                 FirstName = "Ксения",
                 MiddleName = "Петровна",
