@@ -12,7 +12,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using System;
 
 namespace CRM_for_English_School
@@ -45,6 +44,8 @@ namespace CRM_for_English_School
 
             services.Configure<FileModel>(Configuration.GetSection("FileModel"));
             services.Configure<AccessOptions>(Configuration.GetSection(AccessOptions.Access));
+            services.Configure<EmailSenderOptions>(Configuration.GetSection(EmailSenderOptions.Sender));
+            services.Configure<EmailTestReveiverOptions>(Configuration.GetSection(EmailTestReveiverOptions.Receiver));
 
             services.AddCRMService();
             services.AddMvc(options => options.Filters.Add<CustomExceptionFilter>());
@@ -58,9 +59,7 @@ namespace CRM_for_English_School
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, 
-            IWebHostEnvironment env, 
-            IServiceProvider serviceProvider, 
-            IOptions<AccessOptions> accessOptions,
+            IWebHostEnvironment env,
             ILoggerFactory loggerFactory)
         {
             if (loggerFactory is null)

@@ -11,6 +11,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using System;
+using CRM_for_English_School.Configuration;
 
 namespace CRM_for_English_School.Controllers
 {
@@ -22,18 +23,24 @@ namespace CRM_for_English_School.Controllers
         private readonly IOptions<FileModel> _fileConfig;
         private readonly IWebHostEnvironment _appEnvironment;
         private readonly UserManager<IdentityUser> _userManager;
+        private readonly IOptions<EmailSenderOptions> _emailSenderOptions;
+        private readonly IOptions<EmailTestReveiverOptions> _emailReceiverOptions;
 
         public TeachersController(ITeacherService teacherervice,
             IMapper mapper,
             IOptions<FileModel> fileConfig,
             IWebHostEnvironment appEnvironment,
-            UserManager<IdentityUser> userManager)
+            UserManager<IdentityUser> userManager,
+            IOptions<EmailSenderOptions> emailSenderOptions,
+            IOptions<EmailTestReveiverOptions> emailReceiverOptions)
         {
             _teacherService = teacherervice;
             _mapper = mapper;
             _fileConfig = fileConfig;
             _appEnvironment = appEnvironment;
             _userManager = userManager;
+            _emailSenderOptions = emailSenderOptions;
+            _emailReceiverOptions = emailReceiverOptions;
         }
         public async Task<IActionResult> IndexAsync()
         {
@@ -59,7 +66,7 @@ namespace CRM_for_English_School.Controllers
             teacherModel.Photo = bytesStream;
             await _teacherService.CreateEntityAsync(_mapper.Map<Teacher>(teacherModel));
             await SetTeacherRole(teacherModel);
-            return RedirectToAction("Index", "Teachers");
+            return RedirectToAction("Index");
         }
 
         [Authorize (Roles = "manager")]
@@ -80,14 +87,38 @@ namespace CRM_for_English_School.Controllers
             byte[] bytesStream = SetImage(teacherModel);
             teacherModel.Photo = bytesStream;
             await _teacherService.EditEntityAsync(_mapper.Map<Teacher>(teacherModel));
-            return RedirectToAction("Index", "Teachers");
+            return RedirectToAction("Index");
         }
         [HttpGet]
         public async Task<IActionResult> DeleteTeacherAsync(int id)
         {
             await _teacherService.DeleteEntityAsync(id);
-            return RedirectToAction("Index", "Teachers");
+            return RedirectToAction("Index");
         }
+        [HttpGet]
+        public async Task<IActionResult> SendEmailAsync(int id)
+        {
+            EmailService emailService = new(_emailSenderOptions, _emailReceiverOptions);
+            var teacher = await _teacherService.GetEntityAsync(id);
+            if (teacher.Email != _emailReceiverOptions.Value.Email)
+                await emailService.SendEmailAsync(null, "Регистрация", GetMessage(teacher));
+            else
+                await emailService.SendEmailAsync(teacher.Email, "Регистрация", GetMessage(teacher));
+            return RedirectToAction("Index");
+        }
+
+        private static string GetMessage(Teacher teacher)
+        {
+            string message = $"<h3>Hello {teacher.FirstName}. We are glad to see you in our team!</h3>\n";
+            message += "<p>We suppose that you'll get a pleasure working at our company. Before we start our collaboration\n" +
+                "we want to say that you need to create your person account in our corporation network. To creat an account, please\n" +
+                "follow this link:\n\n</p>";
+            message += "<a href=\"https://localhost:44308/Identity/Account/Register\">Register</a>";
+            message += $"<p style=\"color: red;\">Pay attention that you need to use an email, which you have given to our manager - {teacher.Email}.\n</p>";
+            message += "<p>Great regards your English School!</p>";
+            return message;
+        }
+
         private byte[] SetImage(TeacherModel teacherModel)
         {
             byte[] bytesStream = null;
