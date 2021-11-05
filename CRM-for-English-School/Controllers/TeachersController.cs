@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.IO;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
+using System;
 
 namespace CRM_for_English_School.Controllers
 {
@@ -19,16 +21,19 @@ namespace CRM_for_English_School.Controllers
         private readonly IMapper _mapper;
         private readonly IOptions<FileModel> _fileConfig;
         private readonly IWebHostEnvironment _appEnvironment;
+        private readonly UserManager<IdentityUser> _userManager;
 
         public TeachersController(ITeacherService teacherervice,
             IMapper mapper,
             IOptions<FileModel> fileConfig,
-            IWebHostEnvironment appEnvironment)
+            IWebHostEnvironment appEnvironment,
+            UserManager<IdentityUser> userManager)
         {
             _teacherService = teacherervice;
             _mapper = mapper;
             _fileConfig = fileConfig;
             _appEnvironment = appEnvironment;
+            _userManager = userManager;
         }
         public async Task<IActionResult> IndexAsync()
         {
@@ -53,6 +58,7 @@ namespace CRM_for_English_School.Controllers
             byte[] bytesStream = SetImage(teacherModel);
             teacherModel.Photo = bytesStream;
             await _teacherService.CreateEntityAsync(_mapper.Map<Teacher>(teacherModel));
+            await SetTeacherRole(teacherModel);
             return RedirectToAction("Index", "Teachers");
         }
 
@@ -106,6 +112,19 @@ namespace CRM_for_English_School.Controllers
                 teacherModel.Photo = bytesStream;
             }
             return bytesStream;
+        }
+        private async Task SetTeacherRole(TeacherModel teacherModel)
+        {
+            IdentityUser teacher = new()
+            {
+                UserName = teacherModel.Email,
+                NormalizedUserName = teacherModel.Email.ToUpper(),
+                Email = teacherModel.Email,
+                NormalizedEmail = teacherModel.Email.ToUpper(),
+            };
+            IdentityResult result = await _userManager.CreateAsync(teacher);
+            if (result.Succeeded)
+                await _userManager.AddToRoleAsync(teacher, "teacher");
         }
     }
 }

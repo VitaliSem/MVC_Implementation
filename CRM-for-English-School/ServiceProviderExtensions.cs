@@ -2,6 +2,7 @@
 using CRM_for_English_School.BLL.Services;
 using CRM_for_English_School.DAL.EF.Repositories;
 using CRM_for_English_School.DAL.Interfaces;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace CRM_for_English_School
@@ -21,6 +22,8 @@ namespace CRM_for_English_School
             services.AddScoped<ITeacherService, TeacherService>();
             services.AddScoped<ICourseService, CourseService>();
             services.AddScoped<IStudentsGroupService, StudentsGroupService>();
+
+            services.AddScoped<UserManager<IdentityUser>>();
         }
     }
 }

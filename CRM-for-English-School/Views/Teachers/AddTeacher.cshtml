@@ -27,9 +27,25 @@
                 <span class="alert-danger" asp-validation-for="MiddleName"></span>
             </div>
             <div class="col-md-12">
-                <label class="form-check-label" asp-for="BirthDate">Дата рождения</label>
+                <label asp-for="BirthDate">Дата рождения</label>
                 <input type="date" class="form-control" id="BirthDate" name="BirthDate" asp-for="BirthDate">
                 <span asp-validation-for="BirthDate" class="alert-danger"></span>
+            </div>
+            <div class="col-md-12">
+                <label asp-for="Email">Email</label>
+                <div class="input-group">
+                    <span class="input-group-text">@@</span>
+                    <input type="email" class="form-control" id="Email" name="Email" asp-for="Email">
+                    <span asp-validation-for="Email" class="alert-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <label asp-for="PhoneNumber">Номер телефона</label>
+                <div class="input-group">
+                    <span class="input-group-text">+375</span>
+                    <input type="tel" class="form-control" id="PhoneNumber" name="PhoneNumber" asp-for="PhoneNumber">
+                    <span asp-validation-for="PhoneNumber" class="alert-danger"></span>
+                </div>
             </div>
             <div class="col-md-6">
                 <label for="GraduatedFrom">Учебное заведение</label>

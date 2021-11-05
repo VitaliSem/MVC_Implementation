@@ -25,7 +25,7 @@
             </div>
             <div class="col-md-8 float-right">
                 <label>Изменить фото</label>
-                <input name="PhotoFile" type="file" class="form-control" value="@Model.PhotoFile"/>
+                <input name="PhotoFile" type="file" class="form-control" value="@Model.PhotoFile" />
             </div>
             <div class="col-md-8 float-right py-1">
                 <label asp-for="LastName">Фамилия</label>
@@ -43,26 +43,44 @@
                 <span asp-validation-for="MiddleName" class="alert-danger"></span>
             </div>
             <div class="col-md-8 float-right py-1">
-                <label class="form-check-label" asp-for="BirthDate">Возраст</label>
+                <label asp-for="BirthDate">Возраст</label>
                 <input type="date" class="form-control" id="Age" name="BirthDate" asp-for="BirthDate">
                 <span asp-validation-for="BirthDate" class="alert-danger"></span>
             </div>
             <div class="col-md-8 float-right py-1">
+                <label asp-for="Email">Email</label>
+                <div class="input-group">
+                    <span class="input-group-text">@@</span>
+                    <input type="email" class="form-control" id="Email" name="Email" asp-for="Email">
+                    <span asp-validation-for="Email" class="alert-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-8 float-right py-1">
+                <label asp-for="PhoneNumber">Номер телефона</label>
+                <div class="input-group">
+                    <span class="input-group-text">+375</span>
+                    <input type="tel" class="form-control" id="PhoneNumber" name="PhoneNumber" asp-for="PhoneNumber">
+                    <span asp-validation-for="PhoneNumber" class="alert-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 py-1">
                 <label asp-for="GraduatedFrom">Учебное заведение</label>
                 <input type="text" class="form-control" id="GraduatedFrom" name="GraduatedFrom" asp-for="GraduatedFrom">
             </div>
-            <div class="col-md-8 float-right py-1">
+            <div class="col-md-6 py-1">
                 <label asp-for="Degree">Ученая степень</label>
                 <select class="form-select" asp-for="Degree" asp-items="Html.GetEnumSelectList<Degree>()">
                     <option selected="selected" value="Please select"></option>
                 </select>
                 <span asp-validation-for="Degree" class="text-danger"></span>
             </div>
-            <div class="col-md-8 float-right py-1">
+            <div class="col-md-12 py-1">
                 <label asp-for="MainSpecialization">Основная специализация</label>
                 <input type="text" class="form-control" id="MainSpecialization" name="MainSpecialization" asp-for="MainSpecialization">
             </div>
-            <div class="col-md-3">
+            <div class="py-3">
                 <button type="submit" class="btn btn-success">Сохранить</button>
                 @Html.ActionLink("Удалить", "DeleteTeacher", "Teachers", new { id = Model.Id }, new { @class = "btn btn-danger" })
             </div>
