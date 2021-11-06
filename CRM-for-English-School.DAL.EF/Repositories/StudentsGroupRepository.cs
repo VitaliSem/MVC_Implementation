@@ -40,5 +40,9 @@ namespace CRM_for_English_School.DAL.EF.Repositories
                 .Include(g => g.Students)
                 .FirstAsync(g => g.Id == id);
         }
+        public async Task<IEnumerable<StudentsGroup>> GetGroupsByTeacherId(int id)
+        {
+            return await _englishSchoolContext.StudentsGroups.Where(g => g.TeacherId == id).Include(g => g.Students).ToListAsync();
+        }
     }
 }

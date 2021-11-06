@@ -4,14 +4,16 @@ using CRM_for_English_School.DAL.EF.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CRM_for_English_School.DAL.EF.Migrations
 {
     [DbContext(typeof(EnglishSchoolContext))]
-    partial class EnglishSchoolContextModelSnapshot : ModelSnapshot
+    [Migration("20211106144434_LessonsMigration")]
+    partial class LessonsMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -103,7 +105,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Description")
+                    b.Property<string>("Desctiption")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("GroupId")
@@ -1022,7 +1024,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         {
                             Id = "18fedd72-d3e2-4033-9744-877b60a5a2ff",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "16e92e75-c9c1-482f-b811-050fae80cc1c",
+                            ConcurrencyStamp = "697beca8-49c1-4c55-b419-738967319fe7",
                             Email = "SvetlanaFedorova@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
@@ -1030,7 +1032,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             NormalizedUserName = "SVETLANAFEDOROVA@GMAIL.COM",
                             PasswordHash = "Fedorova1986",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "7e7040ef-61a2-4911-af3d-519f0c7449f7",
+                            SecurityStamp = "4b821a6f-9504-4330-b77a-4d2ffe0044e5",
                             TwoFactorEnabled = false,
                             UserName = "SvetlanaFedorova@gmail.com"
                         },
@@ -1038,7 +1040,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         {
                             Id = "2aa85a78-dba9-49d8-8215-89f793f1fd74",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "e9774d7b-8c6a-4b31-b684-9ca96a204a1e",
+                            ConcurrencyStamp = "de28d7ef-bae0-4893-b3e1-de4be40c347b",
                             Email = "KateKalinina@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
@@ -1046,7 +1048,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             NormalizedUserName = "KATEKALININA@GMAIL.COM",
                             PasswordHash = "Kalinina1992",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "cdd416e4-7db8-474b-8c9c-17db2b388626",
+                            SecurityStamp = "0fbc08e8-ab24-4fca-be66-2bab1912b34a",
                             TwoFactorEnabled = false,
                             UserName = "KateKalinina@gmail.com"
                         },
@@ -1054,7 +1056,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         {
                             Id = "465f38e5-9d8b-4ddb-9a9a-67c6d9c9f5e9",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "238defc9-1ab0-4a33-a75e-311184464ae6",
+                            ConcurrencyStamp = "c75ee89b-72fd-486e-8b78-f65599d6402f",
                             Email = "IrinaStupco@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
@@ -1062,7 +1064,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             NormalizedUserName = "IRINASTUPCO@GMAIL.COM",
                             PasswordHash = "Stupco1994",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "73ac40d6-5634-4dc1-bf56-f9adef68a7b7",
+                            SecurityStamp = "2aefd92d-35ba-4cca-b570-2a020ce30c8c",
                             TwoFactorEnabled = false,
                             UserName = "IrinaStupco@gmail.com"
                         },
@@ -1070,7 +1072,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         {
                             Id = "008120a7-6d9c-4f2e-83aa-52764cc6e3b7",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "be54d2b7-dc97-4504-91a5-628483a08b2a",
+                            ConcurrencyStamp = "fbd3076d-79a9-4a13-b91c-e4b063180cca",
                             Email = "KseniaFursina@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
@@ -1078,7 +1080,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             NormalizedUserName = "KSENIAFURSINA@GMAIL.COM",
                             PasswordHash = "Fursina1990",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "e153228c-776b-4e50-9490-f59ba21800c1",
+                            SecurityStamp = "e9bdc271-d9aa-4d80-ae8a-7a8c120c043f",
                             TwoFactorEnabled = false,
                             UserName = "KseniaFursina@gmail.com"
                         });

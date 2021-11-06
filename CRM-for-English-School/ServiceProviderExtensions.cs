@@ -16,12 +16,14 @@ namespace CRM_for_English_School
             services.AddScoped<ITeacherRepository, TeacherRepository>();
             services.AddScoped<ICourseRepository, CourseRepository>();
             services.AddScoped<IStudentsGroupRepository, StudentsGroupRepository>();
+            services.AddScoped<ILessonRepository, LessonRepository>();
 
             services.AddScoped<IRequestService, RequestService>();
             services.AddScoped<IStudentService, StudentService>();
             services.AddScoped<ITeacherService, TeacherService>();
             services.AddScoped<ICourseService, CourseService>();
             services.AddScoped<IStudentsGroupService, StudentsGroupService>();
+            services.AddScoped<ILessonService, LessonService>();
 
             services.AddScoped<UserManager<IdentityUser>>();
         }

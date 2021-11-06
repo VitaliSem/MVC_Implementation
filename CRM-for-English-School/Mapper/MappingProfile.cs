@@ -13,6 +13,7 @@ namespace CRM_for_English_School.Mapper
             CreateMap<Student, StudentModel>().ReverseMap();
             CreateMap<Teacher, TeacherModel>().ReverseMap();
             CreateMap<Course, CourseModel>().ReverseMap();
+            CreateMap<Lesson, LessonModel>().ReverseMap();
             CreateMap<RequestSearch, RequestSearchModel>().ReverseMap();
             CreateMap<StudentSearch, StudentSearchModel>().ReverseMap();
             CreateMap<Request, Student>()

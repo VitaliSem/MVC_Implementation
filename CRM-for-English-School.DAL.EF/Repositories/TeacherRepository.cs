@@ -19,5 +19,10 @@ namespace CRM_for_English_School.DAL.EF.Repositories
         {
             return await _englishSchoolContext.Teachers.ToListAsync();
         }
+        public async Task<Teacher> GetTeacherByUserId(string userId)
+        {
+            return await _englishSchoolContext.Teachers.FirstOrDefaultAsync(t => t.UserId.ToString() == userId);
+        }
+
     }
 }

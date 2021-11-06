@@ -5,6 +5,7 @@ using CRM_for_English_School.Models;
 using System.Collections.Generic;
 using CRM_for_English_School.AppCore.Entities;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CRM_for_English_School.Controllers
 {
@@ -18,12 +19,13 @@ namespace CRM_for_English_School.Controllers
             _courseService = courseService;
             _mapper = mapper;
         }
+        [Authorize(Roles = "manager")]
         public async Task<IActionResult> Index()
         {
-            var courses = await _courseService.GetAllAsync();
-            return View(_mapper.Map<IEnumerable<CourseModel>>(courses));
+            var courses = _mapper.Map<IEnumerable<CourseModel>>(await _courseService.GetAllAsync());
+            return View(courses);
         }
-
+        [Authorize(Roles = "manager")]
         [HttpGet]
         public IActionResult AddCourse()
         {
@@ -34,9 +36,9 @@ namespace CRM_for_English_School.Controllers
         public async Task<IActionResult> AddCourseAsync(CourseModel courseModel)
         {
             await _courseService.CreateEntityAsync(_mapper.Map<Course>(courseModel));
-            return RedirectToAction("Index", "Courses");
+            return RedirectToAction("Index");
         }
-
+        [Authorize(Roles = "manager")]
         [HttpGet]
         public async Task<IActionResult> EditCourse(int id)
         {
@@ -48,14 +50,14 @@ namespace CRM_for_English_School.Controllers
         public async Task<IActionResult> EditCourseAsync(CourseModel courseModel)
         {
             await _courseService.EditEntityAsync(_mapper.Map<Course>(courseModel));
-            return RedirectToAction("Index", "Courses");
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
         public async Task<IActionResult> DeleteCourseAsync(int id)
         {
             await _courseService.DeleteEntityAsync(id);
-            return RedirectToAction("Index", "Courses");
+            return RedirectToAction("Index");
         }
     }
 }

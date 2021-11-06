@@ -11,5 +11,6 @@ namespace CRM_for_English_School.AppCore.Entities
         public int TeacherId { get; set; }
         public Teacher Teacher { get; set; }
         public List<Student> Students { get; set; }
+        public List<Lesson> Lessons { get; set; }
     }
 }

@@ -1,0 +1,70 @@
+﻿@model ScheduleViewModel
+
+<div class="container">
+    @using (Html.BeginForm("Index", "Schedule", FormMethod.Post))
+    {
+        <div>
+            @Html.ValidationSummary()
+        </div>
+
+        <div class="row g-3">
+            <div class="col-md-4">
+                <label asp-for="Lesson.Topic">Тема занятия</label>
+                <input type="text" class="form-control" id="Topic" name="Topic" asp-for="Lesson.Topic">
+                <span class="alert-danger" asp-validation-for="Lesson.Topic"></span>
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Lesson.Date">Тема занятия</label>
+                <input type="date" class="form-control" id="Date" name="Date" asp-for="Lesson.Date">
+                <span class="alert-danger" asp-validation-for="Lesson.Date"></span>
+            </div>
+            <div class="col-sm-4">
+                <label asp-for="Lesson.GroupId">Группа</label>
+                <select class="form-select" name="GroupId">
+                    <option value=""></option>
+                    @foreach (var group in (List<StudentsGroupModel>)ViewBag.Groups)
+                    {
+                        <option name="GroupId" value="@group.Id">@group.GroupName</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-12">
+                <label asp-for="Lesson.Description">Краткое описание занятия</label>
+                <input type="text" class="form-control" id="Description" name="Description" asp-for="Lesson.Description">
+                <span class="alert-danger" asp-validation-for="Lesson.Description"></span>
+            </div>
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-success">Добавить занятие</button>
+            </div>
+        </div>
+    }
+    <br />
+    <div>
+        <table class="table table-sm table-hover">
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">Дата и время занятия</th>
+                    <th scope="col">Группа</th>
+                    <th scope="col">Тема занятия</th>
+                    <th scope="col">Краткое описание</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var lesson in Model.Lessons)
+                {
+                    <tr>
+                        <td scope="col" class="align-middle">@lesson.Date</td>
+                        <td scope="col" class="align-middle">@lesson.Group.Name</td>
+                        <td scope="col" class="align-middle">@lesson.Topic</td>
+                        <td scope="col" class="align-middle">@lesson.Description</td>
+                        <td>
+                            <button type="button" class="btn btn-danger btn-sm" onclick="location.href='@Url.Action("Delete", "Schedule", new { id = lesson.Id})'">Удалить</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <p><div class="text-info">Кол-во занятий: @Model.Lessons.Count()</div></p>
+</div>

@@ -10,7 +10,6 @@ using System.IO;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
-using System;
 using CRM_for_English_School.Configuration;
 using UnidecodeSharpFork;
 
@@ -65,8 +64,8 @@ namespace CRM_for_English_School.Controllers
                 teacherModel.HasPhoto = true;
             byte[] bytesStream = SetImage(teacherModel);
             teacherModel.Photo = bytesStream;
+            teacherModel.UserId = await SetTeacherRole(teacherModel);
             await _teacherService.CreateEntityAsync(_mapper.Map<Teacher>(teacherModel));
-            await SetTeacherRole(teacherModel);
             return RedirectToAction("Index");
         }
 
@@ -147,7 +146,7 @@ namespace CRM_for_English_School.Controllers
             }
             return bytesStream;
         }
-        private async Task SetTeacherRole(TeacherModel teacherModel)
+        private async Task<string> SetTeacherRole(TeacherModel teacherModel)
         {
             IdentityUser teacher = new();
             var password = teacherModel.LastName.Unidecode().ToString() + teacherModel.BirthDate.Year.ToString();
@@ -176,6 +175,7 @@ namespace CRM_for_English_School.Controllers
             IdentityResult result = await _userManager.CreateAsync(teacher);
             if (result.Succeeded)
                 await _userManager.AddToRoleAsync(teacher, "teacher");
+            return teacher.Id;
         }
     }
 }

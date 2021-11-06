@@ -1,0 +1,35 @@
+﻿@model StudentsGroupModel
+
+@{ ViewData["Title"] = "Информация "; }
+
+<div class="container">
+    <h2>Группа @Model.GroupName</h2>
+    <br />
+    <div>
+        <table class="table table-sm table-hover">
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">ФИО</th>
+                    <th scope="col">Возраст</th>
+                    <th scope="col">Статус</th>
+                    <th scope="col">Текущий уровень языка</th>
+                    <th scope="col">Номер телефона</th>
+                    <th scope="col">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var student in Model.Students)
+                {
+                    <tr>
+                        <td scope="col" class="align-middle">@student.LastName @student.MiddleName @student.FirstName</td>
+                        <td scope="col" class="align-middle">@student.Age</td>
+                        <td scope="col" class="align-middle">@student.Status</td>
+                        <td scope="col" class="align-middle">@student.CurrentEnglishLevel</td>
+                        <td scope="col" class="align-middle">@student.PhoneNumber</td>
+                        <td scope="col" class="align-middle">@student.Email</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

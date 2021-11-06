@@ -14,6 +14,11 @@ namespace CRM_for_English_School.BLL.Services
         {
             _teacherRepository = teacherRepository;
         }
+        public Task<Teacher> GetTeacherByUserId(string userId)
+        {
+            return _teacherRepository.GetTeacherByUserId(userId);
+        }
+
         public Task<IEnumerable<Teacher>> GetTeachersAsync()
         {
             return _teacherRepository.GetAllAsync();

@@ -1,1 +1,26 @@
-﻿<h3>Hello teacher!</h3>
+﻿<div class="px-4 py-5" id="featured-3">
+    <h2 class="pb-2 border-bottom">Список разделов</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="feature col">
+            <h2>Мои группы</h2>
+            <p>Данный раздел содержит информацию обо всех группах, который в данный момент имеют активный статус. Здесь приводится информация о составе группы.</p>
+            <a class="icon-link" asp-controller="StudentsGroups" asp-action="TeachersGroups">
+                Перейти
+            </a>
+        </div>
+        <div class="feature col">
+            <h2>Расписание занятий</h2>
+            <p>Списко занятий по группам с возможностью создания занятия, удаления, переноса, а также прочей необходимой информацией о занятии.</p>
+            <a class="icon-link" asp-controller="Schedule" asp-action="Index">
+                Перейти
+            </a>
+        </div>
+        <div class="feature col">
+            <h2>Журнал</h2>
+            <p>В журнале содержится информация об посещаемости и успеваемости студентов. Журнал находится в процессе разработки</p>
+            <a class="icon-link" asp-controller="Jornal" asp-action="Index">
+                Перейти
+            </a>
+        </div>
+    </div>
+</div>

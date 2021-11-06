@@ -12,6 +12,7 @@ namespace CRM_for_English_School.DAL.EF.Context
         public DbSet<Student> Students { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
         public DbSet<StudentsGroup> StudentsGroups { get; set; }
+        public DbSet<Lesson> Lessons { get; set; }
 
         public EnglishSchoolContext() { }
         public EnglishSchoolContext(DbContextOptions<EnglishSchoolContext> options) : base(options) { }
