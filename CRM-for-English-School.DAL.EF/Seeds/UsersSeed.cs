@@ -13,7 +13,9 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 UserName = "SvetlanaFedorova@gmail.com",
                 NormalizedUserName = "SVETLANAFEDOROVA@GMAIL.COM",
                 NormalizedEmail = "SVETLANAFEDOROVA@GMAIL.COM",
-                Email = "SvetlanaFedorova@gmail.com"
+                Email = "SvetlanaFedorova@gmail.com",
+                PasswordHash = "Fedorova1986",
+                EmailConfirmed = true
             };
             var user2 = new IdentityUser()
             {
@@ -21,7 +23,9 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 UserName = "KateKalinina@gmail.com",
                 NormalizedUserName = "KATEKALININA@GMAIL.COM",
                 NormalizedEmail = "KATEKALININA@GMAIL.COM",
-                Email = "KateKalinina@gmail.com"
+                Email = "KateKalinina@gmail.com",
+                PasswordHash = "Kalinina1992",
+                EmailConfirmed = true
             };
             var user3 = new IdentityUser()
             {
@@ -29,7 +33,9 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 UserName = "IrinaStupco@gmail.com",
                 NormalizedUserName = "IRINASTUPCO@GMAIL.COM",
                 NormalizedEmail = "IRINASTUPCO@GMAIL.COM",
-                Email = "IrinaStupco@gmail.com"
+                Email = "IrinaStupco@gmail.com",
+                PasswordHash = "Stupco1994",
+                EmailConfirmed = true
             };
             var user4 = new IdentityUser()
             {
@@ -37,7 +43,9 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 UserName = "KseniaFursina@gmail.com",
                 NormalizedUserName = "KSENIAFURSINA@GMAIL.COM",
                 NormalizedEmail = "KSENIAFURSINA@GMAIL.COM",
-                Email = "KseniaFursina@gmail.com"
+                Email = "KseniaFursina@gmail.com",
+                PasswordHash = "Fursina1990",
+                EmailConfirmed = true
             };
             modelBuilder.Entity<IdentityUser>().HasData(user1, user2, user3, user4);
         }

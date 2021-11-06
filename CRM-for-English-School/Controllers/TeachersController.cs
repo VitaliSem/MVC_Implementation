@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using System;
 using CRM_for_English_School.Configuration;
+using UnidecodeSharpFork;
 
 namespace CRM_for_English_School.Controllers
 {
@@ -111,10 +112,12 @@ namespace CRM_for_English_School.Controllers
         {
             string message = $"<h3>Hello {teacher.FirstName}. We are glad to see you in our team!</h3>\n";
             message += "<p>We suppose that you'll get a pleasure working at our company. Before we start our collaboration\n" +
-                "we want to say that you need to create your person account in our corporation network. To creat an account, please\n" +
+                "we want to say that you need to sign in in your person account in our corporation network. To sign in in an account, please\n" +
                 "follow this link:\n\n</p>";
-            message += "<a href=\"https://localhost:44308/Identity/Account/Register\">Register</a>";
-            message += $"<p style=\"color: red;\">Pay attention that you need to use an email, which you have given to our manager - {teacher.Email}.\n</p>";
+            message += "<a href=\"https://localhost:44308/Identity/Account/Login\">Sign In</a>";
+            message += $"<p style=\"color: red;\">Pay attention that you need to use an email, which you have given to our manager - <b>{teacher.Email}</b>.\n</p>";
+            message += $"<p style=\"color: red;\">Your password is <b>{teacher.LastName.Unidecode()}{teacher.BirthDate.Value.Year}</b>." +
+                $" When you sign in into the system you can change the password.</p>";
             message += "<p>Great regards your English School!</p>";
             return message;
         }
@@ -146,13 +149,30 @@ namespace CRM_for_English_School.Controllers
         }
         private async Task SetTeacherRole(TeacherModel teacherModel)
         {
-            IdentityUser teacher = new()
+            IdentityUser teacher = new();
+            var password = teacherModel.LastName.Unidecode().ToString() + teacherModel.BirthDate.Year.ToString();
+            var _passwordValidator =
+                HttpContext.RequestServices.GetService(typeof(IPasswordValidator<IdentityUser>)) as IPasswordValidator<IdentityUser>;
+            var _passwordHasher =
+                HttpContext.RequestServices.GetService(typeof(IPasswordHasher<IdentityUser>)) as IPasswordHasher<IdentityUser>;
+            IdentityResult passwordResult =
+                await _passwordValidator.ValidateAsync(_userManager, teacher, password);
+            if (!passwordResult.Succeeded)
             {
-                UserName = teacherModel.Email,
-                NormalizedUserName = teacherModel.Email.ToUpper(),
-                Email = teacherModel.Email,
-                NormalizedEmail = teacherModel.Email.ToUpper(),
-            };
+                foreach (var error in passwordResult.Errors)
+                {
+                    ModelState.AddModelError(string.Empty, error.Description);
+                }
+            }
+            else
+            {
+                teacher.PasswordHash = _passwordHasher.HashPassword(teacher, password);
+                teacher.UserName = teacherModel.Email;
+                teacher.NormalizedUserName = teacherModel.Email.ToUpper();
+                teacher.Email = teacherModel.Email;
+                teacher.NormalizedEmail = teacherModel.Email.ToUpper();
+                teacher.EmailConfirmed = true;
+            }
             IdentityResult result = await _userManager.CreateAsync(teacher);
             if (result.Succeeded)
                 await _userManager.AddToRoleAsync(teacher, "teacher");
