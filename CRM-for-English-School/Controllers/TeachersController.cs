@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using System;
 using CRM_for_English_School.Configuration;
+using UnidecodeSharpFork;
 
 namespace CRM_for_English_School.Controllers
 {
@@ -113,8 +114,10 @@ namespace CRM_for_English_School.Controllers
             message += "<p>We suppose that you'll get a pleasure working at our company. Before we start our collaboration\n" +
                 "we want to say that you need to create your person account in our corporation network. To creat an account, please\n" +
                 "follow this link:\n\n</p>";
-            message += "<a href=\"https://localhost:44308/Identity/Account/Register\">Register</a>";
-            message += $"<p style=\"color: red;\">Pay attention that you need to use an email, which you have given to our manager - {teacher.Email}.\n</p>";
+            message += "<a href=\"https://localhost:44308/Identity/Account/Login\">Sign In</a>";
+            message += $"<p style=\"color: red;\">Pay attention that you need to use an email, which you have given to our manager - <b>{teacher.Email}</b>.\n</p>";
+            message += $"<p style=\"color: red;\">Your password is <b>{teacher.LastName.Unidecode()}{teacher.BirthDate.Value.Year}</b>." +
+                $" When you sign in into the system you can change the password.</p>";
             message += "<p>Great regards your English School!</p>";
             return message;
         }
