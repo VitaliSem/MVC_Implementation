@@ -10,17 +10,21 @@
                     <th scope="col">Возраст</th>
                     <th scope="col">Образование</th>
                     <th scope="col">Специализация</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var teacher in Model)
                 {
                     <tr>
-                        <th scope="col">@teacher.Id</th>
-                        <td scope="col"> <a asp-controller="Teachers" asp-action="EditTeacher" asp-route-id="@teacher.Id">@teacher.FirstName @teacher.MiddleName @teacher.LastName</a></td>
-                        <td scope="col">@teacher.Age</td>
-                        <td scope="col">@teacher.GraduatedFrom - @teacher.Degree</td>
-                        <td scope="col">@teacher.MainSpecialization</td>
+                        <th scope="col" class="align-middle">@teacher.Id</th>
+                        <td scope="col" class="align-middle"> <a asp-controller="Teachers" asp-action="EditTeacher" asp-route-id="@teacher.Id">@teacher.FirstName @teacher.MiddleName @teacher.LastName</a></td>
+                        <td scope="col" class="align-middle">@teacher.Age</td>
+                        <td scope="col" class="align-middle">@teacher.GraduatedFrom - @teacher.Degree</td>
+                        <td scope="col" class="align-middle">@teacher.MainSpecialization</td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm" onclick="location.href='@Url.Action("SendEmail", "Teachers", new { id = teacher.Id})'">Отправить форму регистрации</button>
+                        </td>
                     </tr>
                 }
             </tbody>
