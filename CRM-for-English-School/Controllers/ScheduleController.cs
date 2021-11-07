@@ -46,7 +46,7 @@ namespace CRM_for_English_School.Controllers
             };
             return View(model);
         }
-
+        [Authorize(Roles = "teacher")]
         [HttpGet]
         public async Task<IActionResult> DeleteAsync(int id)
         {

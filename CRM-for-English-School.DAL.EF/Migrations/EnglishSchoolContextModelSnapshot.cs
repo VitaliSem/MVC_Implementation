@@ -659,104 +659,6 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                     b.HasIndex("GroupId");
 
                     b.ToTable("Students");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            BirthDate = new DateTime(1998, 8, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CurrentEnglishLevel = 2,
-                            Email = "KonstantinKvaskov@gmail.com",
-                            FirstName = "Константин",
-                            LastName = "Квасков",
-                            MiddleName = "Игоревич",
-                            PhoneNumber = "+375(29)616-94-87",
-                            Status = 0
-                        },
-                        new
-                        {
-                            Id = 2,
-                            BirthDate = new DateTime(2000, 3, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CurrentEnglishLevel = 2,
-                            Email = "OlgaLabudco@gmail.com",
-                            FirstName = "Ольга",
-                            LastName = "Лабудько",
-                            MiddleName = "Петрович",
-                            PhoneNumber = "+375(33)822-74-13",
-                            Status = 0
-                        },
-                        new
-                        {
-                            Id = 3,
-                            BirthDate = new DateTime(1997, 11, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CurrentEnglishLevel = 2,
-                            Email = "KateSoroka@gmail.com",
-                            FirstName = "Екатерина",
-                            LastName = "Сорока",
-                            MiddleName = "Степановна",
-                            PhoneNumber = "+375(33)555-66-77",
-                            Status = 0
-                        },
-                        new
-                        {
-                            Id = 4,
-                            BirthDate = new DateTime(1993, 5, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CurrentEnglishLevel = 2,
-                            Email = "IvanLikov@gmail.com",
-                            FirstName = "Иван",
-                            LastName = "Лыков",
-                            MiddleName = "Федорович",
-                            PhoneNumber = "+375(29)996-74-14",
-                            Status = 0
-                        },
-                        new
-                        {
-                            Id = 5,
-                            BirthDate = new DateTime(1998, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CurrentEnglishLevel = 2,
-                            Email = "PolyGolubeva@gmail.com",
-                            FirstName = "Полина",
-                            LastName = "Голубева",
-                            MiddleName = "Алексеевна",
-                            PhoneNumber = "+375(29)622-74-74",
-                            Status = 0
-                        },
-                        new
-                        {
-                            Id = 6,
-                            BirthDate = new DateTime(1994, 12, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CurrentEnglishLevel = 2,
-                            Email = "SvetoslavOgorodnik@gmail.com",
-                            FirstName = "Светослав",
-                            LastName = "Огородник",
-                            MiddleName = "Дмитриевич",
-                            PhoneNumber = "+375(29)743-96-13",
-                            Status = 0
-                        },
-                        new
-                        {
-                            Id = 7,
-                            BirthDate = new DateTime(1993, 6, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CurrentEnglishLevel = 2,
-                            Email = "KristinaKarayl@gmail.com",
-                            FirstName = "Кристина",
-                            LastName = "Караул",
-                            MiddleName = "Федоровна",
-                            PhoneNumber = "+375(29)120-19-84",
-                            Status = 0
-                        },
-                        new
-                        {
-                            Id = 8,
-                            BirthDate = new DateTime(1996, 4, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CurrentEnglishLevel = 2,
-                            Email = "EugeniaAlbegova@gmail.com",
-                            FirstName = "Евгения",
-                            LastName = "Альбегова",
-                            MiddleName = "Петровна",
-                            PhoneNumber = "+375(29)545-75-75",
-                            Status = 0
-                        });
                 });
 
             modelBuilder.Entity("CRM_for_English_School.AppCore.Entities.StudentsGroup", b =>
@@ -838,68 +740,6 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                     b.HasIndex("UserId1");
 
                     b.ToTable("Teachers");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            BirthDate = new DateTime(1986, 11, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Degree = 1,
-                            Email = "SvetlanaFedorova@gmail.com",
-                            FirstName = "Светлана",
-                            GraduatedFrom = "МГЛУ",
-                            HasPhoto = false,
-                            LastName = "Федорова",
-                            MainSpecialization = "Теоретическая и прикладная лингвистика",
-                            MiddleName = "Георгиевна",
-                            PhoneNumber = "+375(29)654-45-67",
-                            UserId = new Guid("18fedd72-d3e2-4033-9744-877b60a5a2ff")
-                        },
-                        new
-                        {
-                            Id = 2,
-                            BirthDate = new DateTime(1992, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Degree = 0,
-                            Email = "KateKalinina@gmail.com",
-                            FirstName = "Екатерина",
-                            GraduatedFrom = "МГЛУ",
-                            HasPhoto = false,
-                            LastName = "Калинина",
-                            MainSpecialization = "Современные иностранные языки",
-                            MiddleName = "Викторовна",
-                            PhoneNumber = "+375(33)151-16-19",
-                            UserId = new Guid("2aa85a78-dba9-49d8-8215-89f793f1fd74")
-                        },
-                        new
-                        {
-                            Id = 3,
-                            BirthDate = new DateTime(1994, 7, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Degree = 0,
-                            Email = "IrinaStupco@gmail.com",
-                            FirstName = "Ирина",
-                            GraduatedFrom = "МГЛУ",
-                            HasPhoto = false,
-                            LastName = "Ступко",
-                            MainSpecialization = "Современные иностранные языки",
-                            MiddleName = "Андреевна",
-                            PhoneNumber = "+375(33)742-86-95",
-                            UserId = new Guid("465f38e5-9d8b-4ddb-9a9a-67c6d9c9f5e9")
-                        },
-                        new
-                        {
-                            Id = 4,
-                            BirthDate = new DateTime(1990, 8, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Degree = 1,
-                            Email = "KseniaFursina@gmail.com",
-                            FirstName = "Ксения",
-                            GraduatedFrom = "МГЛУ",
-                            HasPhoto = false,
-                            LastName = "Фурсина",
-                            MainSpecialization = "Теоретическая и прикладная лингвистика",
-                            MiddleName = "Петровна",
-                            PhoneNumber = "+375(33)87565-41",
-                            UserId = new Guid("008120a7-6d9c-4f2e-83aa-52764cc6e3b7")
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -1016,72 +856,6 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "18fedd72-d3e2-4033-9744-877b60a5a2ff",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "16e92e75-c9c1-482f-b811-050fae80cc1c",
-                            Email = "SvetlanaFedorova@gmail.com",
-                            EmailConfirmed = true,
-                            LockoutEnabled = false,
-                            NormalizedEmail = "SVETLANAFEDOROVA@GMAIL.COM",
-                            NormalizedUserName = "SVETLANAFEDOROVA@GMAIL.COM",
-                            PasswordHash = "Fedorova1986",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "7e7040ef-61a2-4911-af3d-519f0c7449f7",
-                            TwoFactorEnabled = false,
-                            UserName = "SvetlanaFedorova@gmail.com"
-                        },
-                        new
-                        {
-                            Id = "2aa85a78-dba9-49d8-8215-89f793f1fd74",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "e9774d7b-8c6a-4b31-b684-9ca96a204a1e",
-                            Email = "KateKalinina@gmail.com",
-                            EmailConfirmed = true,
-                            LockoutEnabled = false,
-                            NormalizedEmail = "KATEKALININA@GMAIL.COM",
-                            NormalizedUserName = "KATEKALININA@GMAIL.COM",
-                            PasswordHash = "Kalinina1992",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "cdd416e4-7db8-474b-8c9c-17db2b388626",
-                            TwoFactorEnabled = false,
-                            UserName = "KateKalinina@gmail.com"
-                        },
-                        new
-                        {
-                            Id = "465f38e5-9d8b-4ddb-9a9a-67c6d9c9f5e9",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "238defc9-1ab0-4a33-a75e-311184464ae6",
-                            Email = "IrinaStupco@gmail.com",
-                            EmailConfirmed = true,
-                            LockoutEnabled = false,
-                            NormalizedEmail = "IRINASTUPCO@GMAIL.COM",
-                            NormalizedUserName = "IRINASTUPCO@GMAIL.COM",
-                            PasswordHash = "Stupco1994",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "73ac40d6-5634-4dc1-bf56-f9adef68a7b7",
-                            TwoFactorEnabled = false,
-                            UserName = "IrinaStupco@gmail.com"
-                        },
-                        new
-                        {
-                            Id = "008120a7-6d9c-4f2e-83aa-52764cc6e3b7",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "be54d2b7-dc97-4504-91a5-628483a08b2a",
-                            Email = "KseniaFursina@gmail.com",
-                            EmailConfirmed = true,
-                            LockoutEnabled = false,
-                            NormalizedEmail = "KSENIAFURSINA@GMAIL.COM",
-                            NormalizedUserName = "KSENIAFURSINA@GMAIL.COM",
-                            PasswordHash = "Fursina1990",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "e153228c-776b-4e50-9490-f59ba21800c1",
-                            TwoFactorEnabled = false,
-                            UserName = "KseniaFursina@gmail.com"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -1143,28 +917,6 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles");
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = "18fedd72-d3e2-4033-9744-877b60a5a2ff",
-                            RoleId = "cc51b262-0dbf-442d-a121-3fcb5f25d9fb"
-                        },
-                        new
-                        {
-                            UserId = "2aa85a78-dba9-49d8-8215-89f793f1fd74",
-                            RoleId = "cc51b262-0dbf-442d-a121-3fcb5f25d9fb"
-                        },
-                        new
-                        {
-                            UserId = "465f38e5-9d8b-4ddb-9a9a-67c6d9c9f5e9",
-                            RoleId = "cc51b262-0dbf-442d-a121-3fcb5f25d9fb"
-                        },
-                        new
-                        {
-                            UserId = "008120a7-6d9c-4f2e-83aa-52764cc6e3b7",
-                            RoleId = "cc51b262-0dbf-442d-a121-3fcb5f25d9fb"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>

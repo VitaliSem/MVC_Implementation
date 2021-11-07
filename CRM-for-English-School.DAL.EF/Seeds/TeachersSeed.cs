@@ -22,7 +22,10 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 Degree = Degree.Master,
                 GraduatedFrom = "МГЛУ",
                 MainSpecialization = "Теоретическая и прикладная лингвистика",
-                Groups = null
+                Groups = null,
+                HasPhoto =  false,
+                Photo = null,
+                User = null
             };
             var teacher2 = new Teacher()
             {
@@ -37,7 +40,10 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 Degree = Degree.Bachelor,
                 GraduatedFrom = "МГЛУ",
                 MainSpecialization = "Современные иностранные языки",
-                Groups = null
+                Groups = null,
+                HasPhoto = false,
+                Photo = null,
+                User = null
             };
             var teacher3 = new Teacher()
             {
@@ -52,7 +58,10 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 Degree = Degree.Bachelor,
                 GraduatedFrom = "МГЛУ",
                 MainSpecialization = "Современные иностранные языки",
-                Groups = null
+                Groups = null,
+                HasPhoto = false,
+                Photo = null,
+                User = null
             };
             var teacher4 = new Teacher()
             {
@@ -67,7 +76,10 @@ namespace CRM_for_English_School.DAL.EF.Seeds
                 Degree = Degree.Master,
                 GraduatedFrom = "МГЛУ",
                 MainSpecialization = "Теоретическая и прикладная лингвистика",
-                Groups = null
+                Groups = null,
+                HasPhoto = false,
+                Photo = null,
+                User = null
             };
 
             modelBuilder.Entity<Teacher>().HasData(teacher1, teacher2, teacher3, teacher4);

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CRM_for_English_School.DAL.EF.Migrations
 {
     [DbContext(typeof(EnglishSchoolContext))]
-    [Migration("20211102120214_TeacherPhotoMigration")]
-    partial class TeacherPhotoMigration
+    [Migration("20211107150727_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -93,6 +93,32 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                             Name = "Английский для бизнеса - B-PI_1",
                             Price = 1030.0
                         });
+                });
+
+            modelBuilder.Entity("CRM_for_English_School.AppCore.Entities.Lesson", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("GroupId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Topic")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("GroupId");
+
+                    b.ToTable("Lessons");
                 });
 
             modelBuilder.Entity("CRM_for_English_School.AppCore.Entities.Request", b =>
@@ -599,7 +625,9 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int?>("Age")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("int")
+                        .HasComputedColumnSql("DATEDIFF(YEAR,BirthDate,GETDATE())");
 
                     b.Property<DateTime?>("BirthDate")
                         .HasColumnType("datetime2");
@@ -613,7 +641,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                     b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("GroupId")
+                    b.Property<int?>("GroupId")
                         .HasColumnType("int");
 
                     b.Property<string>("LastName")
@@ -633,112 +661,6 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                     b.HasIndex("GroupId");
 
                     b.ToTable("Students");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            BirthDate = new DateTime(1998, 8, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CurrentEnglishLevel = 2,
-                            Email = "KonstantinKvaskov@gmail.com",
-                            FirstName = "Константин",
-                            GroupId = 0,
-                            LastName = "Квасков",
-                            MiddleName = "Игоревич",
-                            PhoneNumber = "+375(29)616-94-87",
-                            Status = 0
-                        },
-                        new
-                        {
-                            Id = 2,
-                            BirthDate = new DateTime(2000, 3, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CurrentEnglishLevel = 2,
-                            Email = "OlgaLabudco@gmail.com",
-                            FirstName = "Ольга",
-                            GroupId = 0,
-                            LastName = "Лабудько",
-                            MiddleName = "Петрович",
-                            PhoneNumber = "+375(33)822-74-13",
-                            Status = 0
-                        },
-                        new
-                        {
-                            Id = 3,
-                            BirthDate = new DateTime(1997, 11, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CurrentEnglishLevel = 2,
-                            Email = "KateSoroka@gmail.com",
-                            FirstName = "Екатерина",
-                            GroupId = 0,
-                            LastName = "Сорока",
-                            MiddleName = "Степановна",
-                            PhoneNumber = "+375(33)555-66-77",
-                            Status = 0
-                        },
-                        new
-                        {
-                            Id = 4,
-                            BirthDate = new DateTime(1993, 5, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CurrentEnglishLevel = 2,
-                            Email = "IvanLikov@gmail.com",
-                            FirstName = "Иван",
-                            GroupId = 0,
-                            LastName = "Лыков",
-                            MiddleName = "Федорович",
-                            PhoneNumber = "+375(29)996-74-14",
-                            Status = 0
-                        },
-                        new
-                        {
-                            Id = 5,
-                            BirthDate = new DateTime(1998, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CurrentEnglishLevel = 2,
-                            Email = "PolyGolubeva@gmail.com",
-                            FirstName = "Полина",
-                            GroupId = 0,
-                            LastName = "Голубева",
-                            MiddleName = "Алексеевна",
-                            PhoneNumber = "+375(29)622-74-74",
-                            Status = 0
-                        },
-                        new
-                        {
-                            Id = 6,
-                            BirthDate = new DateTime(1994, 12, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CurrentEnglishLevel = 2,
-                            Email = "SvetoslavOgorodnik@gmail.com",
-                            FirstName = "Светослав",
-                            GroupId = 0,
-                            LastName = "Огородник",
-                            MiddleName = "Дмитриевич",
-                            PhoneNumber = "+375(29)743-96-13",
-                            Status = 0
-                        },
-                        new
-                        {
-                            Id = 7,
-                            BirthDate = new DateTime(1993, 6, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CurrentEnglishLevel = 2,
-                            Email = "KristinaKarayl@gmail.com",
-                            FirstName = "Кристина",
-                            GroupId = 0,
-                            LastName = "Караул",
-                            MiddleName = "Федоровна",
-                            PhoneNumber = "+375(29)120-19-84",
-                            Status = 0
-                        },
-                        new
-                        {
-                            Id = 8,
-                            BirthDate = new DateTime(1996, 4, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CurrentEnglishLevel = 2,
-                            Email = "EugeniaAlbegova@gmail.com",
-                            FirstName = "Евгения",
-                            GroupId = 0,
-                            LastName = "Альбегова",
-                            MiddleName = "Петровна",
-                            PhoneNumber = "+375(29)545-75-75",
-                            Status = 0
-                        });
                 });
 
             modelBuilder.Entity("CRM_for_English_School.AppCore.Entities.StudentsGroup", b =>
@@ -809,67 +731,17 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                     b.Property<byte[]>("Photo")
                         .HasColumnType("varbinary(max)");
 
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("UserId1")
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Teachers");
+                    b.HasIndex("UserId1");
 
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            BirthDate = new DateTime(1986, 11, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Degree = 1,
-                            Email = "SvetlanaFedorova@gmail.com",
-                            FirstName = "Светлана",
-                            GraduatedFrom = "МГЛУ",
-                            HasPhoto = false,
-                            LastName = "Федорова",
-                            MainSpecialization = "Теоретическая и прикладная лингвистика",
-                            MiddleName = "Георгиевна",
-                            PhoneNumber = "+375(29)654-45-67"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            BirthDate = new DateTime(1992, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Degree = 0,
-                            Email = "KateKalinina@gmail.com",
-                            FirstName = "Екатерина",
-                            GraduatedFrom = "МГЛУ",
-                            HasPhoto = false,
-                            LastName = "Калинина",
-                            MainSpecialization = "Современные иностранные языки",
-                            MiddleName = "Викторовна",
-                            PhoneNumber = "+375(33)151-16-19"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            BirthDate = new DateTime(1994, 7, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Degree = 0,
-                            Email = "IrinaStupco@gmail.com",
-                            FirstName = "Ирина",
-                            GraduatedFrom = "МГЛУ",
-                            HasPhoto = false,
-                            LastName = "Ступко",
-                            MainSpecialization = "Современные иностранные языки",
-                            MiddleName = "Андреевна",
-                            PhoneNumber = "+375(33)742-86-95"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            BirthDate = new DateTime(1990, 8, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Degree = 1,
-                            Email = "KseniaFursina@gmail.com",
-                            FirstName = "Ксения",
-                            GraduatedFrom = "МГЛУ",
-                            HasPhoto = false,
-                            LastName = "Фурсина",
-                            MainSpecialization = "Теоретическая и прикладная лингвистика",
-                            MiddleName = "Петровна",
-                            PhoneNumber = "+375(33)87565-41"
-                        });
+                    b.ToTable("Teachers");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -1068,6 +940,17 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("CRM_for_English_School.AppCore.Entities.Lesson", b =>
+                {
+                    b.HasOne("CRM_for_English_School.AppCore.Entities.StudentsGroup", "Group")
+                        .WithMany("Lessons")
+                        .HasForeignKey("GroupId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Group");
+                });
+
             modelBuilder.Entity("CRM_for_English_School.AppCore.Entities.Request", b =>
                 {
                     b.HasOne("CRM_for_English_School.AppCore.Entities.Course", "Course")
@@ -1082,9 +965,7 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                 {
                     b.HasOne("CRM_for_English_School.AppCore.Entities.StudentsGroup", "Group")
                         .WithMany("Students")
-                        .HasForeignKey("GroupId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("GroupId");
 
                     b.Navigation("Group");
                 });
@@ -1098,6 +979,15 @@ namespace CRM_for_English_School.DAL.EF.Migrations
                         .IsRequired();
 
                     b.Navigation("Teacher");
+                });
+
+            modelBuilder.Entity("CRM_for_English_School.AppCore.Entities.Teacher", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId1");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -1158,6 +1048,8 @@ namespace CRM_for_English_School.DAL.EF.Migrations
 
             modelBuilder.Entity("CRM_for_English_School.AppCore.Entities.StudentsGroup", b =>
                 {
+                    b.Navigation("Lessons");
+
                     b.Navigation("Students");
                 });
 
